@@ -1,0 +1,2 @@
+*.zip filter=lfs diff=lfs merge=lfs -text
+webHelpSE-FOUNDATION2-all.zip filter=lfs diff=lfs merge=lfs -text
