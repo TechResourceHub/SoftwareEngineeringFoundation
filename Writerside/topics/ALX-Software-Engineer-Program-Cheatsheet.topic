@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="ALX-Software-Engineer-Program-Cheatsheet"
+       title="ALX Software Engineer Program Cheatsheet"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <p>
+        👉🏽 This page is your go-to resource once you attended the Let’s Talk Session or watched the recording.
+    </p>
+    <p>
+        Here, you’ll find practical tips, engaging tutorials, and reliable links to help you navigate through your
+        journey with ease, in addition to what discussed during the call
+    </p>
+    <procedure id="time-management" title="Time Management">
+        <step>
+            Read about effective time management strategies in this insightful article:
+            <a href="https://discord.com/channels/1148581179084243054/1218914698964107344">Time Management Article</a>
+        </step>
+        <step>
+            <a href="https://www.youtube.com/playlist?list=PLyYhUzEei28N9wIpCrHXPmC1MEs3NpRnT">
+                Watch curated playlists for time management tips
+            </a>
+        </step>
+    </procedure>
+    <procedure id="task-prioritization-and-project-efficiency" title="Task Prioritization and Project Efficiency">
+        <step>
+            Learn how to prioritize tasks and approach projects efficiently
+            <a href="https://www.youtube.com/watch?v=5qEiBPiTufw">Project and Coding Efficiency Tutorial</a>
+        </step>
+        <step>
+            Decide which are the prioritary tasks for your day (a realistic number, ex. 3) and concentrate on completing
+            those
+        </step>
+    </procedure>
+    <procedure id="navigating-projects" title="Navigating Projects">
+        <p>Navigate your projects effectively with these steps</p>
+        <step>Check Learning Objectives.</step>
+        <step>Review foundational concepts.</step>
+        <step>Utilize available resources.</step>
+        <step>Explore YouTube tutorials for visual learning.</step>
+    </procedure>
+    <procedure id="_actively_participating_in_pl_ds_and_find_peers_to_work_with"
+               title="🟢 Actively participating in PLDs and find peers to work with">
+        <p>
+            Here some suggetions from your colleagues: 1. Take the initiative and organize a PLD yourself - you just
+            need to share an online meeting link, with suggested time, date and topic and invite your peers to join 2.
+            Reach out to a peer in another Cohort who already did the project, to ask them if they want to participate
+            in the PLDs 3. Engage on your Discord Cohort channel (ex. #cohort19 ) by asking or answering a question, or
+            sharing your knowledge or experience - Find friends before colleagues!
+        </p>
+    </procedure>
+    <procedure id="_fuelling_motivation" title="🟢 Fuelling motivation">
+        <p>
+            If it’s true that Motivation comes from within, it is your daily job to nurture it! Fortunately, you do not
+            have to do it alone! You can benefit from a thriving Community of people! Hereunder you can find a selection
+            of interviews and session recordings that can help you fuel your motivation and carry on:
+        </p>
+
+        <p>
+            Graduates unplugged: the story of Peter and Rose who speak about how they face a problem they haven’t
+            encountered before, how the research and handle anxiety - watch their interview
+        </p>
+        <video src="https://www.youtube.com/watch?v=q7st1R0mp4Y"/>
+        <video src="https://www.youtube.com/watch?v=KbAWy_8l-Wo"/>
+        <p>
+            From Doubt to Determination: Yassir was a C13 learner who nearly gave up on graduating because he was
+            feeling hopeless. The help of some of his colleagues helped him to find strenght and continue his journey:
+            he finally graduated with flying colours.
+            <a href="https://www.canva.com/design/DAGCAXp_Lp8/ZahDTlS7DNOILy8WhFJn0A/view">
+                <format color="DarkOrange">Read their interview</format>
+            </a>
+        </p>
+        <p>
+            If you sometimes wonder if is it all worthy, Terry’s story will clear your sight on where the Program can
+            lead you to: thanks to her ability in the Portfolio Project and in showcasing her skills, she found her
+            first entry-level job as a back-end development days after graduation as part of Cohort 12.
+            <a href="https://www.youtube.com/live/iasv358Fi2c">
+                <format color="DarkOrange">Watch her interview here</format>
+            </a>
+        </p>
+    </procedure>
+    <procedure id="_technical_issues_" title="💻Technical Issues💻">
+        <deflist>
+            <def title="🔵 Sandbox Troubleshooting: Solve Sandbox issues with these tutorials">
+                <video src="https://www.youtube.com/watch?v=AEoaecrqvyA"/>
+                <video src="https://www.youtube.com/watch?v=G7P8Dj97kQg"/>
+                <video src="https://www.youtube.com/watch?v=9QYG8uVNZdU"/>
+            </def>
+            <def title="🔵 SSH and Servers: Understand SSH and server concepts">
+                <video src="https://www.youtube.com/watch?v=lsTMooaxITY"/>
+            </def>
+            <def title="🔵 Checker Explained: Decode the Checker in under a minute">
+                <video src="https://www.youtube.com/watch?v=mC00OIq63eI"/>
+            </def>
+            <def title="🔵 C Navigation: Clear doubts in C navigation with this 7-minute tutorial">
+                <video preview-src="yt.png" src="https://www.youtube.com/watch?v=ZbHf1b3xduo"/>
+            </def>
+            <def title="🔵 Ubuntu Setup: Set up Ubuntu 20.04 Windows Subsystem for Linux easily">
+                <video src="https://www.youtube.com/watch?v=J24j1Di-Rhc"/>
+            </def>
+            <def title="🔵 Git SSH Authentication: Learn about Git SSH authentication with this demo">
+                <video src="https://www.youtube.com/watch?v=X8Mp-s6ZQVo"/>
+            </def>
+        </deflist>
+    </procedure>
+    <deflist>
+        <def title="🔌Offline Learning and Coding🔌">
+            <p>No stable internet access? No problem! Follow these steps:</p>
+            <b>🔵 Download project materials for offline access</b>
+            <p>
+                Click
+                <shortcut>ctrl + P</shortcut>
+                or the right tab of the mouse and select “print”, then select “PDF” as
+                destination
+            </p>
+            <p><b>🔵 Set up your local coding environment when accessing the sandbox (for windows or mac OS)</b></p>
+            <p>
+                You can set up a working environment using the following setup to have a similar environment (Ubuntu
+                20.04) like the Sandbox on your local machine. Then you can install your favorite editor vi, vim, emacs
+                on the docker or wsl and also all the libraries, programming languages you need to work on the project.
+                Then you can work on the projects offline. Follow the steps highlighted in this
+                <a href="Using-Docker-WSL-on-your-local-host.topic">
+                    <format color="DarkOrange">Project page</format>
+                </a>
+            </p>
+            <p><b>🔵 Access offline documentation for your programming languages and frameworks</b></p>
+            <p>
+                All languages, frameworks, and libraries can be used offline. Here you can explore Python, C++, Ruby,
+                PHP, Swift, React, Angular, and Django offline documentation:-
+            </p>
+            <list>
+                <li><a href="https://docs.python.org/3/download.html">
+                    <format color="DarkOrange">Python Documentation</format>
+                </a></li>
+                <li><a href="https://en.cppreference.com/w/">
+                    <format color="DarkOrange">C++ Reference</format>
+                </a></li>
+                <li><a href="https://www.ruby-lang.org/en/documentation/">
+                    <format color="DarkOrange">Ruby Documentation</format>
+                </a></li>
+                <li><a href="https://www.php.net/manual/en/">
+                    <format color="DarkOrange">PHP Manual</format>
+                </a></li>
+                <li><a href="https://www.swift.org/documentation/">
+                    <format color="DarkOrange">Swift Documentation</format>
+                </a></li>
+                <li><a href="https://legacy.reactjs.org/docs/getting-started.html">
+                    <format color="DarkOrange">React Documentation</format>
+                </a></li>
+                <li><a href="https://v17.angular.io/docs">
+                    <format color="DarkOrange">Angular Documentation</format>
+                </a></li>
+                <li><a href="https://docs.djangoproject.com/en/5.0/">
+                    <format color="DarkOrange">Django Documentation</format>
+                </a></li>
+            </list>
+            <p><b>🔵 Stable Internet Access Alternatives</b></p>
+            <p>
+                If you lack stable internet, consider these options: - Seek places with free Wi-Fi, like bars,
+                libraries, coworking spaces, or university study rooms. - Utilize mobile hotspot or tethering from your
+                smartphone. - Invest in a travel Wi-Fi router for reliable internet access on the go.
+            </p>
+            <p><b>🔵 Collaboration Tools and Backup Solutions</b></p>
+            <p>
+                Work on group projects efficiently using Git for version control. Plan ahead, prioritize tasks, and back
+                up your work regularly to avoid data loss during internet outages.
+            </p>
+            <p><b>🔵 Alternative Devices</b></p>
+            <p>
+                Utilize tablets or cloud services like DigitalOcean if you lack a PC and follow Youssef’s advises (on
+                Discord as <i>@youssef.charif.hamidi_070222): I downloaded a working version of termux on Frandroid
+                because it’s no longer available on the Play store, so I started to leverage the most power of shell
+                scripting to gain time and energy (because I should mention that I type with only one finger),I also
+                studied well Vim shortcuts which also have been a game changer. The problem I usually encounter is some
+                technologies like MySQL server or Docker aren’t supported in termux (as far as I know) , so for now, I
+                am profiting of DigitalOcean 200$ free creative on our Github Student Pack and work on a rented Ubuntu
+                machine when I don’t have what I need locally on termux (reliable internet connection is a must have in
+                this case)</i>
+            </p>
+            <p>
+                Use your phone, as Abdullah Mohammed Hussain (on Discord as @abdulmohusain) suggests:
+                <a href="https://termux.dev/en/">download termux</a> and connect to your web terminal using
+                <a href="https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-remote-server">ssh.</a>
+            </p>
+        </def>
+    </deflist>
+</topic>

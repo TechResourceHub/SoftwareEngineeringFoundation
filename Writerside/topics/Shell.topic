@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Shell"
+       title="Shell"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+	<b>Manpage</b>
+	<p>
+		Most of Unix systems are managed by using Shell. Just as you need to know a minimum number of words to have a
+		discussion in a language, you need to know a minimum number of commands to be able to easily interact with a
+		system. Unix systems all have, sometimes with slight differences, the same set of commands. While it is not too
+		hard to remember commands, it might be hard to remember all of their options and how exactly to use them. The
+		solution to this is the <code>man command</code>. Let’s go through a part of the ssh one, as there are few
+		elements to know to be able to read a man page:
+	</p>
+	<code-block include-lines="1-23" lang="shell" src="concept/shell"/>
+	<p>Some tips:</p>
+	<list>
+		<li>
+			The <code>NAME</code> will summarize what the command is doing. As it is usually super short, you might want
+			to look at <code>DESCRIPTION</code> (bellow) if ever it does not gives clear enough information
+		</li>
+		<li>
+			The <code>SYNOPSIS</code> will help you to understand the structure of the command
+			<list>
+				<li>A shell command usually have this format: <code>command options parameters</code></li>
+				<li>Options inside <code>[]</code> are optional</li>
+				<li>The string without <code>[]</code> are mandatory</li>
+			</list>
+		</li>
+		<li>
+			<code>ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface] [-b bind_address] [-c cipher_spec] [-D
+				[bind_address:]port]</code>
+			<list>
+				<li>
+					<code>ssh</code> is mandatory
+					<list>
+						<li><code>[-46AaCfGgKkMNnqsTtVvXxYy]</code> is optional</li>
+						<li>
+							<code>[-B bind_interface] [-b bind_address] [-c cipher_spec] [-D
+								[bind_address:]port]</code> is optional
+						</li>
+					</list>
+				</li>
+			</list>
+		</li>
+	</list>
+
+	<b>COMMANDS</b>
+	<p>Here is the (non-exhaustive) list of commands & concepts you should master to be verbose with Unix systems:</p>
+    <code-block include-lines="25-89" lang="shell" src="concept/shell"/>
+    <b>SHORTCUTS</b>
+    <p>Some handy shortcuts</p>
+    <code-block include-lines="91-106" lang="shell" src="concept/shell"/>
+
+</topic>

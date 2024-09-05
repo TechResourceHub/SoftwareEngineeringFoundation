@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Git-and-Github-cheat-sheet-Everything-in-less-than-30-seconds"
+       title="Git and Github cheat sheet - Everything in less than 30 seconds"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <procedure id="create_and_setup_a_new_repository_in_15_seconds"
+               title="Create and setup a new repository in 15 seconds">
+        <p>
+            Go to <a href="https://github.com/">Github</a>, log-in and find the green button to create a new repository.
+            Click on it.
+        </p>
+        <p>
+            You should see this:
+        </p>
+        <img alt="image_63.png" border-effect="rounded" src="image_63.png"/>
+        <p>
+            Fill in the repository <code>name</code>, and the <code>description</code> and click on the green button
+            “ <b>Create repository</b> ”. Do not initialize this repository with a README.
+        </p>
+        <p>You should see this now:</p>
+        <img alt="image_64.png" border-effect="rounded" src="image_64.png"/>
+        <p>Now in your computer’s terminal, create the directory that will contain your code and <code>cd</code> into
+            it:</p>
+        <img alt="image_65.png" border-effect="rounded" src="image_65.png"/>
+        <p>Now let’s setup our repository, and <code>push</code> a very simple README file:</p>
+        <img alt="image_66.png" border-effect="rounded" src="image_66.png"/>
+        <p>
+            Now if you refresh your repository page on GitHub, you should see the <code>README.md</code> file there:
+        </p>
+        <img alt="image_67.png" border-effect="rounded" src="image_67.png"/>
+        <p>
+            On your computer, you should have a <code>.git</code> directory inside your directory.
+        </p>
+        <img alt="image_68.png" border-effect="rounded" src="image_68.png"/>
+        <p>All done.</p>
+    </procedure>
+
+    <procedure id="add_new_versions_of_files_and_commit_in_5_seconds" title="Add new (versions of) files and commit in 5 seconds
+">
+        <p>
+            After working on your project, you can add, commit and push new and modified files to your GitHub, with 3
+            commands:
+        </p>
+        <code-block lang="bash">
+            git add [file(s) to add]
+            git commit -m [A meaningful commit message]
+            git push
+        </code-block>
+        <p>Here’s an example. Let’s say we created a <code>main.c</code> file, and we want to push it:</p>
+        <img alt="image_69.png" border-effect="rounded" src="image_69.png"/>
+        <p>Now on GitHub, we can see that the file was correctly pushed: </p>
+        <img alt="image_70.png" border-effect="rounded" src="image_70.png"/>
+    </procedure>
+</topic>

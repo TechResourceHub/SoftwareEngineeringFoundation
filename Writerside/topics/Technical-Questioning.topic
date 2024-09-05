@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Technical-Questioning"
+       title="Technical Questioning"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <procedure>
+        <p>
+            Being a software engineer means constant learning and questioning. Whether you’re a newbie developer or an
+            experienced one, you are bound to find yourself banging your head against a wall, trying to figure out why
+            the program you just wrote is not working the way you want.
+        </p>
+        <step>
+            To become a better developer, there are <b>two essential skills</b> you need:
+            <list>
+                <li>
+                    <b>Find answers to your questions:</b> Manual pages and documentation usually contain apt
+                    explanations. posting a question without doing your homework is disrespectful to the community, and
+                    other developers will instantly see whether you really need their help or are just fishing for
+                    somebody to do the heavy lifting for you;
+                </li>
+                <li>
+                    <b>Ask good technical questions:</b> The better you express your inquiry to others, the more
+                    effective they will respond to you.
+                </li>
+            </list>
+        </step>
+        <deflist>
+            <def title="How to ask good technical questions">
+                <list>
+                    <li><b>Sum up your question in a title:</b> this will act as a heading for your question.</li>
+                    <li><b>Provide context:</b> this helps people understand your question better because they’ll know
+                        what situation you’re dealing with and any parameters that might affect how they answer. It
+                        would also help to mention the project and task number that you need assistance with.
+                    </li>
+                    <li><b>Provide code sample:</b> include a minimal reproducible example if your question depends on
+                        code. It should be minimal and have no irrelevant bits of code. Only show code that directly
+                        affects the example’s completion and the issue at hand.
+                    </li>
+                    <li><b>Avoid using screenshots:</b> typing the question builds your confidence to explain yourself
+                        in text, a very important soft-skill.
+                    </li>
+                    <li><b>Share what you’ve already tried:</b> Your last attempt may be one tiny step away from fixing
+                        the problem. Without listing what you’ve tried, people will have to debug the problem from the
+                        very start.
+                    </li>
+                    <li><b>Format, Lint, and Document Your Code:</b> No one wants to read code that is all on the same
+                        line with bad indentation, variable naming inconsistencies, or bad style in general. Follow
+                        popular conventions if possible. Document your code. When sending code in slack, format it to
+                        appear as code.
+                    </li>
+                    <li><b>Grammar-Check Your Question:</b> questions with grammatical errors are hard to decipher. This
+                        makes it hard to read and limits the number of people that can help you.
+                    </li>
+                    <li><b>Keep track of your question:</b> Once you ask a question and you get an answer, don’t just
+                        desert the whole thing. Don’t just ghost the people that are trying to help you. Provide
+                        feedback. Tell them what worked, what didn’t work, and why. When your question has been
+                        answered, edit the original message and add: ✅ Solved.
+                    </li>
+                    <li><b>Be humble:</b> you won’t always get cheerful, welcoming, or happy responses. People have
+                        lives in which they could be facing problems. If you push people too much, they may start to
+                        ignore you or delete their responses altogether. Respect people’s privacy, and give them space.
+                    </li>
+                </list>
+            </def>
+            <def title="Why you should ask and answer technical questions">
+                <p><b>You learn how to ask questions:</b> A well-crafted question that ignites a helpful discussion and
+                    uncovers brilliant answers is often rated as highly as the best-given answer.</p>
+
+                <p><b>You will gain a better understanding of the problem:</b> When you pose a question, you will be
+                    asked to think and explain your reasoning. As a result, you will examine and assess your issue while
+                    asking questions, which may lead to you discovering the solution.</p>
+
+                <p><b>You learn by answering questions:</b> Explaining something that you already know to others makes
+                    your knowledge stronger and often uncovers new knowledge. When you write an answer to a question,
+                    you try to make it as clear and comprehensive as possible. Because of this attention to detail, you
+                    will often get back to something you did not pay initial attention to, totally forgot, or never knew
+                    in the first place.</p>
+
+            </def>
+        </deflist>
+    </procedure>
+    <procedure id="technical-questions-samples" title="Technical questions samples">
+        <deflist>
+            <def title="Example 1: Python Script Not Printing Output">
+                <p><b>Title:</b> Why is my Python script not printing any output?</p>
+
+                <p><b>Message:</b> Hey @cohortxmentor, I’m working on a project to automate data entry from an Excel
+                    file into a database (Project XYZ, Task #45). I’m using Python to read the Excel file and print each
+                    row to the console, but the script runs without errors and doesn’t print anything. Can someone help
+                    me figure out why?</p>
+
+                <p><b>Code:</b></p>
+                <code-block lang="python">
+                    import pandas as pd
+
+                    def readexcel(filepath):
+                    df = pd.read_excel(filepath)
+                    for index, row in df.iterrows():
+                    print(row)
+
+                    filepath = ‘data.xlsx’
+                    readexcel(filepath)
+                </code-block>
+
+                <p><b>What I’ve Tried:</b></p>
+                <list>
+                    <li>I checked that the file ‘data.xlsx’ exists in the same directory as the script.</li>
+                    <li>I confirmed that the file is not empty and contains data.</li>
+                    <li>I added print statements before and after the read_excel function call to ensure the script is
+                        running.
+                    </li>
+                </list>
+
+                <p>I appreciate any guidance or suggestions. Thanks!</p>
+
+            </def>
+            <def title="Example 2: JavaScript Function Returning Undefined">
+                <p><b>Title:</b> Why is my JavaScript function returning undefined?</p>
+
+                <p><b>Message:</b> Hello @cohortxmentor, I’m building a web app that calculates the total price of items
+                    in a shopping cart (Project ABC, Task #10). I wrote a function to sum the prices, but it keeps
+                    returning undefined. Any ideas on what might be wrong?</p>
+
+                <p><b>Code:</b></p>
+                <code-block lang="javascript">
+                    function calculateTotal(cart) {
+                    let total = 0;
+                    for (let i = 0; i &lt; cart.length; i++) {
+                    total += cart[i].price;
+                    }
+                    return total;
+                    }
+
+                    let cart = [
+                    { item: 'Apple', price: 1.0 },
+                    { item: 'Banana', price: 0.5 }
+                    ];
+
+                    console.log(calculateTotal(cart));
+                </code-block>
+
+                <p><b>What I’ve Tried:</b></p>
+                <list>
+                    <li>Verified that the cart array is correctly defined and contains objects with item and price
+                        properties.
+                    </li>
+                    <li>Added console.log statements inside the loop to check the values being summed.</li>
+                </list>
+
+                <p>Thanks in advance for your help!</p>
+
+            </def>
+
+            <def title="Example 3: SQL Query Not Returning Expected Results">
+                <p><b>Title:</b> Why is my SQL query not returning the expected results?</p>
+
+                <p><b>Message:</b> Hi @cohortxmentor, I’m working on a task to fetch user data based on their last login
+                    date (Project DEF, Task #20). My query should return users who logged in within the last 30 days,
+                    but it seems to return all users. Can someone point out what I’m doing wrong?</p>
+
+                <p><b>Code:</b></p>
+                <code-block lang="sql">
+                    SELECT user_id, username, last_login
+                    FROM users
+                    WHERE last_login >= DATE_SUB(CURDATE(), INTERVAL 30 DAY);
+                </code-block>
+
+                <p><b>What I’ve Tried:</b></p>
+                <list>
+                    <li>Checked that the last_login column is in DATE format.</li>
+                    <li>Ran <code>SELECT CURDATE()</code> to confirm the current date is correct.</li>
+                    <li>Executed the query with different date intervals to test the logic.</li>
+                </list>
+
+                <p>Any insights would be greatly appreciated. Thanks!</p>
+
+            </def>
+        </deflist>
+    </procedure>
+
+</topic>

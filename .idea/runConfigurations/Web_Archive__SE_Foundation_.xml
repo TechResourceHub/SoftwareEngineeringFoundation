@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Web Archive (SE-Foundation)" type="StardustRunConfiguration" factoryName="save-as-zip">
+    <option name="folderPath" value="$PROJECT_DIR$" />
+    <option name="instanceId" value="SE-Foundation" />
+    <option name="instanceName" value="SE-Foundation" />
+    <method v="2" />
+  </configuration>
+</component>

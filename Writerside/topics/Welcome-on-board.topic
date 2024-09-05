@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Welcome-on-board"
+       title="Welcome on board"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+
+	<deflist>
+		<def id="concepts" title="Concepts">
+			<i>For this project, we expect you to look at these concepts:</i>
+			<list>
+				<li>
+					<a href="Web-Stack-Portfolio-Project-Criteria.topic">
+						<format color="DarkOrange">
+							Web Stack Portfolio Project Criteria
+						</format>
+					</a>
+				</li>
+				<li>
+					<a href="Web-Stack-Portfolio-Project-Criteria.topic">
+						<format color="DarkOrange">
+							Web Stack Portfolio Project Criteria
+						</format>
+					</a>
+				</li>
+			</list>
+		</def>
+	</deflist>
+
+
+</topic>

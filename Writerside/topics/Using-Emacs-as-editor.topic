@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Using-Emacs-as-editor"
+       title="Using Emacs as editor"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+	<p>
+		Read the page <a href="https://www.gnu.org/software/emacs/tour/">A Guided Tour of Emacs from the GNU</a>, and go
+		through the Emacs tutorial: Open <code>emacs</code> by typing emacs in your shell. Then type
+		<shortcut>C-h t</shortcut>
+		to open the tutorial and go through it.
+	</p>
+</topic>

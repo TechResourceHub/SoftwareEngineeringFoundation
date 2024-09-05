@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Load-balancer"
+       title="Load balancer"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+	<deflist>
+		<def title="Load balancer">
+			<p>
+				Ever wonder how Facebook, Linkedin, Twitter and other web giants are handling such huge amounts of
+				traffic? They don’t have just one server, but tens of thousands of them. In order to achieve this, web
+				traffic needs to be distributed to these servers, and that is the role of a load-balancer.
+			</p>
+			<img alt="image_15.png" border-effect="rounded" src="image_15.png"/>
+		</def>
+		<def title="Readme:">
+			<list>
+				<li>
+					<a href="https://www.thegeekstuff.com/2016/01/load-balancer-intro/">
+						<format color="DarkOrange">
+							How does Software and Hardware Load Balancer Work?
+						</format>
+					</a>
+				</li>
+				<li>
+					<a href="https://community.f5.com/kb/technicalarticles/intro-to-load-balancing-for-developers-–-the-algorithms/273759">
+						<format color="DarkOrange">
+							Intro to Load Balancing for Developers – The Algorithms
+						</format>
+					</a>
+				</li>
+			</list>
+		</def>
+	</deflist>
+
+</topic>

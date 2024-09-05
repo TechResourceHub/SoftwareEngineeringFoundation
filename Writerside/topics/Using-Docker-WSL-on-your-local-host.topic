@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Using-Docker-WSL-on-your-local-host"
+       title="Using Docker &amp; WSL on your local host"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <p>
+        In this software engineering training, all projects are designed to be done in the Ubuntu 20.04 Linux
+        environment.
+    </p>
+    <p>
+        There are several ways of acquiring an Ubuntu 20.04 Linux environment in case your
+        <a href="https://lemp.io/what-is-a-host-operating-system-2/">host operating system</a> is not one:
+    </p>
+
+    <list>
+        <li><code>Dual booting:</code> Install Linux alongside Windows on your computer, allowing you to choose which
+            operating system to use at startup.
+        </li>
+        <li><code>Via Windows Subsystem for Linux (WSL):</code> provides a compatibility layer that lets you run Linux
+            binary executables natively on Windows. <b>Recommended.</b></li>
+        <li><code>Via Virtual Machine (VM):</code> allows you to run multiple operating systems and applications on a
+            single physical machine simultaneously.
+        </li>
+        <li><code>Via Linux Docker containers:</code> <b>Recommended.</b></li>
+    </list>
+
+    <deflist>
+        <def title="What is Docker?">
+            <p>Docker is a containerization platform that allows you to package your code and dependencies into isolated
+                containers.</p>
+            <b>What are containers?</b>
+            <p>
+                Containers are lightweight, standalone, executable packages of software that include everything needed
+                to run an application: <code>code, runtime, system tools, system libraries, and settings.</code>
+            </p>
+            <b>How do Docker containers work?</b>
+            <p>
+                When you run a Docker container, Docker creates a lightweight virtual machine that runs your
+                application. The virtual machine is isolated from the host machine (regardless of the type of operating
+                system you use) and from other containers, so each container has its own filesystem, network, and
+                process space.
+            </p>
+            <b>What are the benefits of using Docker?</b>
+            <p>Docker containers offer many benefits, including:</p>
+
+            <list>
+                <li><code>Portability:</code> Docker containers can be run on any machine with Docker installed, making
+                    them easy to deploy and share.
+                </li>
+                <li><code>Reproducibility:</code> Docker containers are reproducible, meaning you can create the exact
+                    same environment on any machine. This helps debug and test your code.
+                </li>
+                <li><code>Isolation:</code> Docker containers isolate your applications from each other and the host
+                    machine, helping to prevent conflicts and security vulnerabilities.
+                </li>
+                <li><code>Efficiency:</code> Docker containers are lightweight and efficient, taking up less space and
+                    resources than traditional virtual machines.
+                </li>
+                <li><code>Scalability:</code> Docker containers are scalable, making it easy to add or remove containers
+                    as needed.
+                </li>
+            </list>
+
+            <b>What is Docker used for?</b>
+            <p>There are many ways to use Docker, but some of the most common tasks include:</p>
+
+            <list>
+                <li><code>Building Docker images:</code> A Docker image is a blueprint for a Docker container. You can
+                    build a Docker image from a Dockerfile, which is a text file that describes the contents of the
+                    image.
+                </li>
+                <li><code>Running Docker containers:</code> Once you have built a Docker image, you can run it as a
+                    Docker container. To do this, you use the <code>docker run</code> command.
+                </li>
+                <li><code>Managing Docker containers:</code> Once you have run a Docker container, you can manage it
+                    using the <code>docker ps</code>, <code>docker stop</code>, and <code>docker start</code> commands.
+                </li>
+                <li><code>Networking Docker containers:</code> Docker containers can communicate with each other using
+                    Docker networks. You can create a Docker network using the <code>docker network create</code>
+                    command.
+                </li>
+                <li><code>Storing Docker images:</code> Docker images can be stored in Docker registries. You can push
+                    and pull Docker images from Docker registries using the <code>docker push</code> and <code>docker
+                        pull</code> commands.
+                </li>
+            </list>
+        </def>
+        <def title="Setting up a development environment in Docker">
+            <p>Your development environment is the hardware and software you use to write code. As a developer, it is
+                usually your responsibility to set up your environment based on the work you will be doing at your new
+                job. As tasks change, you’ll often need to update or reconfigure your environment for new software,
+                packages, or versions.</p>
+
+            <p>Please follow the appropriate guide (PC, Mac, or Linux) to set up your development environment on your
+                operating system.</p>
+
+            <p>We’re always here to help, but it is your responsibility to configure your development machine.</p>
+
+            <p>In order to be successful in this program, your computer needs to be set up in a very specific way. If
+                the setup is correct, you will not waste your time fighting the set up of tools and applications, so you
+                can concentrate on the new material you are learning.</p>
+
+            <p>First, head to the guide for your particular operating system. This will give you an overview of anything
+                in particular you should be aware of for your system.</p>
+
+
+        </def>
+
+        <def title="1. Docker Installation on Windows">
+            <video src="https://www.youtube.com/watch?v=rATNU0Fr8zs"/>
+            <b>Key steps:</b>
+
+            <list type="decimal">
+                <li>Download &amp; install Docker</li>
+                <li>Download &amp; install WSL</li>
+                <li>Enable virtualization</li>
+                <li>Integrate WSL Ubuntu 20.04 with Docker</li>
+                <li>Run Docker</li>
+            </list>
+        </def>
+        <def title="2. Docker Installation on macOS">
+            <video src="https://www.youtube.com/watch?v=qX7nyMijOIo"/>
+            <list type="decimal">
+                <li>
+                    <p>Go to the Docker website: <a href="https://www.docker.com/products/docker-desktop"/></p>
+                    <img alt="image_25.png" border-effect="rounded" src="image_25.png"/>
+                </li>
+                <li>
+                    Click the <code>“Download for Mac”</code> button to download the latest version of Docker Desktop
+                    for Mac.
+                </li>
+                <li>Once the download is complete, double-click the Docker.dmg file to open the installer.</li>
+                <li>
+                    <p>Drag the Docker icon to the Applications folder to install Docker Desktop.</p>
+                    <img alt="image_26.png" border-effect="rounded" src="image_26.png"/>
+                </li>
+                <li>Open Docker Desktop from the Applications folder.</li>
+            </list>
+        </def>
+        <def title="Understanding important concepts about Docker">
+            <list>
+                <li><b>Docker images:</b> A Docker image is a lightweight, standalone, executable package of software
+                    that includes everything needed to run an application: code, runtime, system tools, system
+                    libraries, and settings.
+                </li>
+                <li><b>Docker containers:</b> A Docker container is a runnable instance of a Docker image. It includes
+                    the application code and all of its dependencies, but it runs isolated from other containers on the
+                    same host.
+                </li>
+                <li><b>Dockerfile:</b> A Dockerfile is a text file that contains the instructions for building a custom
+                    Docker image. It tells Docker what software to install, what configuration settings to use, and so
+                    on.
+                </li>
+                <li><b>Docker Hub:</b> Docker Hub is a public registry of Docker images. It allows you to find and share
+                    images with other users.
+                </li>
+                <li><b>Docker Compose:</b> Docker Compose is a tool that allows you to define and run multi-container
+                    Docker applications. It makes it easy to manage complex applications that require multiple
+                    containers.
+                </li>
+            </list>
+        </def>
+        <def title="Important Docker Commands">
+            <list>
+                <li><code>docker pull</code> - This command is used to pull a Docker ubuntu image from a registry.</li>
+                <li><code>docker run</code> - creates and starts a Docker container from an image.</li>
+                <li><code>docker start</code> - is used for containers that have been previously created but are
+                    currently stopped. If you want to create and start a new container in a single step, you can use the
+                    <code>docker run</code> command.
+                </li>
+                <li><code>docker exec</code> - runs a command in a running Docker container.</li>
+                <li><code>docker stop</code> - stops a running Docker container.</li>
+                <li><code>docker ps -a</code> - This command is used to list all of the Docker containers, including
+                    those that are not running.
+                </li>
+                <li><code>docker kill</code> - This command is used to forcefully stop a Docker container.</li>
+                <li><code>docker rm</code> - This command is used to remove a Docker container.</li>
+                <li><code>docker images</code> - This command is used to list all of the Docker images that are stored
+                    on your machine.
+                </li>
+                <li><code>docker search</code> - This command is used to search for Docker images in a registry.</li>
+                <li><code>docker inspect</code> - This command is used to get detailed information about a Docker
+                    container or image.
+                </li>
+                <li><code>docker logs</code> - This command is used to view the logs for a Docker container.</li>
+                <li><code>docker commit</code> - This command is used to create a new Docker image from an existing
+                    container.
+                </li>
+                <li><code>docker push</code> - This command is used to push a Docker image to a registry.</li>
+                <li><code>docker tag</code> - This command is used to tag a Docker image with a new name or identifier.
+                </li>
+                <li><code>docker build</code> - This command is used to build a Docker image from a Dockerfile.</li>
+                <li><code>docker compose</code> - This command is used to run a Docker application that is defined in a
+                    Docker Compose file.
+                </li>
+            </list>
+        </def>
+        <def title="Building Ubuntu 20.04 Docker Image for alx projects">
+            <b>First-Time Setup</b>
+            <list>
+                <li>
+                    <code> docker pull ubuntu:20.04</code> - Pull the ubuntu 20.04 image from docker hub
+                </li>
+                <li>
+                    <code>docker run -it --name my-ubuntu-container ubuntu:20.04</code> - This command is used to run a
+                    Docker ubuntu 20.04 container.
+                </li>
+            </list>
+            <b>How to Use the Container Again</b>
+            <list>
+                <li>
+                    <code>docker start my-ubuntu-containe</code> - starting the container named “my-ubuntu-container”
+                    that was created from the Ubuntu 20.04 image.
+                </li>
+                <li>
+                    <code>docker exec -it my-ubuntu-container /bin/bash</code> - executes the /bin/bash command inside
+                    the my-ubuntu-container container in interactive mode.
+                </li>
+                <li>
+                    <code>docker stop my-ubuntu-container</code> - When you are done and want to stop the
+                    “my-ubuntu-container” container, use the following command.
+                </li>
+            </list>
+        </def>
+        <def title="Windows Subsystem for Linux (WSL)">
+            <p>Windows Subsystem for Linux (WSL) is a feature of Windows that allows you to run Linux command-line tools
+                and applications directly on Windows, without the need for a virtual machine or dual boot setup.</p>
+
+            <p>
+                It is powered by a real Linux kernel, which means that you can run any Linux binary executable on
+                Windows, as long as it is compatible with the x86-64 architecture.
+            </p>
+            <p>
+                WSL is a popular choice for developers who need to use Linux tools and applications on Windows. It is
+                also a good choice for students who are learning Linux, as it allows them to learn Linux without having
+                to install a separate operating system.
+            </p>
+            <b>Benefits of using WSL</b>
+            <list>
+                <li><b>Speed:</b> WSL is much faster than running Linux in a virtual machine, as it uses the native
+                    Windows kernel.
+                </li>
+                <li><b>Convenience:</b> WSL is more convenient than dual booting, as you can run Linux tools and
+                    applications alongside your Windows applications.
+                </li>
+                <li><b>Compatibility:</b> WSL is compatible with a wide range of Linux tools and applications.</li>
+                <li><b>Flexibility:</b> WSL can be used for a variety of purposes, including development, education, and
+                    research.
+                </li>
+            </list>
+            <b>Setting up WSL in Windows OS</b>
+            <video src="https://www.youtube.com/watch?v=J24j1Di-Rhc"/>
+            <a href="https://learn.microsoft.com/en-us/windows/wsl/install">
+                Microsoft installation tutorial: How to install Linux on Windows with WSL
+            </a>
+            <list>
+                <li>
+                    <p>Enable WSL. Open PowerShell as an administrator and run the following command:</p>
+                    <img alt="image_27.png" border-effect="rounded" src="image_27.png"/>
+                </li>
+                <li>
+                    <p>Enable Virtual Machine feature</p>
+                    <code-block lang="shell">
+                        dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+                    </code-block>
+                    <p>Download the Linux kernel update package</p>
+                    <code-block lang="console">
+                        wsl.exe --install
+                    </code-block>
+                    <p>or</p>
+                    <code-block lang="shell">
+                        wsl.exe --update
+                    </code-block>
+                    <img alt="image_28.png" border-effect="rounded" src="image_28.png"/>
+                    <code-block lang="shell">
+                        dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+                    </code-block>
+                </li>
+                <li>
+                    <p>
+                        <b>Install a Linux distribution</b>. Open the Microsoft Store and search for <code>Linux</code>.
+                        Select the Linux distribution that you want to install and click the “Get” button. Once the
+                        distribution is installed, click the “Launch” button to start it.
+                    </p>
+                    <img alt="image_29.png" border-effect="rounded" src="image_29.png"/>
+                </li>
+                <li>
+                    <p>Create a user account for the Linux distribution. When you start the Linux distribution for the
+                        first time, you will be prompted to create a user account. Enter a username and password for
+                        your account.</p>
+                    <img alt="image_30.png" border-effect="rounded" src="image_30.png"/>
+                </li>
+                <li>
+                    Start using WSL! Once you have created a user account, you can start using WSL to run Linux commands
+                    and applications. To do this, open a PowerShell or Command Prompt window and type <code>wsl</code>.
+                    This will
+                    start a new Linux terminal session.
+                </li>
+            </list>
+            <b>Tips for using WSL</b>
+            <list>
+                <li>You can install multiple Linux distributions on Windows. To do this, simply repeat the installation
+                    process for each distribution.
+                </li>
+                <li>You can set the default Linux distribution. To do this, open the Settings app and go to “Apps” >
+                    “Features” > “Windows Subsystem for Linux”. Under “Default distribution”, select the distribution
+                    that you want to set as the default.
+                </li>
+                <li>You can access Windows files from WSL. To do this, use the <code>/mnt/c</code> directory. For
+                    example, to access the C:\Windows directory, you would use the <code>/mnt/c/Windows</code>
+                    directory.
+                </li>
+                <li>You can run Windows applications from WSL. To do this, use the <code>wsl --run</code> command. For
+                    example, to run the notepad.exe application, you would use the <code>wsl --run notepad.exe</code>
+                    command.
+                </li>
+            </list>
+        </def>
+        <def title="Extra Resources">
+
+            <list>
+
+                <li>
+                    <b>Why Do So Many Software Engineers Use Linux?</b>
+                    <video src="https://www.youtube.com/watch?v=otDOHt_Jges"/>
+                </li>
+                <li>
+                    <a href="https://www.simplilearn.com/tutorials/docker-tutorial/getting-started-with-docker">
+                        Learn Docker to the next level
+                    </a>
+                </li>
+                <li>
+                    <a href="https://docker-curriculum.com/">Docker tutorial doc</a>
+                </li>
+                <li>
+                    <video src="https://www.youtube.com/watch?v=AEoaecrqvyA"/>
+                </li>
+            </list>
+        </def>
+    </deflist>
+
+
+</topic>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="The-Essential-Cheat-Sheet-for-Open-Source-Projects-ALXLevelUp"
+       title="The Essential Cheat Sheet for Open Source Projects #ALXLevelUp"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <procedure id="open_source_projects_a_beginner_s_guide" title="Open Source Projects: A Beginner’s Guide">
+        <deflist>
+            <def title="What is Open Source?">
+                <p>
+                    Open source software is a software with source code that anyone can inspect, modify, and enhance.
+                    Anyone who has Internet access can benefit from Open Source Software.
+                </p>
+            </def>
+            <def title="Basics of Open Source Projects">
+                <p>
+                    Popular Open Source Platforms - <a href="https://github.com/">GitHub</a> - <a
+                        href="https://gitlab.com/">GitLab</a> - <a href="https://bitbucket.org/">Bitbucket</a>
+                </p>
+                <p>
+                    Keywords when starting with Open Source - (e.g. forking, cloning, committing, pushing, opening pull
+                    request)
+                </p>
+                <list>
+                    <li>
+                        <b>Open Source Communities:</b> groups of developers and non-coders who collaborate on open
+                        source projects
+                    </li>
+                    <li>
+                        <b>Source Code:</b> The original code which can be viewed, modified and distributed under an
+                        open source license
+                    </li>
+                    <li>
+                        <b>License:</b> Terms under which Open Source Software can be used, modified, and distributed
+                    </li>
+                    <li>
+                        <b>Contribute:</b> it can acquire the form of debugging, fixing codes, making corrections to
+                        project's documents. Anyone can contribute to Open Source Projects regardless of their coding
+                        skills
+                    </li>
+                    <li>
+                        <b>Forking:</b> it is a copy of a repository owned by an organization, community or user: it
+                        allows the user to experiment, make changes in the forked repository and then make a pull
+                        request to the original project for your changes to be included
+                    </li>
+                    <li>
+                        <b>Cloning:</b> creates a copy of a repository from a remote server to a local one
+                    </li>
+                    <li><b>Tag:</b> key word through which to look for projects</li>
+                    <li>
+                        Key components of Open Source Projects (e.g. Maintainers, contributors, source code repository,
+                        project license!)
+                    </li>
+                </list>
+            </def>
+            <def title="Exploring Open Source Projects">
+                <i>Finding Projects:</i>
+                <p>
+                    Choose a project based on your skill level and interests: you can search them by programming
+                    language, category, or tags:
+                </p>
+                <i>List of categories to begin looking for your next project:</i>
+                <p><b>
+                    Programming Languages, Frameworks and Libraries, Data Engineering, DevOps and Cloud, Web
+                    Development, Mobile Development, Game Development, Security, Miscellaneous
+                </b></p>
+                <i>List of tags you can use to look to exercise:</i>
+                <p>
+                    <b>
+                        ‘good-first-issue’ ‘beginner-friendly’ ‘first-timers-only’ ‘easy-pick’ ‘starter-project’
+                        ‘newbie-friendly’ ‘intermediate’ ‘medium-difficulty’ ‘improvement-needed’ ‘enhancement’
+                        ‘feature-request’ ‘bug-fix’ ‘up-for-grabs’ ‘help-wanted’
+                    </b>
+                </p>
+                <i>Explore curated lists</i>
+                <list>
+                    <li><a href="https://www.codetriage.com/"/></li>
+                    <li><a href="https://www.firsttimersonly.com/"/></li>
+                    <li><a href="https://up-for-grabs.net/"/></li>
+                    <li><a href="https://github.com/MunGell/awesome-for-beginners"/></li>
+                    <li><a href="https://firstcontributions.github.io/"/></li>
+                    <li><a href="https://codetribute.mozilla.org/"/></li>
+                    <li><a href="https://ovio.org/how-it-works"/></li>
+                    <li><a href="https://github.com/sereneblue/awesome-oss"/></li>
+                    <li><a href="https://skillcrush.com/blog/what-is-open-source/"/></li>
+                </list>
+            </def>
+            <def title="Getting Started">
+                <list type="decimal">
+                    <li>Creating a <a href="https://github.com"/> account</li>
+                    <li>Familiarizing with <b>Git</b> and <b>Version Controlling</b></li>
+                </list>
+                <b>Getting Involved with Open Source</b>
+                <p>You can either:</p>
+                <list>
+                    <li>Creating your own Open Source Project</li>
+                    <li>Contributing to existing Open Source Project</li>
+                </list>
+                <p><i>As soon as you land to an Open Source Project</i>. Make sure to check out:</p>
+                <list>
+                    <li><b>The README file:</b> it contains all you need to know about the project, and where to find
+                        the information
+                    </li>
+                    <li><b>The Code of Conduct:</b> it includes all the rules that the Community will abide by</li>
+                    <li><b>The CONTRIBUTING.md:</b> all you need to know before you start contributing in a project. In
+                        this document you normally find out if the project accepts contributions, how project's
+                        maintainers prefers <b>Commit Messages</b> and <b>Pull Requests</b> to be formulated.
+                    </li>
+                    <li><b>LICENSE</b></li>
+                </list>
+                <i>
+                    Now, you should be clear on the project’s goals and components, teams, and rules of behaviour and
+                    contribution.
+                </i>
+                <p><b>Where to go next?</b></p>
+                <p>
+                    Land on <b>“Issues”</b> and browse through them to understand where you can help the project with -
+                    issues that need immediate help are usually tagged with the tag help-wanted . Once you find the
+                    issue you are interested in solving, you can start interacting with the Maintainer to take up the
+                    issue, as well as asking all the questions you need.
+                </p>
+                <i>Explore some of the most commonly types of Contributions</i>
+                <list>
+                    <li>Reporting bugs and issues</li>
+                    <li>Writing documentations</li>
+                    <li>Fixing bugs</li>
+                    <li>Adding features</li>
+                    <li>Leading development efforts</li>
+                    <li>Documentation and translations</li>
+                    <li>Design and user interface</li>
+                    <li>Organizing and event planning</li>
+                    <li>Code review and testing</li>
+                </list>
+            </def>
+            <def title="How to make a contribution?">
+                <b>Follow these steps</b>
+                <img alt="image_31.png" border-effect="rounded" src="image_31.png"/>
+                <p>image from <a href="https://skillcrush.com/blog/what-is-open-source/"/></p>
+                <i>What can you do to keep a respectful and inclusive environment?</i>
+                <list>
+                    <li>Read and abide by project’s documentation, coding standards, and contribution process. Respect
+                        the existing community’s norms and etiquette, including how to report, respond to comments,
+                        making commits and pulling requests
+                    </li>
+                    <li>Open Source is about collaborating with others: Be polite, constructive, and responsive to
+                        feedback from maintainers and other contributors
+                    </li>
+                    <li>Start small—keep doing it—think big: Start by tackling small tasks and making small pull
+                        requests, then make incremental changes.
+                        Keep your documentation clear, preferably by using markdowns
+                    </li>
+                </list>
+            </def>
+            <def title="Benefits of Contributing to Open Source">
+                <list>
+                    <li>
+                        <p>Enhance your coding skills and learn from experienced developers by:</p>
+                        <list>
+                            <li>Understanding of Git and GitHub</li>
+                            <li>Getting familiar with other version controll systems (e.g. SVN, Mercurial</li>
+                            <li>Understanding of software development processes and concepts and datastructures</li>
+                            <li>Increase knowledge of common programming concepts and data structures</li>
+                        </list>
+                    </li>
+                    <li>Improve your communication skills and problem solving</li>
+                    <li>Get confident in working in teams and collaborate with others, possibly through digital
+                        collaboration tools (e.g., Slack, Trello, Asana)
+                    </li>
+                    <li>Understanding of project management and issue tracking</li>
+                    <li>Build a strong portfolio and showcase your work to potential employers</li>
+                    <li>Gain valuable experience in collaboration and communication</li>
+                    <li>Become part of a global developer community</li>
+                    <li>Give back to the software development world</li>
+                </list>
+            </def>
+        </deflist>
+    </procedure>
+
+</topic>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Web-Stack-Portfolio-Project-Criteria"
+       title="Web Stack Portfolio Project Criteria"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+	<chapter id="overview" title="Overview">
+		<p>
+			This paper describes the requirements for the web stack portfolio project.
+		</p>
+		<procedure id="project-scope" title="Project Scope">
+			<step>Front-end only</step>
+			<step>Back-end only</step>
+			<step>Full-stack application</step>
+			<step>Mobile applications</step>
+			<step>AI projects</step>
+		</procedure>
+		<format color="Bisque" style="italic">
+			Static sites are not permitted; projects must demonstrate dynamic functionality.
+		</format>
+		<procedure id="timeline" title="TimeLine">
+			<step>
+				Projects built before the designated time are not acceptable. Learners must adhere to the specified
+				timeframe the curriculum provides for project development. Learners will have one month to develop, and
+				present their project.
+			</step>
+		</procedure>
+		<procedure id="git-commit-history" title="Git Commit History">
+			<step>
+				Learners must maintain a consistent track record of commits on GitHub. Each commit should be accompanied
+				by a standard commit message, providing clarity on the changes made.
+			</step>
+		</procedure>
+		<procedure id="group-contribution" title="Group Contribution">
+			<step>All project group members are expected to contribute to the codebase actively</step>
+			<step>Contributions should be proportional, ensuring fair distribution of workload among team members</step>
+		</procedure>
+		<format color="Bisque" style="italic">
+			Instances of plagiarism will result in consequences, including disqualification from graduation,
+			disengagement from the program, or a flag from Kimba.
+		</format>
+		<procedure id="framework-flexibility" title="Framework Flexibility">
+			<step>
+				Learners have the freedom to choose any framework they prefer for their project.
+			</step>
+		</procedure>
+	</chapter>
+	<chapter id="front-end-only-projects" title="Front-end-Only Projects">
+		<procedure id="front-end-only">
+			<step>
+				For projects focusing solely on the front end, learners may use mock API tools to simulate backend
+				functionality.
+			</step>
+		</procedure>
+	</chapter>
+	<chapter id="back-end-only-projects" title="Back-end-Only Projects">
+		<procedure id="back-end-only">
+			<step>
+				Projects focusing exclusively on the backend must include comprehensive documentation of API endpoints.
+			</step>
+		</procedure>
+	</chapter>
+	<chapter id="documentation" title="Documentation">
+		<procedure id="documentation-proc">
+			<step>
+				<b>README.md</b> should include setup instructions, usage guidelines, and an overview of the project
+				architecture.
+			</step>
+		</procedure>
+	</chapter>
+	<chapter id="demonstration" title="Demonstration">
+		<procedure id="demonstration-proc">
+			<step>
+				The demonstration should provide insights into the project’s development process and highlight key
+				achievements.
+			</step>
+		</procedure>
+	</chapter>
+
+</topic>

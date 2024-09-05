@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildprofiles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd">
+
+    <variables>
+        <primary-color>deep-ocean</primary-color>
+        <color-preset>vivid</color-preset>
+        <header-logo>Logo.png</header-logo>
+        <custom-favicons>Logo.png</custom-favicons>
+        <link-color>halloween</link-color>
+        <custom-css>custom.css</custom-css>
+    </variables>
+    <build-profile instance="SE-Foundation">
+        <variables>
+            <noindex-content>false</noindex-content>
+        </variables>
+        <sitemap priority="0.35" change-frequency="daily"/>
+    </build-profile>
+    <footer>
+        <social type="twitter" href="https://twitter.com/ECHOsOdyssey"/>
+        <social type="linkedin" href="https://www.linkedin.com/in/gideon-yebei"/>
+        <link href="#">Blog</link>
+        <link href="https://github.com/Gideon-Yebei">GitHub</link>
+    </footer>
+</buildprofiles>

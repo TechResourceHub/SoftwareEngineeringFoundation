@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="0x0D-Web-stack-debugging-0"
+       title="0x0D. Web stack debugging #0"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+	<procedure id="concepts" title="Concepts" type="choices">
+		<p>For this project, we expect you to look at these concepts:</p>
+		<step>
+			<a href="Network-basics.topic">
+				<format color="DarkOrange">Networking basics</format>
+			</a>
+		</step>
+		<step>
+			<a href="Docker.topic">
+				<format color="DarkOrange">Docker</format>
+			</a>
+		</step>
+		<step>
+			<a href="Web-stack-debugging.topic">
+				<format color="DarkOrange">Web stack debugging</format>
+			</a>
+		</step>
+	</procedure>
+	<procedure id="background_context" title="Background Context">
+		<img alt="debug.png" border-effect="rounded" src="debug.png"/>
+		<p>
+			The Webstack debugging series will train you in the art of debugging. Computers and software rarely work the
+			way we want (that’s the “fun” part of the job!).
+		</p>
+		<p>
+			Being able to debug a webstack is essential for a Full-Stack Software Engineer, and it takes practice to be
+			a master of it.
+		</p>
+		<p>
+			In this debugging series, broken/bugged webstacks will be given to you, the final goal is to come up with a
+			Bash script that once executed, will bring the webstack to a working state. But before writing this Bash
+			script, you should figure out what is going on and fix it manually.
+		</p>
+		<p>Let’s start with a very simple example. My server must:</p>
+		<step>have a copy of the <code>/etc/passwd</code> file in <code>/tmp</code></step>
+		<step>have a file named <code>/tmp/isworking</code> containing the string <code>OK</code></step>
+		<p>Let’s pretend that without these 2 elements, my web application cannot work.</p>
+		<p>Let’s go through this example and fix the server.</p>
+		<code-block lang="shell">
+			docker run -d -ti ubuntu:14.04
+		</code-block>
+		<code-block lang="shell">
+			Unable to find image 'ubuntu:14.04' locally
+			14.04: Pulling from library/ubuntu
+			34667c7e4631: Already exists
+			d18d76a881a4: Already exists
+			119c7358fbfc: Already exists
+			2aaf13f3eff0: Already exists
+			Digest: sha256:58d0da8bc2f434983c6ca4713b08be00ff5586eb5cdff47bcde4b2e88fd40f88
+			Status: Downloaded newer image for ubuntu:14.04
+			76f44c0da25e1fdf6bcd4fbc49f4d7b658aba89684080ea5d6e8a0d832be9ff9
+		</code-block>
+		<code-block lang="shell">
+			docker ps
+		</code-block>
+		<code-block lang="shell">
+			CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
+			76f44c0da25e ubuntu:14.04 "/bin/bash" 13 seconds ago Up 12 seconds infallible_bhabha
+		</code-block>
+		<code-block lang="shell">
+			docker exec -ti 76f44c0da25e /bin/bash
+		</code-block>
+		<code-block lang="shell">
+			root@76f44c0da25e:/# ls /tmp/
+			root@76f44c0da25e:/# cp /etc/passwd /tmp/
+			root@76f44c0da25e:/# echo OK > /tmp/isworking
+			root@76f44c0da25e:/# ls /tmp/
+			isworking passwd
+			root@76f44c0da25e:/#
+		</code-block>
+		<p>Then my answer file would contain:</p>
+		<code-block lang="shell">
+			cat answerfile
+		</code-block>
+		<code-block lang="shell">
+			#!/usr/bin/env bash
+			# Fix my server with these magic 2 lines
+			cp /etc/passwd /tmp/
+			echo OK > /tmp/isworking
+		</code-block>
+		<p>
+			Note that as you cannot use interactive software such as <code>emacs</code> or <code>vi</code> in your Bash
+			script, everything needs to be done from the command line (including file edition).
+		</p>
+	</procedure>
+	<procedure id="installing_docker" title="Installing Docker" type="choices">
+		<p>
+			If you would like to have Docker so that you can experiment with it and/or solve this problem locally, you
+			can install it on your machine, your Ubuntu 14.04 VM, or your Ubuntu 16.04 VM if you upgraded.
+		</p>
+		<step>
+			<a href="https://docs.docker.com/desktop/install/mac-install/">
+				<format color="DarkOrange">Mac OS</format>
+			</a>
+		</step>
+		<step>
+			<a href="https://docs.docker.com/desktop/install/windows-install/">
+				<format color="DarkOrange">Windows</format>
+			</a>
+		</step>
+		<step>
+			<a href="https://www.liquidweb.com/blog/how-to-install-docker-on-ubuntu-14-04-lts/">
+				<format color="DarkOrange">Ubuntu 14.04 LTS</format>
+			</a>
+			(Note that Docker for Ubuntu 14 is deprecated and you will have to make some adjustments to the instructions
+			when installing)
+		</step>
+		<step>
+			<a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04">
+				<format color="DarkOrange">Ubuntu 16.04</format>
+			</a>
+		</step>
+
+	</procedure>
+
+	<procedure id="more_info" title="More Info">
+		<b>Resources</b>
+		<tabs>
+			<tab id="man-or-help" title="man or help">
+				<code-block lang="shell">curl</code-block>
+			</tab>
+		</tabs>
+		<b>Requirements</b>
+		<p>
+			<format color="BlueViolet">General</format>
+		</p>
+		<list>
+			<li>Allowed editors: <code>vi, vim, emacs</code></li>
+			<li>All your files will be interpreted on Ubuntu 14.04 LTS</li>
+			<li>All your files should end with a new line</li>
+			<li>A <code>README.md</code> file, at the root of the folder of the project, is mandatory</li>
+			<li>All your Bash script files must be <code>executable</code></li>
+			<li>Your Bash scripts must pass <code>Shellcheck</code> without any error</li>
+			<li>Your Bash scripts must run without error</li>
+			<li>The first line of all your Bash scripts should be exactly <code>#!/usr/bin/env bash</code></li>
+			<li>The second line of all your Bash scripts should be a comment explaining what is the script doing</li>
+		</list>
+	</procedure>
+
+	<chapter id="tasks" title="Tasks">
+		<procedure id="0_give_me_a_page_" title="0. Give me a page!">
+			<p>
+				Be sure to read the
+				<a href="Docker.topic">
+					Docker concept page
+				</a>
+			</p>
+			<p>
+				In this first debugging project, you will need to get
+				<a href="https://en.wikipedia.org/wiki/Apache_HTTP_Server">Apache</a>
+				to run on the container and to return a page containing <code>Hello Holberton</code> when querying the
+				root of it.
+			</p>
+			<b>Example:</b>
+			<code-block lang="shell">
+				docker run -p 8080:80 -d -it holbertonschool/265-0
+			</code-block>
+			<code-block lang="shell">
+				47ca3994a4910bbc29d1d8925b1c70e1bdd799f5442040365a7cb9a0db218021
+			</code-block>
+			<code-block lang="shell">docker ps</code-block>
+			<code-block lang="shell">
+				CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
+				47ca3994a491 holbertonschool/265-0 "/bin/bash" 3 seconds ago Up 2 seconds 0.0.0.0:8080->80/tcp
+				vigilant_tesla
+			</code-block>
+			<code-block lang="shell">
+				curl 0:8080
+			</code-block>
+			<code-block lang="shell">
+				curl: (52) Empty reply from server
+			</code-block>
+			<p>
+				Here we can see that after starting my Docker container, I <code>curl</code> the port <code>8080</code>
+				mapped to the Docker container port <code>80</code>, it does not return a page but an error message.
+				Note that you might also get the error message <code>curl: (52) Empty reply from server.</code>
+			</p>
+			<code-block lang="shell">
+				curl 0:8080
+			</code-block>
+			<code-block lang="shell">
+				Hello Holberton
+			</code-block>
+			<p>
+				After connecting to the container and fixing whatever needed to be fixed (here is your mission), you can
+				see that curling port 80 return a page that contains <code>Hello Holberton</code>. Paste the command(s)
+				you used to fix the issue in your answer file.
+			</p>
+		</procedure>
+		<procedure collapsible="true" id="repo" title="Repo">
+			<step>
+				<format color="DarkCyan">Repo:</format>
+
+				<list>
+					<li>GitHub repository:
+						<code>alx-system_engineering-devops</code>
+					</li>
+					<li>Directory:
+						<code>0x0D-web_stack_debugging_0</code>
+					</li>
+					<li>File:
+						<code>0-give_me_a_page</code>
+					</li>
+				</list>
+			</step>
+		</procedure>
+	</chapter>
+
+</topic>

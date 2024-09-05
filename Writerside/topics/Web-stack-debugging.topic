@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Web-stack-debugging"
+       title="Web stack debugging"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+	<procedure id="intro" title="Intro">
+		<p>
+			Debugging usually takes a big chunk of a software engineer’s time. The art of debugging is tough and it
+			takes years, even decades to master, and that is why seasoned software engineers are the best at it…
+			experience. They have seen lots of broken code, buggy systems, weird edge cases and race conditions.
+		</p>
+		<img alt="wsd.png" border-effect="rounded" src="wsd.png"/>
+	</procedure>
+	<chapter id="non_exhaustive_guide_to_debugging" title="Non-exhaustive guide to debugging">
+		<procedure id="school_specific" title="School specific">
+			<p>
+				If you are struggling to get something right that is run on the checker, like a Bash script or a piece
+				of code, keep in mind that you can simulate the flow by starting a Docker container with the
+				distribution that is specified in the requirements and by running your code.
+				<a href="Docker.topic">
+					Check the Docker concept page for more info.
+				</a>
+			</p>
+		</procedure>
+		<procedure id="test_and_verify_your_assumptions" title="Test and verify your assumptions" type="choices">
+			<p>
+				The idea is to ask a set of questions until you find the issue. For example, if you installed a web
+				server and it isn’t serving a page when browsing the IP, here are some questions you can ask yourself to
+				start debugging:
+			</p>
+			<step>
+				<format color="BurlyWood">Is the web server started? -</format>
+				You can check using the service manager, also double check by checking process list.
+			</step>
+			<step>
+				<format color="BurlyWood">On what port should it listen? -</format>
+				Check your web server configuration
+			</step>
+			<step>
+				<format color="BurlyWood">Is it actually listening on this port? -</format>
+				<code-block lang="shell">netstat -lpdn</code-block>
+				run as <code>root</code> or <code>sudo</code> so that you can see the process for each listening port
+			</step>
+			<step>
+				<format color="BurlyWood">It is listening on the correct server IP? -</format>
+				<code>netstat</code> is also your friend here
+			</step>
+			<step>Is there a firewall enabled?</step>
+			<step>
+				Have you looked at logs? - usually in <code>/var/log</code> and <code>tail -f</code> is your friend
+			</step>
+			<step>
+				Can I connect to the HTTP port from the location I am browsing from? - <code>curl</code> is your friend
+			</step>
+			<p>There is a good chance that at this point you will already have found part of the issue.</p>
+		</procedure>
+		<procedure id="get_a_quick_overview_of_the_machine_state" title="Get a quick overview of the machine state">
+			<p>Youtube video First 5 Commands When I Connect on a Linux Server</p>
+			<video src="https://www.youtube.com/watch?v=1_gqlbADaAw"/>
+			<p>
+				When you connect to a server/machine/computer/container you want to understand what’s happened recently
+				and what’s happening now, and you can do this with
+				<a href="https://www.linux.com/training-tutorials/first-5-commands-when-i-connect-linux-server/"
+				   target-switcher-key="_blank">
+					<format color="DarkOrange">
+						5 commands
+					</format>
+				</a>
+				in a minute or less:
+			</p>
+			<step>
+				<code>w</code>
+				<list>
+					<li>
+						shows server
+						<a href="https://www.techtarget.com/whatis/definition/uptime-and-downtime">
+							uptime
+						</a>
+						which is the time during which the server has been continuously running
+					</li>
+					<li>shows which users are connected to the server</li>
+					<li>
+						load average will give you a good sense of the server health - (read more about
+						<a href="https://scoutapm.com/blog/understanding-load-averages">load here</a>
+						and
+						<a href="https://www.brendangregg.com/blog/2017-08-08/linux-load-averages.html">here</a>
+					</li>
+				</list>
+			</step>
+			<step>
+				<code>history</code>
+				<list>
+					<li>shows which commands were previously run by the user you are currently connected to</li>
+					<li>
+						you can learn a lot about what type of work was previously performed on the machine, and what
+						could have gone wrong with it
+					</li>
+					<li>where you might want to start your debugging work</li>
+				</list>
+			</step>
+			<step>
+				<code>top</code>
+				<list>
+					<li>shows what is currently running on this server</li>
+					<li>order results by CPU, memory utilization and catch the ones that are resource intensive</li>
+				</list>
+			</step>
+			<step>
+				<code>df</code>
+				<list>
+					<li>shows disk utilization</li>
+				</list>
+			</step>
+			<step>
+				<code>netstat</code>
+				<list>
+					<li>what port and IP your server is listening on</li>
+					<li>what processes are using sockets</li>
+					<li>
+						try this on a Ubuntu machine
+						<code-block lang="shell">
+							netstat -lpn
+						</code-block>
+					</li>
+				</list>
+			</step>
+		</procedure>
+	</chapter>
+	<chapter id="machine" title="Machine">
+		<procedure id="machine01">
+			<p>
+				Debugging is pretty much about verifying assumptions, in a perfect world the software or system we are
+				working on would be working perfectly, the server is in perfect shape and everybody is happy. But
+				actually, it NEVER goes this way, things ALWAYS fail (it’s tremendous!).
+			</p>
+			<p>For the machine level, you want to ask yourself these questions:</p>
+			<list>
+				<li>
+					Does the server have free disk space? -
+					<code-block lang="shell">df</code-block>
+				</li>
+				<li>
+					Is the server able to keep up with CPU load? -
+					<code-block lang="shell">
+						w
+						top
+						ps
+					</code-block>
+				</li>
+				<li>
+					Does the server have available memory?
+					<code-block lang="shell">free</code-block>
+				</li>
+				<li>
+					Are the server disk(s) able to keep up with read/write IO? -
+					<code-block lang="shell">
+						htop
+					</code-block>
+				</li>
+			</list>
+			<p>
+				If the answer is no for any of these questions, then that might be the reason why things are not going
+				as expected. There are often 3 ways of solving the issue:
+			</p>
+			<list>
+				<li>free up resources (stop process(es) or reduce their resource consumption)</li>
+				<li>increase the machine resources (adding memory, CPU, disk space…)</li>
+				<li>distributing the resource usage to other machines</li>
+			</list>
+		</procedure>
+	</chapter>
+
+	<chapter id="network_issue" title="Network issue">
+		<procedure id="networkissue01">
+			<p>For the machine level, you want to ask yourself these questions:</p>
+			<list>
+				<li>
+					Does the server have the expected network interfaces and IPs up and running?
+					<code-block lang="shell">
+						ifconfig
+					</code-block>
+				</li>
+				<li>
+					Does the server listen on the sockets that it is supposed to? <code>netstat</code>
+					<code-block lang="shell">
+						netstat -lpd
+						netstat -lpn
+					</code-block>
+				</li>
+				<li>
+					Can you connect from the location you want to connect from, to the socket you want to connect to?
+					<code>telnet to the IP + PORT</code>
+					<code-block lang="shell">
+						telnet 8.8.8.8 80
+					</code-block>
+				</li>
+				<li>
+					Does the server have the correct firewall rules? <code>iptables, ufw</code>
+					<code-block lang="shell">
+						iptables -L
+						sudo ufw status
+					</code-block>
+				</li>
+			</list>
+		</procedure>
+	</chapter>
+
+	<chapter id="process_issue" title="Process issue">
+		<procedure id="processissue">
+			<p>
+				If a piece of Software isn’t behaving as expected, it can obviously be because of above reasons… but the
+				good news is that there is more to look into (there is ALWAYS more to look into actually).
+			</p>
+			<list>
+				<li>
+					Is the software started? <code>init, init.d</code>:
+					<code-block lang="shell">
+						service NAME_OF_THE_SERVICE status
+						/etc/init.d/NAME_OF_THE_SERVICE status
+					</code-block>
+				</li>
+				<li>
+					Is the software process running? <code>pgrep, ps</code>:
+					<code-block lang="shell">
+						pgrep -lf NAME_OF_THE_PROCESS
+						ps auxf
+					</code-block>
+				</li>
+				<li>
+					Is there anything interesting in the logs? look for log files in <code>/var/log/</code> and
+					<code>tail -f</code>
+					is your friend
+				</li>
+			</list>
+		</procedure>
+	</chapter>
+
+	<chapter id="debugging_is_fun" title="Debugging is fun">
+		<p>
+			Debugging can be frustrating, but it will definitely be part of your job, it requires experience and
+			methodology to become good at it. The good news is that bugs are never going away, and the more experienced
+			you become, trickier bugs will be assigned to you! Good luck :)
+		</p>
+		<img alt="bugs" border-effect="rounded" src="bugs.gif"/>
+	</chapter>
+
+</topic>

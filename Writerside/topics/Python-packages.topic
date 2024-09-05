@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Python-packages"
+       title="Python packages"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+	<p>
+		<b>Read:</b>
+		<a href="https://docs.python.org/3.4/tutorial/modules.html#packages">
+			<format color="DarkOrange">Packages</format>
+		</a>
+	</p>
+	<p>
+		A Python file can be a module but when this file is in a folder, we call this folder a package.
+	</p>
+	<p>
+		File organization is really important in a big project. This means for Python: packages everywhere.
+	</p>
+	<procedure id="compare_with_c" title="Compare with C">
+		<b>(file organization, not prototype vs code etc.)</b>
+		<p>In C:</p>
+		<code-block lang="c">
+			#include "abs.h"
+		</code-block>
+		<p>In Python:</p>
+		<code-block lang="python">
+			import abs
+			abs.my_abs(89)
+		</code-block>
+		<p>In C:</p>
+		<code-block lang="c">
+			#include "my_math/abs.h"
+		</code-block>
+		<p>In Python:</p>
+		<code-block lang="python">
+			import abs
+			abs.my_abs(89)
+		</code-block>
+		<i>or</i>
+		<code-block lang="python">
+			from abs import my_abs
+			my_abs(89)
+		</code-block>
+	</procedure>
+
+	<procedure id="dotted_module_names_path" title="Dotted module names == Path
+">
+		<p>Let's take this example of file organization</p>
+		<code-block include-lines="1,2,3,4" lang="console"
+		            src="Higher-level programming/Higher-level programming - AirBnB clone/tree.txt"/>
+
+		<p>
+			How can I use my function <code>my_abs(a)</code> from the file <code>abs.py</code> in my
+			<code>my_script.py</code>
+		</p>
+		<code-block lang="python">
+			import my_math/abs.py # => NO
+		</code-block>
+		<p>_____</p>
+		<code-block lang="python">
+			import my_math/abs # => NO
+		</code-block>
+		<p>_____</p>
+		<code-block lang="python">
+			import my_math.abs.py # => NO
+		</code-block>
+		<p>_____</p>
+		<code-block lang="python">
+			import my_math.abs # => YES
+		</code-block>
+		<p> but you will use your function like that:</p>
+		<code-block lang="python">
+			my_math.abs.my_abs(89) # => NOT Friendly
+		</code-block>
+		<p>_____</p>
+		<code-block lang="python">
+			from my_math.abs import my_abs # => YES YES YES!
+		</code-block>
+		<p> now you can use your function like that: </p>
+		<code-block lang="python">
+			my_abs(89) # => Friendly
+		</code-block>
+		<p>_____</p>
+		<p>Wait, does this really work?</p>
+		<p> NO! something is missing: the magic file <code>__init__.py</code></p>
+		<p>Indeed, each folder must contain this file to be considered a package.</p>
+		<p>This file should be empty except if you want to import all the content of modules by using <code>*</code></p>
+		<p>More complicated?</p>
+		<code-block include-lines="5,6,7,8,9,10,11" lang="console"
+		            src="Higher-level programming/Higher-level programming - AirBnB clone/tree.txt"/>
+		<p>
+			How can I use my function <code>my_add(a, b)</code> from the file <code>add.py</code> in
+			<code>my_script.py</code>
+		</p>
+		<code-block lang="python">
+			from my_math.functions.add import my_add
+		</code-block>
+		<p>Easy right?</p>
+	</procedure>
+	<procedure id="import_is_dangerous" title="import * is dangerous">
+		<p>
+			Using <code>import *</code> is still considered bad practice in production code. In that case,
+			<code>__init__.py</code> shouldn’t be empty but must contain the list of modules to load:
+		</p>
+
+		<code-block include-lines="13,14,15,16,17,18,19,20,21,22" lang="console"
+		            src="Higher-level programming/Higher-level programming - AirBnB clone/tree.txt"/>
+		<code-block include-lines="1-18" lang="console"
+		            src="Higher-level programming/Higher-level programming - AirBnB clone/packages.txt"/>
+	</procedure>
+
+	<procedure id="relative_versus_absolute_import" title="Relative versus Absolute import">
+		<i>In this example</i>
+		<code-block include-lines="24,25,26,27,28" lang="console"
+		            src="Higher-level programming/Higher-level programming - AirBnB clone/tree.txt"/>
+		<p>
+			<code>positive.py</code> contains one function <code>def is_positive(n)</code>
+			and this function uses <code>my_abs(n)</code>. How it’s possible?
+		</p>
+		<p>
+			By importing:
+		</p>
+		<code-block lang="python">from my_math.abs import my_abs</code-block>
+		<i>or</i>
+		<code-block lang="python">from abs import my_abs</code-block>
+		<step>
+			What the difference?
+			<list>
+				<li>
+					<code>from abs import my_abs</code>
+					is using a relative path between your file who imports and the module to import
+				</li>
+				<li>
+					<code>from my_math.abs import my_abs</code>
+					is using an absolute path between the file you execute and the module to import
+				</li>
+			</list>
+			<code-block include-lines="20-30" lang="console"
+			            src="Higher-level programming/Higher-level programming - AirBnB clone/packages.txt"/>
+		</step>
+		<p>
+			Now, let’s execute a file in <code>my_math:</code>
+		</p>
+		<code-block include-lines="32-51" lang="console"
+		            src="Higher-level programming/Higher-level programming - AirBnB clone/packages.txt"/>
+		<p>
+			Ahh! If you are using an absolute path, you can’t execute this module from another point as the “root” of
+			your project.
+		</p>
+		<p>Let's change to relative path:</p>
+		<code-block include-lines="53-69" lang="console"
+		            src="Higher-level programming/Higher-level programming - AirBnB clone/packages.txt"/>
+	</procedure>
+
+</topic>

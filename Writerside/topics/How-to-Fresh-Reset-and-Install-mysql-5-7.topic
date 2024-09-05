@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="How-to-Fresh-Reset-and-Install-mysql-5-7"
+       title="[How to : ] Fresh Reset and Install mysql 5.7"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+	<procedure id="0procedure0">
+		<p>
+			⚠️ Before going through the guide try this command if it gonna install MySQL 5.7 correctly, when you see the
+			white windows you can jump to step 9, and see what to choose :
+		</p>
+		<code-block collapsed-title="mysql57" collapsible="true" lang="shell" src="concept/concepts"/>
+		<code-block lang="shell">
+			sudo chmod +x mysql57
+			sudo ./mysql57
+		</code-block>
+		<p>If this command did not install 5.7 correctly you can continue reading the following guide.</p>
+		<note>
+			NOTE AS YOU PROCEED: At any point in this guide, don’t go to the next step if you have errors in the current
+			step you are in, make sure there are no errors.
+		</note>
+		<p>
+			You can also use this guide for more visual and sample outputs :
+			<format color="DarkOrange">
+				<resource src="Fresh Reset And Install MySQL 5.7.pdf">
+					For a comprehensive Guide Click Here 📄
+				</resource>
+			</format>
+		</p>
+		<p><b>STEPS:</b></p>
+		<list type="decimal">
+			<li><b>Clean Running MySQL Processes:</b>
+				<list>
+					<li>Check for any running MYSQL Processes:
+						<code-block lang="shell">sudo ps aux | grep mysql</code-block>
+					</li>
+					<li>If MySQL is running, try stopping it:
+						<code-block lang="shell">sudo service mysql stop</code-block>
+					</li>
+					<li>Double-check if MySQL is no longer running:
+						<code-block lang="shell">sudo ps aux | grep mysql</code-block>
+					</li>
+					<li>If MySQL processes are still running, terminate them, remember to replace PID with the value of
+						your PID:
+						<code-block lang="shell">sudo kill -9 &lt;PID&gt;</code-block>
+					</li>
+				</list>
+			</li>
+			<li><b>Remove Existing MySQL Versions:</b>
+				<list>
+					<li>Remove MySQL packages:
+						<code-block lang="shell">
+							sudo apt-get remove --purge mysql-server mysql-client mysql-common -y
+							&amp;&amp;
+							sudo apt-get autoremove -y
+						</code-block>
+					</li>
+					<li>If no errors occur, proceed to next steps</li>
+					<li>If prompted by a dialog to remove data directories, please select YES and press Enter.</li>
+				</list>
+			</li>
+			<li><b>Remove MySQL Apt Configurations:</b>
+				<list>
+					<li>Running the following:
+						<code-block lang="shell">sudo rm -rf /etc/apt/sources.list.d/mysql.list*</code-block>
+						<code-block lang="shell">sudo rm -rf /var/lib/mysql-apt-config</code-block>
+						<code-block lang="shell">sudo dpkg --purge mysql-apt-config</code-block>
+					</li>
+				</list>
+			</li>
+			<li><b>Double Check and Remove Configuration File:</b>
+				<list>
+					<li>Check by running:
+						<code-block lang="shell">dpkg -l | grep mysql</code-block>
+					</li>
+					<li>The result from above should be none, on your terminal</li>
+					<li>Now, Remove configuration files by:
+						<code-block lang="shell">sudo rm -rf /etc/mysql /var/lib/mysql</code-block>
+					</li>
+				</list>
+			</li>
+			<li><b>Edit sources.list to Remove MySQL Repositories:</b>
+				<list>
+					<li>Check the sources.list file for MySQL repository entries (example: deb
+						http://repo.mysql.com/apt/ubuntu bionic main), there should be none like the picture below:
+					</li>
+					<li>Update the packages:</li>
+					<li>Check the sources.list file for MySQL repository entries (example: deb
+						http://repo.mysql.com/apt/ubuntu bionic main),
+					</li>
+					<li>Run:
+						<code-block lang="shell">cat /etc/apt/sources.list | grep mysql</code-block>
+					</li>
+					<li>There should be none like the picture below:</li>
+					<li>If there are entries, open the sources.list file:
+						<code-block lang="shell">sudo vi /etc/apt/sources.list</code-block>
+					</li>
+					<li>If no errors occur, proceed to the next step.</li>
+					<li>Update the package by running:
+						<code-block lang="shell">sudo apt update</code-block>
+					</li>
+					<li>Kill any running processes:
+						<code-block lang="shell">ps aux | grep apt</code-block>
+					</li>
+				</list>
+			</li>
+			<li><b>Clean APT Cache:</b>
+				<list>
+					<li>Run:
+						<code-block lang="shell">sudo apt clean</code-block>
+					</li>
+				</list>
+			</li>
+			<li><b>Configure any Pending Packages and Install MySQL:</b>
+				<list>
+					<li>Run:
+						<code-block lang="shell">sudo dpkg --configure -a</code-block>
+					</li>
+					<li>Install MySQL by running:
+						<code-block lang="shell">
+							sudo wget -O mysql57
+							https://raw.githubusercontent.com/nuuxcode/alx-system_engineering-devops/master/scripts/mysql57
+							&amp;&amp;
+							sudo chmod +x mysql57
+							&amp;&amp;
+							sudo ./mysql57
+						</code-block>
+						<!-- 						<code-block collapsed-title="mysql57" collapsible="true" lang="shell" src="concept/concepts"/> -->
+						<!-- 						<code-block lang="shell"> -->
+						<!-- 							sudo chmod +x mysql57 -->
+						<!-- 							sudo ./mysql57 -->
+						<!-- 						</code-block> -->
+					</li>
+					<li>A few windows are going to show up. Follow the prompts to select Ubuntu Bionic, change to MySQL
+						5.7, and set a password if needed.
+					</li>
+					<li>After installation, check MySQL status:
+						<code-block lang="shell">sudo service mysql status</code-block>
+					</li>
+				</list>
+			</li>
+		</list>
+
+		<p>If issues persist, use the following commands to debug:</p>
+		<code-block lang="shell">journalctl -u mysql.service</code-block>
+		<code-block lang="shell">cat /var/log/mysql/error.log</code-block>
+		<code-block lang="shell">journalctl -xe</code-block>
+		<p>Check this post to learn more about MySQL:
+			<a href="https://shazaali.substack.com/p/database-administration">
+				<format color="DarkOrange">https://shazaali.substack.com/p/database-administration</format>
+			</a>
+		</p>
+	</procedure>
+
+</topic>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Research-Project-approval-Part-1"
+       title="Research &amp; Project approval (Part 1)"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <deflist>
+        <def title="Concepts">
+            <p>
+                <i>
+                    For this project, we expect you to look at these concepts:
+                </i>
+            </p>
+            <list>
+                <li>
+                    <a href="Portfolio-Project-Deeper-Overview.topic"/>
+                </li>
+                <li>
+                    <a href="Portfolio-Project-Overview.topic"/>
+                </li>
+                <li>
+                    <a href="Maze-project.topic"/>
+                </li>
+            </list>
+        </def>
+    </deflist>
+
+    <procedure title="What’s this “Research &amp; project approval”?">
+        <p>
+            Before starting any coding, you will need to research and define your portfolio over the course of 3
+            weeks. In the first week, the Project Proposal will be approved, followed by the second week where the
+            MVP will be defined, and finally presented as a collection of tasks on a Trello board.
+        </p>
+        <p>
+            This first part is focused on creating a Project Proposal and requires that a google Document is
+            submitted for Manual Review by a technical staff member. Please take time to brainstorm, research, and
+            explore what currently exists during this first phase.
+        </p>
+        <deflist>
+            <def title="Examples of the past">
+                <p>Explore some student projects from previous cohorts!</p>
+                <list>
+                    <li>
+                        <a href="https://github.com/lroudge/puppr">Puppr (GitHub)</a> – by
+                        <a href="https://github.com/lroudge">Laura Roudge (Cohort 8)</a>,
+                        <a href="https://github.com/dmaring">Drew Maring (Cohort 8)</a>, and
+                        <a href="https://github.com/MCavigli">Marc Cavigli (Cohort 8)</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/JohnCook17/OCR_for_whiteboarding">
+                            OCR for Whiteboarding (GitHub)
+                        </a> – by
+                        <a href="https://github.com/JohnCook17">John Cooke (Cohort 8)</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/dwkwan/Lyrics_For_Learning">Lyrical Learning (GitHub)</a> – by
+                        <a href="https://github.com/dwkwan/">David Kwan (Cohort 8)</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/ad-egg/eggify">Eggify (GitHub)</a> – by
+                        <a href="https://ad-egg.github.io/">Athena Deng (Cohort 7)</a> &amp;
+                        <a href="https://sazad44.github.io/">Samie Azad (Cohort 7)</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/bdbaraban/ideadog">IdeaDog (GitHub)</a> – by
+                        <a href="https://www.bdov.dev/">Brennan D Baraban (Cohort 7)</a>
+                    </li>
+                    <li>
+                        <a href="https://intranet.alxswe.com/projects/361">Job Odyssey (GitHub)</a> – by
+                        <a href="https://susansu.site/"> Susan Su (Cohort 7)</a> &amp;
+                        <a href="https://christopherchoe.github.io/">Christopher Choe (Cohort 7)</a>
+                    </li>
+                </list>
+            </def>
+            <def title="Some things to think about">
+                <b>Role</b>
+                <p>
+                    Within the team you are on, we encourage you to take on the challenges that will be relevant for you
+                    to speak about in your (eventual) job search. For example, if your project is an ride-sharing clone,
+                    and you want to be a front end engineer, then it’s important to take on challenges with
+                    accessibility, interactive elements and user-interface. Likewise, if you are interested in backend
+                    engineering, it will be important to architect the API endpoints, data modeling and performance.
+                </p>
+                <b>Scope</b>
+                <p>
+                    There is always a risk that your project is too ambitious, or not ambitious enough. Each has its
+                    disadvantage. For this project, consider that it is much better to end up with something a bit
+                    smaller in scope that has undergone a couple (or at least one) iteration of deployment, testing and
+                    bug fixes. Documentation is also a big bonus!
+                </p>
+                <b>Novelty</b>
+                <p>
+                    Each person and team is unique. We encourage you to bring a sense of individuality to your project,
+                    so that you can use it as a tool to speak about other aspects of yourself or your team. As an
+                    example, if a team wants to create a buy/sell marketplace app and they are both passionate about
+                    bicycling, they may want to focus their marketplace on bicycles exclusively so specific attributes
+                    can be defined to track the items.
+                </p>
+                <note>
+                    A professional project theme is a requirement. We recommend avoiding themes focused on
+                    religion, political parties and views, sexuality, sexual orientation, or illegal substances.
+                </note>
+                <p>
+                    If there is a specific reason you are passionate about a topic and would like to pursue it, please
+                    meet with a staff member to discuss. As an example, creating a platform to have open political
+                    discourse with a moderation feature would be acceptable. A site to promote all the representatives
+                    and voting history of a single political party would not be acceptable.
+                </p>
+            </def>
+            <def title="No idea? we have some for you...">
+                <p>
+                    If you don’t know what to build, we have some ideas for you:
+                </p>
+                <list>
+                    <li>
+                        Create a web service that uses
+                        <a href="https://github.com/public-apis/public-apis">API</a>
+                        (like a GitHub stats of an account,etc.)
+                    </li>
+                    <li>
+                        Import a rich data set, sanitize it, and create a website to visualize the data with interactive
+                        zoom and sliders
+                    </li>
+                    <li>Create a music recommender based on a set of ‘liked’ songs</li>
+                    <li>Write a game that can be played against another person or an AI</li>
+                    <li>Ship an Android app</li>
+                    <li>Create an IoT system</li>
+                    <li>Write an image compression algorithm</li>
+                    <li>Write a compiler</li>
+                    <li>
+                        Write your own Docker-like container service
+                    </li>
+                    <li>
+                        Create a “One click” to deploy a cluster of blockchain mining workers with a web page to report
+                        on its statistics
+                    </li>
+                    <li>
+                        Create a “One click” to deploy a cluster of servers hosting docker, with a web page where you
+                        can start containers on-demand
+                    </li>
+                </list>
+            </def>
+        </deflist>
+    </procedure>
+
+    <procedure id="default_project" title="Default Project">
+        <p>
+            If you do not have an idea, and do not submit a proposal or do not gain approval for your proposed projects,
+            you’ll be expected to complete the 2D Game: <b>The Maze</b> - concept page available on top of this project.
+        </p>
+    </procedure>
+
+    <procedure id="tasks" title="Tasks">
+        <deflist>
+            <def title="0. Share your project proposal!">
+                <p>
+                    Share a link here to a Google Document where each of the following tasks are addressed.
+                </p>
+            </def>
+            <def title="1. Project name and tag line">
+                <p>
+                    Rename the document to be the Project’s name.
+                </p>
+                <p>
+                    At the top of the document restate the project name as a header. Add a tagline below which is
+                    exactly one sentence (or phrase) that best summarizes your project.
+                </p>
+            </def>
+            <def title="2. Team Members">
+                <p>
+                    In a section named “Team”, answer:
+                </p>
+                <list>
+                    <li>What are the names of the team members?</li>
+                    <li>What role will each person play in completing the project?</li>
+                    <li>Why have those roles been decided?</li>
+                </list>
+            </def>
+            <def title="3. Technologies">
+                <p>
+                    In a section named “Technologies”:
+                </p>
+                <list>
+                    <li>
+                        List the libraries, languages, platforms, frameworks, hardware, books, resources that will be
+                        necessary to complete your project.
+                    </li>
+                    <li>
+                        For 2 of these technology choices, describe another option and what were the trade-offs between
+                        the chosen technology and the alternate. Explain what led to the final decision to use a
+                        particular technology.
+                    </li>
+                </list>
+            </def>
+            <def title="4. Challenge statement">
+                <p>
+                    In a section named “Challenge”:
+                </p>
+                <list>
+                    <li>Describe the problem the Portfolio Project is intended to solve.</li>
+                    <li>Explain what the Portfolio Project will not solve</li>
+                    <li>Explain who the Portfolio Project will help and/or who the users will be</li>
+                    <li>Is this project relevant or dependent on a specific locale?</li>
+                </list>
+            </def>
+            <def title="5. Risks">
+                <p>
+                    In a section named "Risks":
+                </p>
+                <list>
+                    <li>
+                        Describe the technical risks, the potential impact, and what safeguards or alternatives you have
+                        in mind
+                    </li>
+                    <li>
+                        Describe non-technical risks, the potential impact, and what strategies are in place to prevent
+                        these negative outcomes
+                    </li>
+                </list>
+            </def>
+            <def title="6. Infrastructure">
+                <p>In a section called “Infrastructure”:</p>
+                <list>
+                    <li>
+                        Describe your process for branching and merging in your team’s repository (e.g.
+                        <a href="https://docs.github.com/en/get-started/using-github/github-flow">GitHub flow</a>,
+                        <a href="https://www.agileconnection.com/article/picking-right-branch-merge-strategy">
+                            Picking the right branch-merge strategy
+                        </a>)
+                    </li>
+                    <li>Describe your strategy for deployment</li>
+                    <li>Describe how you will populate your app with data</li>
+                    <li>Describe what tools, automation or process you will use for testing</li>
+                </list>
+            </def>
+            <def title="7. Existing Solutions">
+                <p>In a section called “Existing Solutions”:</p>
+                <list>
+                    <li>List any similar products or solutions that currently exist.</li>
+                    <li>For each item in the list, explain similarities and differences</li>
+                </list>
+                <p>
+                    If you intend to reimplement a proven solution, then describe the various proven solutions and why
+                    you chose to reimplement based on a particular specification.
+                </p>
+                <p>
+                    As an example, lets say you will develop an image compression algorithm, and decide to go with
+                    Transform coding. Utilize this section to describe the different classes of image compression, and
+                    the various types of compression algorithms and the unique aspects of Transform coding.
+                </p>
+            </def>
+        </deflist>
+    </procedure>
+
+</topic>

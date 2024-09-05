@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Web-Server"
+       title="Web Server"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+	<deflist>
+		<def title="Do not mix up web server and server.">
+			<p> A web server is a software that delivers web pages. A server is an actual computer.</p>
+			<p>
+				But you might hear people referring to a web server using the word server. (Check out the server concept
+				page to learn more about this.)
+			</p>
+			<p>
+				As mentioned above, a server is a physical machine, an actual computer, but in the Cloud era that could
+				also be a virtual computer, generally called a
+				<a href="https://en.wikipedia.org/wiki/Virtual_machine">
+					<format color="DarkOrange">VM (Virtual Machine)</format>
+				</a>
+				or
+				<a href="https://www.cio.com/article/247005/what-are-containers-and-why-do-you-need-them.html">
+					<format color="DarkOrange">container.</format>
+				</a>
+			</p>
+		</def>
+		<def title="Readme:">
+			<list>
+				<li>
+					<a href="https://en.wikipedia.org/wiki/Web_server">
+						<format color="DarkOrange">Web Server Wiki</format>
+					</a>
+				</li>
+				<li>
+					<a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server">
+						<format color="DarkOrange">What is a web server?</format>
+					</a>
+				</li>
+			</list>
+		</def>
+	</deflist>
+</topic>

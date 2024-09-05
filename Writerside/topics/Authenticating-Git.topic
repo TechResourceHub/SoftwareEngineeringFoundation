@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Authenticating-Git"
+       title="Authenticating Git"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+	<deflist>
+		<def id="authenticating_git_git_hub" title="Authenticating Git &amp; GitHub">
+			<p>Authenticating GitHub is important to protect your account and your code from unauthorized access:</p>
+			<list>
+				<li>
+					<a href="https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/accessing-github-using-two-factor-authentication">
+						Username and password with two-factor authentication, or a passkey
+					</a>
+				</li>
+				<li>
+					<a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens">
+						Personal access token
+					</a>
+				</li>
+				<li>
+					<a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh">
+						SSH key
+					</a>
+				</li>
+			</list>
+		</def>
+	</deflist>
+	<b>Resources</b>
+	<p>
+		<a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github">
+			GitHub auth documentation
+		</a>
+	</p>
+	<p>
+		Support for password authentication was removed GitHub Fixed using Token (August 13, 2021) - Linux by Code With
+		Arjun
+	</p>
+	<video src="https://www.youtube.com/watch?v=ytSoabxSQ6E"/>
+	<p>How to generate GitHub PAT</p>
+	<video src="https://www.youtube.com/watch?v=iLrywUfs7yU"/>
+</topic>

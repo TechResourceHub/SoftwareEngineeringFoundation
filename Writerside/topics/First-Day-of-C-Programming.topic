@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="First-Day-of-C-Programming"
+       title="First Day of C Programming"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+
+	<procedure id="you_finally_got_here_and_we_are_all_happy_for_you_"
+	           title="You finally got here and we are all happy for you." type="choices">
+		<p>
+			To get you started on the right foot, here is a few things you need to know about C programming.
+		</p>
+		<p>
+			C is a powerful and foundational programming language with immense importance in the world of software
+			engineering. Here are a few reasons why C is crucial:
+		</p>
+		<step>
+			<p>
+				<b>Efficiency:</b> C allows you to write highly efficient code, making it ideal for system-level
+				programming and developing resource-intensive applications.
+			</p>
+		</step>
+		<step>
+			<p>
+				<b>Portability:</b> C code can be easily ported to different platforms, making it suitable for creating
+				software that can run on various devices and operating systems.
+			</p>
+		</step>
+		<step>
+			<p>
+				<b>Foundation for other languages:</b> Many modern programming languages, including C++, Java, and
+				Python, have roots in C. Learning C will provide you with a solid foundation and make it easier to grasp
+				these languages.
+			</p>
+		</step>
+		<step>
+			<p>
+				<b>Widely used:</b> C is extensively used in industries such as embedded systems, operating systems,
+				game development, and networking. Mastering C opens up diverse career opportunities and allows you to
+				work on cutting-edge technologies.
+			</p>
+		</step>
+		<step>
+			<p>
+				<b>Low-level control:</b> C gives you direct access to memory and hardware resources, allowing you to
+				have fine-grained control over your programs. This is crucial when performance optimization is
+				paramount.
+			</p>
+		</step>
+		<b>Here is a simple task to help you get access to the right resources for learning C.</b>
+	</procedure>
+
+	<chapter id="tasks" title="Tasks">
+		<procedure collapsible="true" id="0_you_tube_for_the_win" title="0. YouTube for the Win" type="choices">
+			<p>
+				As your first task for C programming, go ahead and subscribe to these YouTube channels where you can
+				find extensive and easy to understand explanation of various concepts in the C language.
+			</p>
+			<step>
+				<a href="https://www.youtube.com/@0xJulien">
+					<format color="BurlyWood">Julien Barbier YouTube Channel:</format>
+				</a> Provides useful tips,
+				videos, and live coding sessions that can help you solve problems and improve your coding skills.
+			</step>
+			<step>
+				<a href="https://www.youtube.com/@ehoneahobed/community">
+					<format color="BurlyWood">Dr. Ehoneah Obed YouTube Channel:</format>
+				</a>
+				Student-led discussions on various topics covered in the ALX SE program.
+			</step>
+			<p>
+				The two channels below are well known for their down to earth content on C programming:
+			</p>
+			<list>
+				<li>
+					<a href="https://www.youtube.com/@JennyslecturesCSIT">
+						<format color="BurlyWood">Jenny’s lecture Youtube Channel</format>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.youtube.com/@nesoacademy">
+						<format color="BurlyWood">Neso Academy YouTube Channel</format>
+					</a>
+				</li>
+			</list>
+		</procedure>
+		<procedure collapsible="true" id="1_on_your_playlist" title="1. On your playlist">
+			<p>
+				Check out the following playlists and bookmark them for future references when working on your C
+				programming projects.
+			</p>
+			<tabs>
+				<tab id="links" title="Links">
+					<list>
+						<li>
+							<a href="https://www.youtube.com/watch?v=EjavYOFoJJ0&amp;list=PLdo5W4Nhv31a8UcMN9-35ghv8qyFWD9_S">
+								<format color="BurlyWood">Programming in C - Jenny’s Lecture</format>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/watch?v=LM6IjCbtpZA&amp;list=PLqEaji1b3wvRaudEAMvyt1dIClA_y6SLS">
+								<format color="BurlyWood">C Programming - Dr. Ehoneah Obed</format>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/live/ywg7cW0Txs4">
+								<format color="BurlyWood">CS50 2022 - Lecture 1 - C</format>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/watch?v=rLf3jnHxSmU&amp;list=PLBlnK6fEyqRggZZgYpPMUxdY1CYkZtARR">
+								<format color="BurlyWood">C Programming Neso Academy</format>
+							</a>
+						</li>
+					</list>
+				</tab>
+				<tab id="videos" title="Videos">
+					<video src="https://www.youtube.com/watch?v=EjavYOFoJJ0"/>
+					<video src="https://www.youtube.com/watch?v=LM6IjCbtpZA"/>
+					<video src="https://www.youtube.com/watch?v=rLf3jnHxSmU"/>
+				</tab>
+			</tabs>
+		</procedure>
+	</chapter>
+
+</topic>

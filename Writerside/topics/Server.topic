@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Server"
+       title="Server"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+	<deflist>
+		<def title="Server">
+			<p>
+				Servers are located in datacenters which are buildings that host hundreds, or even thousands of
+				computers (servers). You can think of a server as a computer without a keyboard, mouse, or screen, that
+				is accessible only by a network. A server can be physical or virtual. A server runs an OS (operating
+				system).
+			</p>
+			<tabs>
+				<tab title="Readme">
+					<list>
+						<li>
+							<a href="https://en.wikipedia.org/wiki/Server_(computing)">
+								<format color="DarkOrange">Serve Wiki</format>
+							</a>
+						</li>
+					</list>
+				</tab>
+				<tab title="Watch">
+					<b>What is a Server.</b>
+					<video src="https://www.youtube.com/watch?v=B1ANfsDyjeA"/>
+					<b>What is a data center?</b>
+					<video src="https://www.youtube.com/watch?v=iuqXFC_qIvA"/>
+				</tab>
+			</tabs>
+			<p>
+				Do not mix up server and web server. (Check out the
+				<a href="Web-Server.topic">
+					<format color="DarkOrange">web server concept page</format>
+				</a>
+				to know more about this.)
+			</p>
+		</def>
+	</deflist>
+
+</topic>

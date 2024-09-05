@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="RSA-Factoring-Challenge"
+       title="RSA Factoring Challenge"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+	<procedure id="background_context" title="Background Context">
+		<p>Before you continue reading, start this song in the background :)</p>
+		<video src="https://www.youtube.com/watch?v=tGSUjuSBt1A"/>
+		<p>
+			We have sniffed an unsecured network and found numbers that are used to encrypt very important documents. It
+			seems that those numbers are not always generated using large enough prime numbers. Your mission should you
+			choose to accept it, is to factorize these numbers as fast as possible before the target fixes this bug on
+			their server – so that we can decode the encrypted documents.
+		</p>
+		<p>Have fun!</p>
+	</procedure>
+	<procedure id="resources" title="Resources">
+		<tabs>
+			<tab id="read" title="Read">
+				<list>
+					<li>
+						<a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem%29">
+							<format color="BurlyWood">RSA (cryptosystem)</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://stackoverflow.com/questions/3968095/how-does-https-provide-security">
+							<format color="BurlyWood">How does HTTPS provide security?</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://privacycanada.net/mathematics/prime-factorization/">
+							<format color="BurlyWood">Prime Factorization</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://jaredatandi.hashnode.dev/rsa-factoring">
+							<format color="BurlyWood">RSA Factoring</format>
+						</a>
+					</li>
+				</list>
+			</tab>
+		</tabs>
+	</procedure>
+	<procedure id="requirements" title="Requirements">
+		<step>You can choose the language of your choice</step>
+		<step>
+			<tooltip term="OS">OS</tooltip>
+			needs to be Standard Ubuntu 20.02
+			<tooltip term="LTS">LTS</tooltip>
+		</step>
+	</procedure>
+	<chapter id="tasks" title="Tasks">
+		<procedure id="0_factorize_all_the_things_" title="0. Factorize all the things!"
+		           type="choices">
+			<p>Factorize as many numbers as possible into a product of two smaller numbers.</p>
+			<step>
+				Usage:
+				<format color="Coral">factors &lt;file&gt;</format>
+				<list>
+					<li>Where
+						<format color="Coral">&lt;file&gt;</format>
+						is the file containing natural numbers to
+						factor.
+					</li>
+					<li>One number per line</li>
+					<li>
+						You can assume that all lines will be valid natural numbers greater than 1
+					</li>
+					<li>
+						You can assume that there will be no empy line, and no space before and after the valid number
+					</li>
+					<li>
+						The file will always end with a new line
+					</li>
+				</list>
+			</step>
+			<step>Output format:
+				<format color="Coral">n=p*q</format>
+				<list>
+					<li>one factorization per line</li>
+					<li><code>p</code> and <code>q</code> don't have to be prime numbers</li>
+					<li>See example</li>
+				</list>
+			</step>
+			<step>You can work on the numbers of the file in the order of your choice</step>
+			<step> Your program should run without any dependency</step>
+			<step>Time limit: Your program will be killed after 5 seconds if it hasn’t finish</step>
+			<step>Push all your scripts, source code, etc… to your repository</step>
+			<step>
+				Executable
+				<format color="Coral">factors</format>
+			</step>
+			<code-block collapsed-title="tests/test00" collapsible="true" lang="plain text"
+			            src="tests/test00"/>
+			<code-block collapsed-title="Running with time" collapsible="true" lang="shell">
+				time ./factors tests/test00
+			</code-block>
+			<code-block collapsed-title="Result" collapsible="true" lang="shell">
+				4=2*2
+				12=6*2
+				34=17*2
+				128=64*2
+				1024=512*2
+				4958=2479*2
+				1718944270642558716715=343788854128511743343*5
+				9=3*3
+				99=33*3
+				999=333*3
+				9999=3333*3
+				9797973=3265991*3
+				49=7*7
+				239809320265259=15485783*15485773
+
+				real 0m0.009s
+				user 0m0.008s
+				sys 0m0.001s
+			</code-block>
+		</procedure>
+		<procedure collapsible="true" id="repo" title="Repo">
+			<step>
+				<format color="DarkCyan">Repo:</format>
+
+				<list>
+					<li>GitHub repository:
+						<code>
+							RSA-Factoring-Challenge
+						</code>
+					</li>
+					<li>File:
+						<code>
+							factors
+						</code>
+					</li>
+				</list>
+			</step>
+		</procedure>
+	</chapter>
+</topic>

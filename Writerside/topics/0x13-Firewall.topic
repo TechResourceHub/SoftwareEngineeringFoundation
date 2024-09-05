@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="0x13-Firewall"
+       title="0x13. Firewall"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+	<deflist>
+		<def title="Concepts">
+			<i>For this project, we expect you to look at this concept:</i>
+			<list>
+				<li>
+					<a href="Web-stack-debugging.topic">
+						<format color="DarkOrange">Web stack debugging</format>
+					</a>
+				</li>
+			</list>
+		</def>
+	</deflist>
+	<deflist>
+		<def title="Firewall">
+			<img alt="image_18.png" border-effect="rounded" src="image_18.png"/>
+		</def>
+	</deflist>
+	<procedure id="background_context" title="Background Context">
+		<b>Your servers without a firewall…</b>
+		<img alt="firewall" border-effect="rounded" src="firewall.gif"/>
+	</procedure>
+	<deflist>
+		<def title="Resources">
+			<tabs>
+				<tab title="Readme">
+					<a href="https://en.wikipedia.org/wiki/Firewall_(computing)">
+						<format color="DarkOrange">Firewall (computing)</format>
+					</a>
+				</tab>
+			</tabs>
+		</def>
+		<def title="More Info">
+			<p>
+				As explained in the web stack debugging guide concept page, telnet is a very good tool to check if
+				sockets are open with telnet IP PORT. For example, if you want to check if port 22 is open on web-02:
+			</p>
+			<code-block lang="shell">
+				sylvain@ubuntu$ telnet web-02.holberton.online 22
+				Trying 54.89.38.100...
+				Connected to web-02.holberton.online.
+				Escape character is '^]'.
+				SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.8
+
+				Protocol mismatch.
+				Connection closed by foreign host.
+				sylvain@ubuntu$
+			</code-block>
+			<p>
+				We can see for this example that the connection is successful:
+				<format color="DarkKhaki">
+					Connected to web-02.holberton.online.
+				</format>
+			</p>
+			<p>Now let’s try connecting to port 2222:</p>
+			<code-block lang="shell">
+				sylvain@ubuntu$ telnet web-02.holberton.online 2222
+				Trying 54.89.38.100...
+				^C
+				sylvain@ubuntu$
+			</code-block>
+			<p>
+				We can see that the connection never succeeds, so after some time I just use
+				<shortcut>ctrl+c</shortcut>
+				to kill the process.
+			</p>
+			<p>
+				This can be used not just for this exercise, but for any debugging situation where two pieces of
+				software need to communicate over sockets.
+			</p>
+			<p>
+				Note that the school network is filtering outgoing connections (via a network-based firewall), so you
+				might not be able to interact with certain ports on servers outside of the school network. To test your
+				work on web-01, please perform the test from outside of the school network, like from your web-02
+				server. If you SSH into your web-02 server, the traffic will be originating from web-02 and not from the
+				school’s network, bypassing the firewall.
+			</p>
+			<warning>
+				<p>Containers on demand cannot be used for this project (Docker container limitation)</p>
+				<p>
+					Be very careful with firewall rules! For instance, if you ever deny port 22/TCP and log out of your
+					server, you will not be able to reconnect to your server via SSH, and we will not be able to recover
+					it. When you install UFW, port 22 is blocked by default, so you should unblock it immediately before
+					logging out of your server.
+				</p>
+			</warning>
+		</def>
+	</deflist>
+
+	<chapter id="tasks" title="Tasks">
+		<procedure id="0_block_all_incoming_traffic_but" title="0. Block all incoming traffic but">
+			<deflist>
+				<def title="Block all incoming traffic but">
+					<p>Let's install the <code>ufw</code> firewall and setup a few rules</p>
+					<b>Requirements:</b>
+					<list>
+						<li>The requirements below must be applied</li>
+						<li>
+							Configure <code>ufw</code> so that it blocks incoming traffic, except the following TCP
+							ports
+							<list>
+								<li><code>22 (SSH)</code></li>
+								<li><code>443 (HTTPS SSL)</code></li>
+								<li><code>80 (HTTP)</code></li>
+							</list>
+						</li>
+						<li>Share the <code>ufw</code> command that you used</li>
+					</list>
+				</def>
+			</deflist>
+
+			<deflist collapsible="true">
+				<def title="GitHub Repository:">
+					<code-block lang="shell">
+						alx-system_engineering-devops
+					</code-block>
+				</def>
+				<def title="Directory:">
+					<code-block lang="shell">
+						0x13-firewall
+					</code-block>
+				</def>
+				<def title="File">
+					<code-block lang="shell">
+						0-block_all_incoming_traffic_but
+					</code-block>
+				</def>
+			</deflist>
+		</procedure>
+	</chapter>
+
+</topic>

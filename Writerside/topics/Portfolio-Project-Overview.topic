@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Portfolio-Project-Overview"
+       title="Portfolio Project Overview"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <deflist>
+        <def title="What’s a Portfolio Project?">
+            <p>The Portfolio Project will be a project you will showcase on your resumé, online, and during interviews.
+                A completed Portfolio Project will consist of:</p>
+            <list>
+                <li>A landing page describing your project</li>
+                <li>A comprehensive <code>README.md</code></li>
+                <li>A demo of the project</li>
+                <li>A presentation</li>
+                <li>A blog post</li>
+            </list>
+        </def>
+        <def title="Why build a Portfolio project?">
+            <p>The Portfolio Project serves several different purposes:</p>
+            <list type="decimal">
+                <li>Highlights a Student’s unique interests and background when networking, or interviewing with
+                    potential employers.
+                </li>
+                <li>Provides a realistic workplace scenario where engineers create a solution to fit loosely defined
+                    requirements, break this down into concrete tasks and implement on a deadline.
+                </li>
+                <li>Allows for self-directed learning to explore a new technical topic, deepen understanding of a
+                    curriculum-covered topic, or use technology to bring an idea to life.
+                </li>
+            </list>
+        </def>
+        <def title="Timeline and checkpoints">
+            <p>Projects can be developed alone, or in teams of up to 3 students. The technologies and project concept
+                are defined by the student teams.</p>
+
+            <p><b>Research &amp; project approval (Part 1-3)</b></p>
+            <list>
+                <li><b>Week 1:</b> Project proposal (staff review, approval required)</li>
+                <li><b>Week 2:</b> MVP (Minimum Viable Product) proposal (staff review, approval required)</li>
+                <li><b>Week 3:</b> <a href="https://trello.com/">Trello</a> board (staff review, approval required)</li>
+            </list>
+
+            <p><b>Build Portfolio Project (Part 1-3)</b></p>
+            <list>
+                <li><b>Week 4:</b> Making Progress (status update, staff review)</li>
+                <li><b>Week 5:</b> MVP completed (staff review, approval required)</li>
+                <li><b>Week 6:</b> Landing page deployed, Final presentation preparation &amp; delivery (staff review,
+                    approval required)
+                </li>
+            </list>
+
+            <p><b>Week 7:</b> Blog post reflection (peer review), GitHub cleanup</p>
+
+            <p><b>End of Foundations Year</b></p>
+
+        </def>
+        <def title="Resources">
+            <p>Check out these software tools that are available to you:</p>
+            <list>
+                <li><a href="https://education.github.com/pack/offers">Github Education Pack</a> (available through the
+                    “Tools” section of your left-hand menu)
+                </li>
+                <li><a href="https://account.activedirectory.windowsazure.com">Microsoft Applications</a></li>
+            </list>
+        </def>
+    </deflist>
+
+</topic>

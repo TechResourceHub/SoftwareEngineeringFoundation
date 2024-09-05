@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Research-Project-approval-Part-2"
+       title="Research &amp; Project approval (Part 2)"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+
+    <deflist>
+        <def title="Concepts">
+            <i>
+                For this project, we expect you to look at these concepts:
+            </i>
+            <list>
+                <li>
+                    <a href="3-Ways-to-Make-a-Portfolio-Project-Great.topic"/>
+                </li>
+                <li>
+                    <a href="Portfolio-Project-Overview.topic"/>
+                </li>
+                <li>
+                    <a href="Maze-project.topic"/>
+                </li>
+                <li>
+                    <a href="Research-Project-Approval-Overview.topic"/>
+                </li>
+            </list>
+        </def>
+    </deflist>
+
+    <procedure>
+        <img alt="image_84.png" border-effect="rounded" src="image_84.png"/>
+        <b>What’s the Minimum Viable Product (MVP)?</b>
+        <tip>
+            “A minimum viable product has just enough core features to effectively deploy the product, and no more.” –
+            Wikipedia
+        </tip>
+        <p>
+            Now that the team and the challenge are well defined, it is time to create a specification for the first
+            version of your software. This is important because it is an opportunity to get the scope of the project
+            right. If a project is too small in scope, it does not serve as an opportunity to expand your technical
+            understanding, or present as impressive. When a project is too large in scope, the project will likely be
+            incomplete by the end of the 2 weeks.
+        </p>
+    </procedure>
+
+
+</topic>

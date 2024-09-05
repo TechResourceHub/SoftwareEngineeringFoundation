@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Guidelines-Take-the-Hot-Seat-Live-Interview-and-Leetcode-Problem-DEMOs-ALXLevelUp"
+       title="Guidelines: Take the Hot Seat - Live Interview and Leetcode Problem DEMOs #ALXLevelUp"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+	<chapter id="welcome" title="Welcome">
+		<deflist>
+			<def title="Read these Guidelines to participate in the event">
+				<a href="https://www.youtube.com/live/lFTVRYbGZL8">
+					<format color="DarkOrange">Take the Hot Seat—Live Interview and Leetcode Problem DEMOs 🔥</format>
+				</a>
+			</def>
+		</deflist>
+		<deflist>
+			<def title="You can use these guidelines to repeat the DEMOs when and where you want with who you wish to! ❤️">
+				<p><b>🧑🏾‍💼 Live Interview DEMO</b></p>
+				<p><b>📣 Rules of participation</b></p>
+				<p><b>🧑🏾‍💻 Participants:</b></p>
+				<list>
+					<li>1 learner to volunteer as the Interviewee</li>
+					<li>1 learner to volunteer as the interviewer</li>
+				</list>
+				<p>Both volunteers will be randomly selected during the event.</p>
+				<list>
+					<li>
+						The rest of the audience will listen and take notes to give feedbacks at the end of the
+						interview.
+					</li>
+				</list>
+				<p><b>✍🏾 Rules of the DEMO:</b></p>
+				<p>The interview will be based on this job description hereunder:</p>
+				<list>
+					<li>Each interview will last 20 minutes</li>
+					<li>
+						The volunteering recruiter will ask 3 non-technical questions and 2 technical questions - the
+						questions will be sourced in these two lists (technical and non-technical questions)
+					</li>
+					<li>At the end of the interview - 10 minutes for feedback from the audience</li>
+				</list>
+				<p><b>📖 Get ready for the interview</b></p>
+				<p>
+					*Do you feel ready to participate in the Live Interview DEMO as interviewer or Interviewee? * Make
+					sure to arrive prepared!
+				</p>
+				<p>
+					Check out the videos in this
+					<a href="https://www.youtube.com/playlist?list=PLyYhUzEei28OmoUdN9W1oERvOOTNOxwmb">
+						<format color="DarkOrange">playlist</format>
+					</a>
+					and read how to get ready for a mock interview
+					<a href="https://octresources.stanford.edu/mock-interviews/how-conduct-mock-interview">
+						<format color="DarkOrange">here.</format>
+					</a>
+				</p>
+				<p>
+					If you want to volunteer for the role of Interviewee, be ready to use
+					<a href="https://codeshare.io/">
+						<format color="DarkOrange">https://codeshare.io/</format>
+					</a>
+				</p>
+				<p><b>📖 The Tech Interview Handbook</b></p>
+				<p>
+					If you are preparing for a Tech Interview, you should check this out!
+					<a href="https://www.techinterviewhandbook.org/">
+						<format color="DarkOrange">Start reading here</format>
+					</a>
+				</p>
+				<p><b>🧑🏾‍💼 Live Leetcode DEMO</b></p>
+				<p><b>📣 Rules of participation</b></p>
+				<p><b>🧑🏾‍💻 Participants:</b></p>
+				<p>
+					Group of 5 volunteers: preference will be given to people with little or zero experience in solving
+					leetcodes You must:
+				</p>
+				<list>
+					<li>Have a little or zero experience with leetcode</li>
+					<li>Have a knowledge of Python</li>
+					<li>Good use of whiteboard</li>
+				</list>
+				<p><b>✍🏾 Structure of the DEMO</b></p>
+				<p><i>Duration: 30 minutes max</i></p>
+				<p><i>With the guidance of the facilitators, the group will:</i></p>
+				<list type="decimal">
+					<li>Read and understand the problem</li>
+					<li>
+						Brainstorm a possible solution on a whiteboard:
+						<a href="https://excalidraw.com/">
+							<format color="DarkOrange">https://excalidraw.com/</format>
+						</a>
+					</li>
+					<li>Pseudocode: Transform the solution in logical steps</li>
+					<li>
+						Recommended when working in groups: Go to
+						<a href="https://codeshare.io/">
+							<format color="DarkOrange">https://codeshare.io/</format>
+						</a>
+						and start writing it as a code (python)
+					</li>
+					<li>Run the code on Leetcode</li>
+					<li>Debugging as needed</li>
+				</list>
+				<p><b>📖 Get ready for solving Leetcodes!</b></p>
+				<p>
+					Do you feel ready to participate in the Live Leetcode DEMO? Make sure to arrive prepared! Be ready
+					to use
+					<a href="https://codeshare.io/">
+						<format color="DarkOrange">https://codeshare.io/</format>
+					</a>
+					and
+					<a href="https://excalidraw.com/">
+						<format color="DarkOrange">https://excalidraw.com/</format>
+					</a>
+				</p>
+				<p>Do you know that some ALX SE Projects help you get ready for your next Technical Interview?</p>
+				<p>They are released during Specialization, one per week!</p>
+				<list>
+					<li>
+						<a href="https://example.com">
+							<format color="DarkOrange">Prime Game</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://example.com">
+							<format color="DarkOrange">Island Perimeter</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://example.com">
+							<format color="DarkOrange">Rotate 2D Matrix</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://example.com">
+							<format color="DarkOrange">Minimum Operations</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://example.com">
+							<format color="DarkOrange">Lockboxes</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://example.com">
+							<format color="DarkOrange">Pascal’s Triangle</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://example.com">
+							<format color="DarkOrange">Log Parsing</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://example.com">
+							<format color="DarkOrange">UTF-8 Validation</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://example.com">
+							<format color="DarkOrange">N Queens</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://example.com">
+							<format color="DarkOrange">Star Wars API</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://example.com">
+							<format color="DarkOrange">Making Change</format>
+						</a>
+					</li>
+				</list>
+				<p><i>What is Leetcode?</i></p>
+				<p>
+					It is an online platform where you can challenge yourself by solving Coding challenge and it is
+					often used in Coding interviews
+				</p>
+				<p>
+					<i>
+						Do you want to start practicing for your next Technical Interview? Here you can find some of the
+						many existing online Platforms:
+					</i>
+				</p>
+				<list>
+					<li>
+						<a href="https://leetcode.com/">
+							<format color="DarkOrange">Leetcode</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.algoexpert.io/systems/product">
+							<format color="DarkOrange">Systemexpert</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://codeinterview.io/">
+							<format color="DarkOrange">Codeinterview.io</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.geeksforgeeks.org/">
+							<format color="DarkOrange">Geeksforgeeks</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://geektastic.com/">
+							<format color="DarkOrange">Geektastic</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.codewars.com/">
+							<format color="DarkOrange">Codewars</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.aceinterview.app/">
+							<format color="DarkOrange">Aceinterview</format>
+						</a>
+					</li>
+				</list>
+				<p><b>🧑🏾‍💼Job Description - Full-Stack Developer Trainee</b></p>
+				<p><b>About the job</b></p>
+				<p>
+					We are looking for a Full-Stack Developer to join our team as a trainee. Successful candidates will
+					join our engineering team, a group of people focused on designing, implementing, and delivering
+					amazing products directly to thousands of customers. You will learn how to build Web based
+					applications such as content-management platforms and Web API’s supporting mobile apps and
+					cloud-based solutions.
+				</p>
+				<p><b>Requirements</b></p>
+				<p>We know that you will be a good fit for our team, if…</p>
+				<list>
+					<li>You have familiarity with Object-Oriented languages and university-level programming skills</li>
+					<li>You simply enjoy coding, regardless of the programming language</li>
+					<li>You have familiarity with any Database Management System (MySQL, PostgreSQL, SQL Server) and
+						SQL
+					</li>
+					<li>You have a special attention to detail and want to understand how technologies work and not just
+						how they are used.
+					</li>
+					<li>You have a problem solver mentality and understand that coding is a skill that requires practice
+						to acquire
+					</li>
+					<li>You have already experimented with backend frameworks like .NET 5/6, Java Spring Boot, NodeJS
+						and/or JavaScript frameworks like Angular.
+					</li>
+					<li>Undergraduate studies in Computer Science, Engineering, Mathematics, Physics or relevant field
+					</li>
+				</list>
+				<p><b>🗣️ LIST OF TECHNICAL QUESTIONS (If you are volunteering as the interviewer, please pick 2)</b></p>
+				<list>
+					<li>
+						<b>General Programming and Object-Oriented Concepts</b>
+						<list>
+							<li>Can you explain the basic principles of Object-Oriented Programming (OOP)? Provide an
+								example of how you have used OOP in a project.
+							</li>
+							<li>What are the basic data types in the python programming language?</li>
+							<li>If possible provide all operations that can be performed on those types; like
+								retrieving, adding, deleting etcetera.
+							</li>
+							<li>Describe a recent project you worked on that involved coding. What challenges did you
+								face, and how did you overcome them?
+							</li>
+							<li>How do you stay updated with new programming languages and technologies?</li>
+						</list>
+					</li>
+					<li><b>Database Management and SQL</b>
+						<list>
+							<li>What is a relational database? How does it differ from a non-relational database?</li>
+							<li>Can you write a SQL query to find all records in a table where a specific column value
+								meets a condition?
+							</li>
+							<li>What is an ORM?</li>
+							<li>Describe one query optimization technique in relational databases like MySQL.</li>
+							<li>Describe a project where you used a Database Management System (e.g., MySQL, PostgreSQL,
+								SQL Server). What was your approach to database design?
+							</li>
+						</list>
+					</li>
+					<li><b>Backend Development</b>
+						<list>
+							<li>What is your experience with backend frameworks like Node.js express, Flask &amp; Django
+								in
+								python? Can you describe a project where you used one of these frameworks?
+							</li>
+							<li>What are the differences between a production server and a development server?</li>
+							<li>In application servers like express and flask, explain the uses of a middleware.</li>
+							<li>Describe what an MVC architecture is.</li>
+							<li>How would you handle error management and logging in a backend application?</li>
+							<li>Explain the concept of RESTful APIs. Have you ever created one? If so, describe the
+								process and tools you used.
+							</li>
+						</list>
+					</li>
+					<li><b>Frontend Development</b>
+						<list>
+							<li>What JavaScript frameworks have you used? Can you describe a project where you
+								implemented a frontend feature using one of these frameworks?
+							</li>
+							<li>In JavaScript, explain the concept of hoisting.</li>
+							<li>In JavaScript, explain the differences and similarities between null and undefined.</li>
+							<li>How do you ensure the responsiveness and cross-browser compatibility of a web
+								application?
+							</li>
+							<li>Describe your experience with HTML and CSS. How do you approach styling and layout in a
+								web application?
+							</li>
+						</list>
+					</li>
+				</list>
+
+				<p><b>
+					🗣️ LIST OF NON-TECHNICAL QUESTIONS (Source:
+					<a href="https://www.linkedin.com/posts/julienbarbier_alxabrse-activity-7206004158745759744-kKnQ/">
+						<format color="DarkOrange">Julien Barbier’s Linkedin</format>
+					</a>
+					) (If you are volunteering as the interviewer, please pick 3)
+				</b></p>
+				<list>
+					<li>Tell me about your background?</li>
+					<li>How did you get into programming? (can be changed to match the current program they are in)</li>
+					<li>What is ALX?</li>
+					<li>What did you do before ALX? and Why?</li>
+					<li>What is the project you liked the most at ALX and why?</li>
+					<li>Tell me about you?</li>
+					<li>How would your friends and family describe you, your personality?</li>
+					<li>What would be your perfect role in a company? What would be your different responsibilities?
+					</li>
+					<li>How do you usually communicate with the team?</li>
+					<li>How would you describe yourself – your personality?</li>
+					<li>What do you know about working in a start-up?</li>
+					<li>What do you expect from a supervisor?</li>
+					<li>What would be your perfect type of Company to work in?</li>
+					<li>Tell me about the last time a co-worker or a peer at school got mad at you and how did you
+						react?
+					</li>
+					<li>How do you usually deal with a complicated project?</li>
+					<li>What would be the perfect day or work for you?</li>
+					<li>What would get on your nerves – professionally speaking?</li>
+					<li>What would be your perfect time window for working?</li>
+					<li>Where do you see yourself, 5 years from now?</li>
+					<li>Tell me about a time you knew you were right but still had to follow directions or guidelines.
+					</li>
+					<li>In 3 words: why should I hire you?</li>
+					<li>What are your weaknesses?</li>
+					<li>Tell me about yourself?</li>
+					<li>Can you list your strengths?</li>
+					<li>What weaknesses do you have?</li>
+					<li>Why should I consider hiring you?</li>
+					<li>Why do you want to work here?</li>
+					<li>What is your salary expectation?</li>
+					<li>What motivates you?</li>
+					<li>What makes a good team player?</li>
+					<li>Is there anything that you would like to ask me?</li>
+					<li>What is your greatest strength?</li>
+					<li>Why do you want this job?</li>
+					<li>Describe a difficult work situation / project and how you overcame it.</li>
+					<li>What is your greatest weakness?</li>
+					<li>What can you do better for us than the other applicants?</li>
+					<li>How do you handle stress and pressure?</li>
+					<li>What are your goals for the future?</li>
+					<li>If I asked someone who doesn’t like you why they don’t like you, what would they say?</li>
+					<li>Tell me about a time when you had to act very quickly to make a decision about a problem. What
+						was the situation and what did you do?
+					</li>
+					<li>What can you bring to ?</li>
+					<li>Name a time you brought someone joy at your last job.</li>
+					<li>What are three words you would use to describe your personal brand?</li>
+					<li>Tell me about a time when you had to learn something on your own?</li>
+					<li>Why do you want to leave your current position?</li>
+					<li>What makes you want to work for ?</li>
+					<li>Name a time you solved a problem creatively.</li>
+					<li>Tell me about a time where you had to bend the rules to help someone.</li>
+					<li>If a former coworker were to describe you, what are some strengths and weaknesses they’d say you
+						have?
+					</li>
+					<li>What was your last position, and what are some reasons for leaving it?</li>
+					<li>Name a time you helped a coworker out.</li>
+					<li>What makes someone a good team player?</li>
+				</list>
+
+			</def>
+		</deflist>
+	</chapter>
+
+</topic>

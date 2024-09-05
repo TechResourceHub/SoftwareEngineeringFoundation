@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="C-static-libraries"
+       title="C static libraries"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <procedure id="build-your-own-c-static-library" title="Build your own C static library">
+        <code-block lang="c" src="concept/c-static-lib"/>
+    </procedure>
+    <deflist>
+        <def id="read_more" title="Read more">
+            <list>
+                <li><code>man gcc</code></li>
+                <li><code>man ar</code></li>
+                <li><code>man ranlib</code></li>
+                <li><a href="https://www.google.com/search?q=C+static+libraries&amp;gws_rd=ssl#q=C+static+libraries">Google</a>
+                </li>
+            </list>
+        </def>
+    </deflist>
+
+</topic>

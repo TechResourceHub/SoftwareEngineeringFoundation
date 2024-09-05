@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="0x00-AirBnB-clone-The-console"
+       title="0x00. AirBnB clone - The console"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+	<procedure id="concepts" title="Concepts">
+		<i>For this project, we expect you to look at these concepts:</i>
+		<step>
+			<a href="Python-packages.topic">
+				<format color="DarkOrange">Python packages</format>
+			</a>
+		</step>
+		<step>
+			<a href="AirBnB-clone.topic">
+				<format color="DarkOrange">AirBnB clone</format>
+			</a>
+		</step>
+	</procedure>
+	<procedure id="background_context" title="Background Context">
+		<img alt="image_11.png" src="image_11.png"/>
+		<code>Welcome to the AirBnB clone project!</code>
+		<p>
+			Before starting, please read the
+			<a href="AirBnB-clone.topic">
+				<format color="DarkOrange">AirBnB concept page.</format>
+			</a>
+		</p>
+		<code>First step: Write a command interpreter to manage your AirBnB objects.</code>
+		<p>
+			This is the first step towards building your first flistl web application: the AirBnB clone. This first step
+			is very important because you will use what you build during this project with all other following projects:
+			HTML/CSS templating, database storage, API, front-end integration…
+		</p>
+		<p>Each task is linked and will help you to:</p>
+
+		<list>
+			<li>
+				Put in place a parent class (called <code>BaseModel</code>) to take care of the initialization,
+				serialization, and deserialization of your future instances
+			</li>
+			<li>
+				Create a simple flow of serialization/deserialization: Instance &lt;-&gt; Dictionary &lt;-&gt; JSON
+				string &lt;-&gt; file
+			</li>
+			<li>
+				Create all classes used for AirBnB (<code>User</code>, <code>State</code>, <code>City</code>, <code>Place</code>…)
+				that inherit from <code>BaseModel</code>
+			</li>
+			<li>Create the first abstracted storage engine of the project: File storage</li>
+			<li>Create all unittests to validate all our classes and storage engine</li>
+		</list>
+	</procedure>
+	<procedure id="what_s_a_command_interpreter_" title="What’s a command interpreter?">
+		<p>
+			Do you remember the Shell? It's the same but limited to a specific use-case. In our case, we want to be able
+			to manage the objects of our project:
+		</p>
+		<list>
+			<li>Create a new object (e.g., a new User or a new Place)</li>
+			<li>Retrieve an object from a file, a database, etc.</li>
+			<li>Do operations on objects (count, compute stats, etc.)</li>
+			<li>Update attributes of an object</li>
+			<li>Destroy an object</li>
+		</list>
+	</procedure>
+	<procedure id="resources" title="Resources">
+		<tabs>
+			<tab id="read" title="Read">
+				<list>
+					<li>
+						<a href="https://docs.python.org/3.8/library/cmd.html">
+							<format color="DarkOrange">cmd modliste</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://pymotw.com/2/cmd/">
+							<format color="DarkOrange">cmd modliste in depth</format>
+						</a>
+					</li>
+					<li>
+						<a href="Python-packages.topic">
+							<format color="DarkOrange">packages concept page</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://docs.python.org/3.8/library/uuid.html">
+							<format color="DarkOrange">uuid modliste</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://docs.python.org/3.8/library/datetime.html">
+							<format color="DarkOrange">datetime</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://docs.python.org/3.8/library/unittest.html#modliste-unittest">
+							<format color="DarkOrange">unittest modliste</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://yasoob.me/2013/08/04/args-and-kwargs-in-python-explained/">
+							<format color="DarkOrange">args/kwargs</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.pythonsheets.com/notes/python-tests.html">
+							<format color="DarkOrange">Python test cheatsheet</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://wiki.python.org/moin/CmdModliste">
+							<format color="DarkOrange">cmd modliste wiki page</format>
+						</a>
+					</li>
+					<li>
+						<a href="https://realpython.com/python-testing/">
+							<format color="DarkOrange">python unittest</format>
+						</a>
+					</li>
+				</list>
+			</tab>
+		</tabs>
+	</procedure>
+	<chapter id="learning_objectives" title="Learning Objectives">
+		<p>
+			At the end of this project, you are expected to be able to
+			<a href="https://fs.blog/feynman-learning-technique/">
+				<format color="DarkOrange">explain to anyone</format>
+			</a>
+			, <code>without the help of Google:</code>
+		</p>
+		<procedure id="general" title="General">
+			<list>
+				<li>How to create a Python <code>package</code></li>
+				<li>How to create a command interpreter in Python using the <code>cmd modliste</code></li>
+				<li>What is <code>Unit testing</code> and how to implement it in a large project</li>
+				<li>How to <code>serialize</code> and <code>deserialize</code> a Class</li>
+				<li>How to write and read a <code>JSON</code> file</li>
+				<li>How to manage <code>datetime</code></li>
+				<li>What is an <code>UUID</code></li>
+				<li>What is <code>*args</code> and how to use it</li>
+				<li>What is <code>**kwargs</code> and how to use it</li>
+				<li>How to handle named arguments in a function</li>
+			</list>
+		</procedure>
+		<procedure id="requirements" title="Requirements">
+			<step>
+				<code>Python Scripts</code>
+				<list>
+					<li>Allowed editors: vi, vim, emacs</li>
+					<li>
+						All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
+					</li>
+					<li>All your files sholistd end with a new line</li>
+					<li>The first line of all your files sholistd be exactly <code>#!/usr/bin/python3</code></li>
+					<li>A <code>README.md</code> file, at the root of the folder of the project, is mandatory</li>
+					<li>Your code sholistd use the <code>pycodestyle</code> (version 2.8.*)</li>
+					<li>All your files must be executable</li>
+					<li>The length of your files will be tested using <code>wc</code></li>
+					<li>
+						All your modlistes sholistd have a documentation (<code>python3 -c
+						'print(__import__("my_modliste").__doc__)'</code>)
+					</li>
+					<li>
+						All your classes sholistd have a documentation (<code>python3 -c
+						'print(__import__("my_modliste").MyClass.__doc__)'</code>)
+					</li>
+					<li>
+						All your functions (inside and outside a class) sholistd have a documentation (<code>python3 -c
+						'print(__import__("my_modliste").my_function.__doc__)'</code> and <code>python3 -c
+						'print(__import__("my_modliste").MyClass.my_function.__doc__)'</code>)
+					</li>
+					<li>
+						A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the
+						modliste, class or method (the length of it will be verified)
+					</li>
+				</list>
+			</step>
+			<step>
+				<code>Python UnitTests</code>
+				<list>
+					<li>Allowed editors: vi, vim, emacs</li>
+					<li>All your files sholistd end with a new line</li>
+					<li>All your test files sholistd be inside a folder <code>tests</code></li>
+					<li>You have to use the <code>unittest</code> modliste</li>
+					<li>All your test files sholistd be python files (extension: <code>.py</code>)</li>
+					<li>All your test files and folders sholistd start by <code>test_</code></li>
+					<li>Your file organization in the <code>tests</code> folder sholistd be the same as your
+						project
+					</li>
+					<li>
+						e.g., For <code>models/base_model.py</code>, unit tests must be in: <code>tests/test_models/test_base_model.py</code>
+					</li>
+					<li>
+						e.g., For <code>models/user.py</code>, unit tests must be in: <code>tests/test_models/test_user.py</code>
+					</li>
+					<li>
+						All your tests sholistd be executed by using this command: <code>python3 -m unittest discover
+						tests</code></li>
+					<li>
+						You can also test file by file by using this command: <code>python3 -m unittest
+						tests/test_models/test_base_model.py</code></li>
+					<li>
+						All your modlistes sholistd have a documentation (<code>python3 -c
+						'print(__import__("my_modliste").__doc__)'</code>)
+					</li>
+					<li>
+						All your classes sholistd have a documentation (<code>python3 -c
+						'print(__import__("my_modliste").MyClass.__doc__)'</code>)
+					</li>
+					<li>
+						All your functions (inside and outside a class) sholistd have a documentation (<code>python3 -c
+						'print(__import__("my_modliste").my_function.__doc__)'</code> and <code>python3 -c
+						'print(__import__("my_modliste").MyClass.my_function.__doc__)'</code>)
+					</li>
+					<li>
+						We bly encourage you to work together on test cases, so that you don’t miss any edge case
+					</li>
+				</list>
+			</step>
+		</procedure>
+		<procedure id="more_info" title="More Info">
+			<step>
+				<code>Execution</code>
+				<p>Your shell sholistd work like this in interactive mode:</p>
+				<code-block lang="console">
+					$ ./console.py
+					(hbnb) help
+
+					Documented commands (type help &lt;topic&gt;):
+					========================================
+					EOF help quit
+
+					(hbnb)
+					(hbnb)
+					(hbnb) quit
+					$
+				</code-block>
+				<p>But also in non-interactive mode: (like the Shell project in C)</p>
+				<code-block lang="console">
+					$ echo "help" | ./console.py
+					(hbnb)
+
+					Documented commands (type help &lt;topic&gt;):
+					========================================
+					EOF help quit
+					(hbnb)
+					$
+					$ cat test_help
+					help
+					$
+					$ cat test_help | ./console.py
+					(hbnb)
+
+					Documented commands (type help &lt;topic&gt;):
+					========================================
+					EOF help quit
+					(hbnb)
+					$
+				</code-block>
+				<p> All tests sholistd also pass in non-interactive mode: </p>
+				<code-block lang="shell">
+					$ echo "python3 -m unittest discover tests" | bash
+				</code-block>
+			</step>
+			<img alt="image_12.png" border-effect="rounded" src="image_12.png"/>
+		</procedure>
+		<procedure id="video_library" title="Video library">
+		</procedure>
+	</chapter>
+	<chapter id="tasks" title="Tasks">
+		<procedure id="0_readme_authors" title="0. README, AUTHORS" type="choices">
+			<step>
+				Write a <code>README.md</code>
+				<list>
+					<li>description of the project</li>
+					<li>
+						description of the command interpreter
+						<list>
+							<li>how to start it</li>
+							<li>how to use it</li>
+							<li>examples</li>
+						</list>
+					</li>
+				</list>
+			</step>
+			<step>
+				You sholistd have an <code>AUTHORS</code> file at the root of your repository, listing all
+				individuals having contributed content to the repository. For format, reference
+				<a href="https://github.com/moby/moby/blob/master/AUTHORS">
+					<format color="DarkOrange">Docker’s AUTHORS page</format>
+				</a>
+			</step>
+			<step>
+				You sholistd use branches and plistl requests on GitHub - it will help you as team to organize your
+				work
+			</step>
+
+			<deflist>
+				<def title="GitHub Repository:">
+					<code>AirBnB_clone</code>
+				</def>
+				<def title="File:">
+					<code>README.md</code>
+					<code>AUTHORS</code>
+				</def>
+			</deflist>
+		</procedure>
+		<procedure id="1_be_pycodestyle_compliant_" title="1. Be pycodestyle compliant!">
+			<p>Write beautiflist code that passes the pycodestyle checks</p>
+			<deflist>
+				<def title="GitHub Repository:">
+					<code>AirBnB_clone</code>
+				</def>
+			</deflist>
+		</procedure>
+		<procedure id="2_unittests" title="2. Unittests">
+			<p>All your files, classes, functions must be tested with unit tests</p>
+			<code-block lang="console">
+				AirBnB$ python3 -m unittest discover tests
+				...................................................................................
+				...................................................................................
+				.......................
+				----------------------------------------------------------------------
+				Ran 189 tests in 13.135s
+
+				OK
+				AirBnB$
+			</code-block>
+			<note>
+				This is just an example, the number of tests you create can be different from the above
+				example.
+			</note>
+			<warning>Unit tests must also pass in non-interactive mode:</warning>
+			<code-block lang="console">
+				AirBnB$ echo "python3 -m unittest discover tests" | bash
+				...................................................................................
+				...................................................................................
+				.......................
+				----------------------------------------------------------------------
+				Ran 189 tests in 13.135s
+
+				OK
+				AirBnB$
+			</code-block>
+			<deflist>
+				<def title="GitHub Repository:">
+					<code>AirBnB_clone</code>
+				</def>
+				<def title="File:">
+					<code>tests/</code>
+				</def>
+			</deflist>
+		</procedure>
+
+		<procedure id="3_base_model" title="3. BaseModel">
+			<p>
+				Write a class <code>BaseModel</code> that defines all common attributes/methods for other classes:
+			</p>
+			<step><code>models/base_model.py</code></step>
+			<step>
+				Public instance attributes:
+				<list>
+					<li>
+						<code>id:string</code>- assign with an <code>uuid</code> when an instance is created:
+						<list>
+							<li>
+								You can use <code>uuid.uuid4()</code> to generate unique <code>id</code> but do not
+								forget to convert to a string
+							</li>
+							<li>the goal is to have unique <code>id</code> for each <code>BaseModel</code></li>
+						</list>
+					</li>
+					<li>
+						<code>created_at:datetime</code>- assign with the current datetime when an instance is created
+					</li>
+					<li>
+						<code>updated_at:datetime</code>- assign with the current datetime when an instance is
+						created and it will be updated everytime you change your object
+					</li>
+				</list>
+			</step>
+			<step>
+				<code>__str__:</code> sholistd print:
+				<code>[&lt;class name&gt;] (&lt;self.id&gt;) &lt;self.__dict__&gt;</code>
+			</step>
+			<step>
+				Public instance methods:
+				<list>
+					<li>
+						<code>save(self):</code> updates the public instance attribute <code>updated_at</code>
+						with the current datetime
+					</li>
+					<li>
+						<code>to_dict(self):</code> returns a dictionary containing all keys/values of
+						<code>__dict__</code> of the instance:
+						<list>
+							<li>
+								by using <code>self.__dict__</code>, only instance attributes set will be returned
+							</li>
+							<li>
+								a key <code>__class__</code> must be added to this dictionary with the class name of the
+								object
+							</li>
+							<li>
+								<code>created_at</code> and <code>updated_at</code> must be converted to string object
+								in ISO format
+								<list>
+									<li>
+										format: <code>%\Y-%\m-%\dT%H:%M:%\S.%f</code> (ex:
+										<code>2017-06-14T22:31:03.285259</code>)
+									</li>
+									<li>
+										you can use <code>isoformat()</code> of <code>datetime</code> object
+									</li>
+								</list>
+							</li>
+							<li>
+								This method will be the first piece of the serialization/deserialization process:
+								create a dictionary representation with “simple object type” of our
+								<code>BaseModel</code>
+							</li>
+						</list>
+					</li>
+				</list>
+			</step>
+			<code-block include-lines="1-29" lang="console"
+			            src="Higher-level programming/Higher-level programming - AirBnB clone/BaseModel"/>
+			<deflist>
+				<def title="GitHub Repository:">
+					<code>AirBnB_clone</code>
+				</def>
+				<def title="File:">
+					<code>models/base_model.py/</code>
+					<code>models/__init__.py</code>
+					<code>tests/</code>
+				</def>
+			</deflist>
+		</procedure>
+
+		<procedure id="4_create_base_model_from_dictionary" title="4. Create BaseModel from dictionary">
+			<p>
+				Previously we created a method to generate a dictionary representation of an instance (method <code>
+				to_dict()</code>).
+			</p>
+			<p>Now it’s time to re-create an instance with this dictionary representation.</p>
+			<code-block lang="console">
+				&lt;class 'BaseModel'&gt; -> to_dict() -> &lt;class 'dict'&gt; -> &lt;class 'BaseModel'&gt;
+			</code-block>
+			<p>Update <code>models/base_model.py:</code></p>
+			<step>
+				<code>__init__(self, *args, **kwargs):</code>
+				<list>
+					<li>
+						you will use <code>*args, **kwargs</code> arguments for the constructor of a
+						<code>BaseModel</code>.
+						(more information inside the
+						<a href="AirBnB-clone.topic">
+							<format color="DarkOrange">AirBnB clone concept page</format>
+						</a>
+						)
+					</li>
+					<li><code>*args</code> won’t be used</li>
+					<li>
+						if <code>kwargs</code> is not empty:
+						<list>
+							<li>
+								each key of this dictionary is an attribute name (Note <code>__class__</code> from
+								<code>kwargs</code> is the only one that sholistd not be added as an attribute. See the
+								example output, below)
+							</li>
+							<li>each value of this dictionary is the value of this attribute name</li>
+							<li>
+								<code>Warning:</code> <code>created_at</code> and <code>updated_at</code> are strings in
+								this
+								dictionary, but inside your <code>BaseModel</code> instance is working with <code>datetime</code>
+								object. You have to convert these strings into <code>datetime</code> object.
+								<code>Tip: you know the string format of these datetime</code>
+							</li>
+						</list>
+					</li>
+					<li>
+						otherwise:
+						<list>
+							<li>
+								create <code>id</code> and <code>created_at</code> as you did previously (new instance)
+							</li>
+						</list>
+					</li>
+				</list>
+			</step>
+			<code-block include-lines="31-76" lang="console"
+			            src="Higher-level programming/Higher-level programming - AirBnB clone/BaseModel"/>
+		</procedure>
+
+		<procedure id="5_store_first_object" title="5. Store first object">
+			<p>
+				Now we can recreate a <code>BaseModel</code> from another one by using a dictionary representation:
+			</p>
+			<code-block lang="console">
+				&lt;class 'BaseModel'&gt; -> to_dict() -> &lt;class 'dict'&gt; -> &lt;class 'BaseModel'&gt;
+			</code-block>
+			<p>
+				It’s great but it’s still not persistent: every time you launch the program, you don’t restore all
+				objects created before… The first way you will see here is to save these objects to a file.
+			</p>
+			<step>
+				Writing the dictionary representation to a file won’t be relevant:
+				<list>
+					<li>Python doesn’t know how to convert a string to a dictionary (easily).</li>
+					<li>It’s not human-readable.</li>
+					<li>Using this file with another program in Python or other language will be hard.</li>
+				</list>
+			</step>
+			<p>
+				So, you will convert the dictionary representation to a JSON string. JSON is a standard representation
+				of a data structure. With this format, humans can read and all programming languages have a JSON reader
+				and writer.
+			</p>
+			<p>
+				Now the flow of serialization-deserialization will be:
+			</p>
+			<code-block lang="console">
+				&lt;class 'BaseModel'> -&gt; to_dict() -&gt; &lt;class 'dict'&gt; -&gt; JSON dump -&gt; &lt;class
+				'str'&gt; -&gt; FILE -&gt; &lt;class 'str'&gt; -&gt; JSON load -&gt; &lt;class 'dict'&gt; -&gt; &lt;class
+				'BaseModel'&gt;
+			</code-block>
+			<p><code>Magic right?</code></p>
+			<p><code>Terms:</code></p>
+			<list>
+				<li>
+					<code>simple Python data structure:</code> Dictionaries, arrays, number and string. ex:
+					<code>{ '12': { 'numbers': [1, 2, 3], 'name': "John" } }</code>
+				</li>
+				<li>
+					<code>JSON string representation:</code> String representing a simple data structure in JSON format.
+					ex:
+					<code>'{ "12": { "numbers": [1, 2, 3], "name": "John" } }'</code>
+				</li>
+			</list>
+			<p>
+				Write a class <code>FileStorage</code> that serializes instances to a JSON file and deserializes JSON
+				file to instances:
+			</p>
+			<list>
+				<li><code>models/engine/file_storage.py</code></li>
+				<li>
+					Private class attributes:
+					<list>
+						<li><code>__file_path:</code> string - path to the JSON file (ex: <code>file.json</code>)</li>
+						<li>
+							<code>__objects</code>: dictionary - empty but will store all objects by <code>&lt;class
+							name&gt;.id</code> (ex: to store a BaseModel object with <code>id=12121212</code>, the key
+							will be <code>BaseModel.12121212)</code>
+						</li>
+					</list>
+				</li>
+				<li>
+					Public instance methods:
+					<list>
+						<li>
+							<code>all(self)</code>: returns the dictionary <code>__objects</code>
+						</li>
+						<li>
+							<code>new(self, obj)</code>: sets in <code>__objects</code> the obj with key <code>&lt;obj
+							class name&gt;.id</code>
+						</li>
+						<li>
+							<code>save(self)</code>: serializes <code>__objects</code> to the JSON file (path: <code>__file_path</code>)
+						</li>
+						<li>
+							<code>reload(self)</code>: deserializes the JSON file to <code>__objects</code> (only if the
+							JSON file (<code>__file_path</code>) exists; otherwise, do nothing. If the file doesn’t
+							exist, no exception sholistd be raised)
+						</li>
+					</list>
+
+				</li>
+			</list>
+			<p>
+				Update <code>models/__init__.py</code>: to create a unique <code>FileStorage</code> instance for your
+				application
+			</p>
+			<list>
+				<li>Import <code>file_storage.py</code></li>
+				<li>Create the variable <code>storage</code>, an instance of FileStorage</li>
+				<li>Call <code>reload()</code> method on this variable</li>
+			</list>
+			<p>
+				Update <code>models/base_model.py</code>: to link your <code>BaseModel</code> to
+				<code>FileStorage</code> by using the variable <code>storage</code>
+			</p>
+			<list>
+				<li>Import the variable <code>storage</code></li>
+				<li>In the method <code>save(self)</code>:
+					<list>
+						<li>Call <code>save(self)</code> method of <code>storage</code></li>
+					</list>
+				</li>
+				<li>
+					In <code>__init__(self, *args, **kwargs)</code>:
+					<list>
+						<li>
+							If it’s a new instance (not from a dictionary representation), add a call to the method
+							<code>new(self)</code> on <code>storage</code>
+						</li>
+					</list>
+				</li>
+			</list>
+			<code-block include-lines="78-122" lang="console"
+			            src="Higher-level programming/Higher-level programming - AirBnB clone/BaseModel"/>
+
+			<deflist>
+				<def title="GitHub Repository:">
+					<code>AirBnB_clone</code>
+				</def>
+				<def title="File:">
+					<code>models/engine/file_storage.py</code>
+					<code>models/engine/__init__.py</code>
+					<code>models/__init__.py</code>
+					<code>models/base_model.py/</code>
+					<code>tests/</code>
+				</def>
+			</deflist>
+		</procedure>
+
+		<procedure id="6_console_0_0_1" title="6. Console 0.0.1" type="choices">
+			<p>
+				Write a program called <code>console.py</code> that contains the entry point of the command interpreter:
+			</p>
+			<step>You must use the modliste <code>cmd</code></step>
+			<step>Your class definition must be: <code>class HBNBCommand(cmd.Cmd):</code></step>
+			<step>
+				Your command interpreter sholistd implement:
+				<list>
+					<li>
+						<code>quit</code> and <code>EOF</code> to exit the program
+					</li>
+					<li>
+						<code>help</code> (this action is provided by defalistt by <code>cmd</code> but you sholistd
+						keep
+						it updated and documented as you work through tasks)
+					</li>
+					<li>
+						a custom prompt: <code>(hbnb)</code>
+					</li>
+					<li>
+						an <code>empty line</code> + <code>ENTER</code> sholistdn’t execute anything
+					</li>
+				</list>
+			</step>
+			<step>Your code should not be executed when imported</step>
+			<note>
+				You should end your file with:
+				<code-block include-lines="124,125" lang="python"
+				            src="Higher-level programming/Higher-level programming - AirBnB clone/BaseModel"/>
+			</note>
+			<p>
+				to make your program executable except when imported. Please don’t add anything around - the Checker
+				won’t like it otherwise
+			</p>
+			<code-block include-lines="127-141" lang="python"
+			            src="Higher-level programming/Higher-level programming - AirBnB clone/BaseModel"/>
+			<b>No unittests needed</b>
+			<deflist>
+				<def title="GitHub Repository:">
+					<code>AirBnB_clone</code>
+				</def>
+				<def title="File:">
+					<code>console.py</code>
+				</def>
+			</deflist>
+		</procedure>
+		<procedure id="7_console_0_1" title="7. Console 0.1">
+			<p>
+				Update your command interpreter <code>(console.py)</code> to have these commands:
+			</p>
+			<list>
+				<li>
+					<code>create</code>: Creates a new instance of <code>BaseModel</code>, saves it (to the JSON file)
+					and prints the <code>id</code>. Ex: <code>$ create BaseModel</code>
+					<list>
+						<li>
+							If the class name is missing, print <code>** class name missing **</code> (ex: <code>$
+							create</code>)
+						</li>
+						<li>
+							If the class name doesn’t exist, print <code>** class doesn't exist **</code> (ex: <code>$
+							create MyModel</code>)
+						</li>
+					</list>
+				</li>
+				<li>
+					<code>show</code>: Prints the string representation of an instance based on the class name and
+					<code>id</code> Ex: <code>$ show BaseModel 1234-1234-1234</code>.
+					<list>
+						<li>
+							If the class name is missing, print <code>** class name missing **</code> (ex: <code>$
+							show</code>)
+						</li>
+						<li>
+							If the class name doesn’t exist, print <code>** class doesn't exist **</code> (ex: <code>$
+							show MyModel</code>)
+						</li>
+						<li>
+							If the <code>id</code> is missing, print <code>** instance id missing **</code> (ex: <code>$
+							show BaseModel</code>)
+						</li>
+					</list>
+					If the instance of the class name doesn’t exist for the <code>id</code>, print <code>** no instance
+					found **</code> (ex: <code>$ show BaseModel 121212</code>)
+				</li>
+				<li>
+					<code>destroy</code>: Deletes an instance based on the class name and <code>id</code> (save the
+					change into the JSON file). Ex: <code>$ destroy BaseModel 1234-1234-1234</code>.
+					<list>
+						<li>
+							If the class name is missing, print <code>** class name missing **</code> (ex: <code>$
+							destroy</code>)
+						</li>
+						<li>
+							If the class name doesn’t exist, print <code>** class doesn't exist **</code> (ex: <code>$
+							destroy MyModel</code>)
+						</li>
+						<li>
+							If the <code>id</code> is missing, print <code>** instance id missing **</code> (ex:
+							<code>$ destroy BaseModel</code>)
+						</li>
+						<li>
+							If the instance of the class name doesn’t exist for the <code>id</code>, print <code>** no
+							instance found **</code> (ex: <code>$ destroy BaseModel 121212</code>)
+						</li>
+					</list>
+				</li>
+				<li>
+					<code>all</code>: Prints all string representations of all instances based or not on the class name.
+					Ex: <code>$ all BaseModel</code> or <code>$ all</code>.
+					<list>
+						<li>The printed reslistt must be a list of strings (like the example below)</li>
+						<li>
+							If the class name doesn’t exist, print <code>** class doesn't exist **</code> (ex: <code>$
+							all MyModel</code>)
+						</li>
+					</list>
+				</li>
+				<li>
+					<code>update</code>: Updates an instance based on the class name and <code>id</code> by adding or
+					updating attribute (save the change into the JSON file). Ex: <code>$ update BaseModel 1234-1234-1234
+					email "aibnb@mail.com"</code>.
+					<list>
+						<li>
+							Usage: <code>update &lt;class name&gt; &lt;id&gt; &lt;attribute name&gt; "&lt;attribute
+							value&gt;"</code>
+						</li>
+						<li>Only one attribute can be updated at a time</li>
+						<li>You can assume the attribute name is valid (exists for this model)</li>
+						<li>The attribute value must be casted to the attribute type</li>
+						<li>
+							If the class name is missing, print <code>** class name missing **</code> (ex: <code>$
+							update</code>)
+						</li>
+						<li>
+							If the class name doesn’t exist, print <code>** class doesn't exist **</code> (ex: <code>$
+							update MyModel</code>)
+						</li>
+						<li>
+							If the <code>id</code> is missing, print <code>** instance id missing **</code> (ex:
+							<code>$ update BaseModel</code>)
+						</li>
+						<li>
+							If the instance of the class name doesn’t exist for the <code>id</code>, print <code>** no
+							instance found **</code> (ex: <code>$ update BaseModel 121212</code>)
+						</li>
+						<li>
+							If the attribute name is missing, print <code>** attribute name missing **</code> (ex:
+							<code>$ update BaseModel existing-id</code>)
+						</li>
+						<li>
+							If the value for the attribute name doesn’t exist, print <code>** value missing **</code>
+							(ex: <code>$ update BaseModel existing-id first_name</code>)
+						</li>
+						<li>
+							All other arguments sholistd not be used (Ex: <code>$ update BaseModel 1234-1234-1234 email
+							"aibnb@mail.com" first_name "Betty"</code> = <code>$ update BaseModel 1234-1234-1234 email
+							"aibnb@mail.com"</code>)
+						</li>
+						<li>
+							<code>id</code>, <code>created_at</code>, and <code>updated_at</code> can’t be updated. You
+							can assume they won’t be passed in the update command
+						</li>
+						<li>
+							Only “simple” arguments can be updated: string, integer, and float. You can assume nobody
+							will try to update list of ids or datetime
+						</li>
+					</list>
+				</li>
+			</list>
+			<p>Let’s add some rlistes:</p>
+			<list>
+				<li>You can assume arguments are always in the right order</li>
+				<li>Each argument is separated by a space</li>
+				<li>A string argument with a space must be between double quotes</li>
+				<li>Error management starts from the first argument to the last one</li>
+			</list>
+			<code-block include-lines="143-168" lang="python"
+			            src="Higher-level programming/Higher-level programming - AirBnB clone/BaseModel"/>
+			<b>No unittests needed</b>
+			<deflist>
+				<def title="GitHub Repository:">
+					<code>AirBnB_clone</code>
+				</def>
+				<def title="File:">
+					<code>console.py</code>
+				</def>
+			</deflist>
+		</procedure>
+
+		<procedure id="8_first_user" title="8. First User">
+			<p>Write a class <code>User</code> that inherits from <code>BaseModel</code>:</p>
+			<list>
+				<li><code>models/user.py</code></li>
+				<li>Public class attributes:
+					<list>
+						<li><code>email</code>: string - empty string</li>
+						<li><code>password</code>: string - empty string</li>
+						<li><code>first_name</code>: string - empty string</li>
+						<li><code>last_name</code>: string - empty string</li>
+					</list>
+				</li>
+			</list>
+			<p>
+				Update <code>FileStorage</code> to manage correctly serialization and deserialization of
+				<code>User</code>.
+			</p>
+			<p>
+				Update your command interpreter <code>(console.py)</code> to allow <code>show</code>,
+				<code>create</code>, <code>destroy</code>, <code>update</code> and all used with <code>User.</code>
+			</p>
+			<code-block include-lines="170-233" lang="python"
+			            src="Higher-level programming/Higher-level programming - AirBnB clone/BaseModel"/>
+			<b>No unittests needed for the console</b>
+			<deflist>
+				<def title="GitHub Repository:">
+					<code>AirBnB_clone</code>
+				</def>
+				<def title="File:">
+					<code>models/user.py</code>
+					<code>models/engine/file_storage.py</code>
+					<code>console.py</code>
+					<code>tests/</code>
+				</def>
+			</deflist>
+		</procedure>
+
+		<procedure id="9_more_classes_" title="9. More classes!">
+			<p>Write all those classes that inherit from <code>BaseModel</code>:</p>
+			<list>
+				<li><code>State</code> (<code>models/state.py</code>):
+					<list>
+						<li>Public class attributes:
+							<list>
+								<li><code>name</code>: string - empty string</li>
+							</list>
+						</li>
+					</list>
+				</li>
+				<li><code>City</code> (<code>models/city.py</code>):
+					<list>
+
+						<li>Public class attributes:
+							<list>
+								<li><code>state_id</code>: string - empty string: it will be the <code>State.id</code>
+								</li>
+								<li><code>name</code>: string - empty string</li>
+							</list>
+						</li>
+					</list>
+				</li>
+				<li><code>Amenity</code> (<code>models/amenity.py</code>):
+					<list>
+						<li>Public class attributes:
+							<list>
+								<li><code>name</code>: string - empty string</li>
+							</list>
+						</li>
+					</list>
+				</li>
+				<li><code>Place</code> (<code>models/place.py</code>):
+					<list>
+
+						<li>Public class attributes:
+							<list>
+								<li><code>city_id</code>: string - empty string: it will be the <code>City.id</code>
+								</li>
+								<li><code>user_id</code>: string - empty string: it will be the <code>User.id</code>
+								</li>
+								<li><code>name</code>: string - empty string</li>
+								<li><code>description</code>: string - empty string</li>
+								<li><code>number_rooms</code>: integer - 0</li>
+								<li><code>number_bathrooms</code>: integer - 0</li>
+								<li><code>max_guest</code>: integer - 0</li>
+								<li><code>price_by_night</code>: integer - 0</li>
+								<li><code>latitude</code>: float - 0.0</li>
+								<li><code>longitude</code>: float - 0.0</li>
+								<li><code>amenity_ids</code>: list of string - empty list: it will be the list of
+									<code>Amenity.id</code> later
+								</li>
+							</list>
+						</li>
+					</list>
+				</li>
+				<li><code>Review</code> (<code>models/review.py</code>):
+					<list>
+						<li>Public class attributes:
+							<list>
+								<li><code>place_id</code>: string - empty string: it will be the <code>Place.id</code>
+								</li>
+								<li><code>user_id</code>: string - empty string: it will be the <code>User.id</code>
+								</li>
+								<li><code>text</code>: string - empty string</li>
+							</list>
+						</li>
+					</list>
+				</li>
+			</list>
+			<deflist>
+				<def title="GitHub Repository:">
+					<code>AirBnB_clone</code>
+				</def>
+				<def title="File:">
+					<code>models/state.py</code>
+					<code>models/city.py</code>
+					<code>models/amenity.py</code>
+					<code>models/place.py</code>
+					<code>models/review.py</code>
+					<code>tests/</code>
+				</def>
+			</deflist>
+		</procedure>
+
+	</chapter>
+</topic>

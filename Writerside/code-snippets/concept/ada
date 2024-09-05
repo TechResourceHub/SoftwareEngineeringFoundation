@@ -1,0 +1,575 @@
+julien@ubuntu:~/c/malloc$ head -n 14 cisfun.c
+/**
+ * cisfun - function used for concept introduction
+ * @n1: number of projects
+ * @n2: number of tasks
+ *
+ * Return: nothing.
+ */
+void cisfun(unsigned int n1, unsigned int n2)
+{
+    int n;
+    char c;
+    int *ptr;
+    char array[3];
+}
+julien@ubuntu:~/c/malloc$
+
+---
+
+julien@ubuntu:~/c/malloc$ cat segf.c
+/**
+ * segf - Let's segfault \o/
+ *
+ * Return: nothing.
+ */
+void segf(void)
+{
+    char *str;
+
+    str = "Holberton";
+    str[0] = 's';
+}
+
+/**
+ *  main - concept introduction
+ *
+ * Return: 0.
+ */
+int main(void)
+{
+    segf();
+    return (0);
+}
+julien@ubuntu:~/c/malloc$ gcc segf.c
+julien@ubuntu:~/c/malloc$ ./a.out
+Segmentation fault (core dumped)
+julien@ubuntu:~/c/malloc$
+
+---
+
+julien@ubuntu:~/c/malloc$ cat print_school.c
+#include <stdio.h>
+
+/**
+ * print_school - prints "Holberton"
+ *
+ * Return: nothing.
+ */
+void print_school(void)
+{
+    char str[] = "Holberton";
+
+    str[0] = 's';
+    printf("%s\n", str);
+}
+
+/**
+ *  main - concept introduction
+ *
+ * Return: 0.
+ */
+int main(void)
+{
+    print_school();
+    return (0);
+}
+julien@ubuntu:~/c/malloc$ gcc print_school.c
+julien@ubuntu:~/c/malloc$ ./a.out
+solberton
+julien@ubuntu:~/c/malloc$
+
+---
+
+julien@ubuntu:~/c/malloc$ cat malloc_example.c
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * main - introduction to malloc and free
+ *
+ * Return: 0.
+ */
+int main(void)
+{
+    char *str;
+
+    str = malloc(sizeof(char) * 3);
+    str[0] = 'O';
+    str[1] = 'K';
+    str[2] = '\0';
+    printf("%s\n", str);
+    return (0);
+}
+julien@ubuntu:~/c/malloc$ gcc malloc_example.c -o m
+julien@ubuntu:~/c/malloc$ ./m
+OK
+julien@ubuntu:~/c/malloc$
+
+---
+
+julien@ubuntu:~/c/malloc$ cat malloc_example2.c
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * main - introduction to malloc and free
+ *
+ * Return: 0.
+ */
+int main(void)
+{
+    int *tab;
+
+    tab = malloc(sizeof(*tab) * 3);
+    tab[0] = 98;
+    tab[1] = -1024;
+    tab[2] = 402;
+    printf("%d, %d, %d\n", tab[0], tab[1], tab[2]);
+    return (0);
+}
+julien@ubuntu:~/c/malloc$ gcc malloc_example2.c -o m2
+julien@ubuntu:~/c/malloc$ ./m2
+98, -1024, 402
+julien@ubuntu:~/c/malloc$
+
+---
+
+julien@ubuntu:~/c/malloc$ cat malloc_mem.c
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * m - stores 3 int in a new allocated space in memory and prints the sum
+ * @n0: integer to store and print
+ * @n1: integer to store and print
+ * @n2: integer to store and print
+ *
+ * Return: nothing
+ */
+void m(int n0, int n1, int n2)
+{
+    int *t;
+    int sum;
+
+    t = malloc(sizeof(*t) * 3);
+    t[0] = n0;
+    t[1] = n1;
+    t[2] = n2;
+    sum = t[0] + t[1] + t[2];
+    printf("%d + %d + %d = %d\n", t[0], t[1], t[2], sum);
+}
+
+/**
+ * main - introduction to malloc and free
+ *
+ * Return: 0.
+ */
+int main(void)
+{
+    m(98, 402, -1024);
+    return (0);
+}
+julien@ubuntu:~/c/malloc$
+
+---
+
+julien@ubuntu:~/c/malloc$ cat while_malloc.c
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * main - introduction to malloc and free
+ *
+ * Return: 0.
+ */
+int main(void)
+{
+    while (1)
+    {
+        malloc(sizeof(char) * 1024);
+    }
+    return (0);
+}
+julien@ubuntu:~/c/malloc$ gcc while_malloc.c -o killme
+julien@ubuntu:~/c/malloc$ ./killme
+Killed
+julien@ubuntu:~/c/malloc$
+
+---
+
+julien@ubuntu:~/c/malloc$ cat free_mem.c
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * m - stores 3 int in a new allocated space in memory and prints the sum
+ * @n0: integer to store and print
+ * @n1: integer to store and print
+ * @n2: integer to store and print
+ *
+ * Return: nothing
+ */
+void m(int n0, int n1, int n2)
+{
+    int *t;
+    int sum;
+
+    t = malloc(sizeof(*t) * 3);
+    t[0] = n0;
+    t[1] = n1;
+    t[2] = n2;
+    sum = t[0] + t[1] + t[2];
+    printf("%d + %d + %d = %d\n", t[0], t[1], t[2], sum);
+    free(t);
+}
+
+/**
+ * main - introduction to malloc and free
+ *
+ * Return: 0.
+ */
+int main(void)
+{
+    m(98, 402, -1024);
+    return (0);
+}
+
+---
+
+julien@ubuntu:~/c/malloc$ cat malloc_mem.c
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * m - stores 3 int in a new allocated space in memory and prints the sum
+ * @n0: integer to store and print
+ * @n1: integer to store and print
+ * @n2: integer to store and print
+ *
+ * Return: nothing
+ */
+void m(int n0, int n1, int n2)
+{
+    int *t;
+    int sum;
+
+    t = malloc(sizeof(*t) * 3);
+    t[0] = n0;
+    t[1] = n1;
+    t[2] = n2;
+    sum = t[0] + t[1] + t[2];
+    printf("%d + %d + %d = %d\n", t[0], t[1], t[2], sum);
+}
+
+/**
+ * main - introduction to malloc and free
+ *
+ * Return: 0.
+ */
+int main(void)
+{
+    m(98, 402, -1024);
+    return (0);
+}
+julien@ubuntu:~/c/malloc$ gcc malloc_mem.c -o m
+julien@ubuntu:~/c/malloc$ valgrind ./m
+==3749== Memcheck, a memory error detector
+==3749== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==3749== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==3749== Command: ./m
+==3749==
+98 + 402 + -1024 = -524
+==3749==
+==3749== HEAP SUMMARY:
+==3749==     in use at exit: 12 bytes in 1 blocks
+==3749==   total heap usage: 2 allocs, 1 frees, 1,036 bytes allocated
+==3749==
+==3749== LEAK SUMMARY:
+==3749==    definitely lost: 12 bytes in 1 blocks
+==3749==    indirectly lost: 0 bytes in 0 blocks
+==3749==      possibly lost: 0 bytes in 0 blocks
+==3749==    still reachable: 0 bytes in 0 blocks
+==3749==         suppressed: 0 bytes in 0 blocks
+==3749== Rerun with --leak-check=full to see details of leaked memory
+==3749==
+==3749== For counts of detected and suppressed errors, rerun with: -v
+==3749== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+julien@ubuntu:~/c/malloc$
+
+---
+
+julien@ubuntu:~/c/malloc$ cat free_mem.c
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * m - stores 3 int in a new allocated space in memory and prints the sum
+ * @n0: integer to store and print
+ * @n1: integer to store and print
+ * @n2: integer to store and print
+ *
+ * Return: nothing
+ */
+void m(int n0, int n1, int n2)
+{
+    int *t;
+    int sum;
+
+    t = malloc(sizeof(*t) * 3);
+    t[0] = n0;
+    t[1] = n1;
+    t[2] = n2;
+    sum = t[0] + t[1] + t[2];
+    printf("%d + %d + %d = %d\n", t[0], t[1], t[2], sum);
+    free(t);
+}
+
+/**
+ * main - introduction to malloc and free
+ *
+ * Return: 0.
+ */
+int main(void)
+{
+    m(98, 402, -1024);
+    return (0);
+}
+julien@ubuntu:~/c/malloc$ gcc free_mem.c -o f
+julien@ubuntu:~/c/malloc$ valgrind ./f
+==3763== Memcheck, a memory error detector
+==3763== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==3763== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==3763== Command: ./f
+==3763==
+98 + 402 + -1024 = -524
+==3763==
+==3763== HEAP SUMMARY:
+==3763==     in use at exit: 0 bytes in 0 blocks
+==3763==   total heap usage: 2 allocs, 2 frees, 1,036 bytes allocated
+==3763==
+==3763== All heap blocks were freed -- no leaks are possible
+==3763==
+==3763== For counts of detected and suppressed errors, rerun with: -v
+==3763== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+julien@ubuntu:~/c/malloc$
+
+
+---
+
+julien@ubuntu:~/c/malloc$ cat malloc_segf.c
+#include <stdlib.h>
+#include <limits.h>
+
+/**
+ * main - introduction to malloc and free
+ *
+ * Return: 0.
+ */
+int main(void)
+{
+    char *s;
+
+    while (1)
+    {
+        s = malloc(INT_MAX);
+        s[0] = 'H';
+    }
+    return (0);
+}
+julien@ubuntu:~/c/malloc$ gcc malloc_segf.c -o s
+julien@ubuntu:~/c/malloc$ ./s
+Segmentation fault (core dumped)
+julien@ubuntu:~/c/malloc$
+
+---
+
+julien@ubuntu:~/c/malloc$ cat malloc_check.c
+#include <stdlib.h>
+#include <limits.h>
+#include <stdio.h>
+
+/**
+ * main - introduction to malloc and free
+ *
+ * Return: 0.
+ */
+int main(void)
+{
+    char *s;
+    int i;
+
+    i = 0;
+    while (1)
+    {
+        s = malloc(INT_MAX);
+        if (s == NULL)
+        {
+            printf("Can't allocate %d bytes (after %d calls)\n", INT_MAX, i);
+            return (1);
+        }
+        s[0] = 'H';
+        i++;
+    }
+    return (0);
+}
+julien@ubuntu:~/c/malloc$ gcc malloc_check.c -o c
+julien@ubuntu:~/c/malloc$ ./c
+Can't allocate 2147483647 bytes (after 0 calls)
+julien@ubuntu:~/c/malloc$
+
+---
+
+julien@ubuntu:~/c/malloc$ cat segf.c
+/**
+ *  segf - Let's segfault \o/
+ *
+ * Return: nothing.
+ */
+void segf(void)
+{
+    char *str;
+
+    str = "Holberton";
+    str[0] = 's';
+}
+
+/**
+ *  main - concept introduction
+ *
+ * Return: 0.
+ */
+int main(void)
+{
+    segf();
+    return (0);
+}
+julien@ubuntu:~/c/malloc$ gcc segf.c -o segf
+julien@ubuntu:~/c/malloc$ strings segf
+/lib64/ld-linux-x86-64.so.2
+,o8E0
+libc.so.6
+__libc_start_main
+__gmon_start__
+GLIBC_2.2.5
+UH-0
+AWAVA
+AUATL
+[]A\A]A^A_
+Holberton
+[...]
+julien@ubuntu:~/c/malloc$
+
+---
+
+julien@ubuntu:~/c/malloc$ objdump -s -j .rodata segf
+
+segf:     file format elf64-x86-64
+
+Contents of section .rodata:
+ 400580 01000200 486f6c62 6572746f 6e00      ....Holberton.
+julien@ubuntu:~/c/malloc$
+
+---
+
+julien@ubuntu:~/c/strings$ cat print_school.c
+#include <stdio.h>
+
+/**
+ * print_school - prints "school"
+ *
+ * Return: nothing.
+ */
+void print_school(void)
+{
+    char str[] = "Holberton";
+
+    str[0] = 's';
+    printf("%s\n", str);
+}
+
+/**
+ *  main - concept introduction
+ *
+ * Return: 0.
+ */
+int main(void)
+{
+    print_school();
+    return (0);
+}
+julien@ubuntu:~/c/strings$ gcc print_school.c -o ps
+julien@ubuntu:~/c/strings$ strings ps | grep Holberton
+julien@ubuntu:~/c/strings$ objdump -s -j .rodata ps
+
+ps:     file format elf64-x86-64
+
+Contents of section .rodata:
+ 2000 01000200                             ....
+julien@ubuntu:~/c/strings$ ./ps
+Holberton
+julien@ubuntu:~/c/strings$
+
+---
+
+julien@ubuntu:~/c/strings$ objdump -d -Mintel ps
+
+ps:     file format elf64-x86-64
+[...]
+0000000000400596 <print_school>:
+  400596:   55                      push   rbp
+  400597:   48 89 e5                mov    rbp,rsp
+  40059a:   48 83 ec 20             sub    rsp,0x20
+  40059e:   64 48 8b 04 25 28 00    mov    rax,QWORD PTR fs:0x28
+  4005a5:   00 00
+  4005a7:   48 89 45 f8             mov    QWORD PTR [rbp-0x8],rax
+  4005ab:   31 c0                   xor    eax,eax
+  4005ad:   48 b8 48 6f 6c 62 65    movabs rax,0x6f747265626c6f48
+  4005b4:   72 74 6f
+  4005b7:   48 89 45 e0             mov    QWORD PTR [rbp-0x20],rax
+  4005bb:   66 c7 45 e8 6e 00       mov    WORD PTR [rbp-0x18],0x6e
+  4005c1:   c6 45 e0 68             mov    BYTE PTR [rbp-0x20],0x68
+  4005c5:   48 8d 45 e0             lea    rax,[rbp-0x20]
+  4005c9:   48 89 c7                mov    rdi,rax
+  4005cc:   e8 8f fe ff ff          call   400460 <puts@plt>
+  4005d1:   90                      nop
+  4005d2:   48 8b 45 f8             mov    rax,QWORD PTR [rbp-0x8]
+  4005d6:   64 48 33 04 25 28 00    xor    rax,QWORD PTR fs:0x28
+  4005dd:   00 00
+  4005df:   74 05                   je     4005e6 <print_school+0x50>
+  4005e1:   e8 8a fe ff ff          call   400470 <__stack_chk_fail@plt>
+  4005e6:   c9                      leave
+  4005e7:   c3                      ret
+    START NEW OBJDUMP
+    0000000000001169 <print_school>:
+    1169:   f3 0f 1e fa             endbr64
+    116d:   55                      push   rbp
+    116e:   48 89 e5                mov    rbp,rsp
+    1171:   48 83 ec 10             sub    rsp,0x10
+    1175:   64 48 8b 04 25 28 00    mov    rax,QWORD PTR fs:0x28
+    117c:   00 00
+    117e:   48 89 45 f8             mov    QWORD PTR [rbp-0x8],rax
+    1182:   31 c0                   xor    eax,eax
+    1184:   c7 45 f1 53 63 68 6f    mov    DWORD PTR [rbp-0xf],0x6f686353
+    118b:   66 c7 45 f5 6f 6c       mov    WORD PTR [rbp-0xb],0x6c6f
+    1191:   c6 45 f7 00             mov    BYTE PTR [rbp-0x9],0x0
+    1195:   c6 45 f1 73             mov    BYTE PTR [rbp-0xf],0x73
+    1199:   48 8d 45 f1             lea    rax,[rbp-0xf]
+    119d:   48 89 c7                mov    rdi,rax
+    11a0:   e8 bb fe ff ff          call   1060 <puts@plt>
+    11a5:   90                      nop
+    11a6:   48 8b 45 f8             mov    rax,QWORD PTR [rbp-0x8]
+    11aa:   64 48 33 04 25 28 00    xor    rax,QWORD PTR fs:0x28
+    11b1:   00 00
+    11b3:   74 05                   je     11ba <print_school+0x51>
+    11b5:   e8 b6 fe ff ff          call   1070 <__stack_chk_fail@plt>
+    11ba:   c9                      leave
+    11bb:   c3                      ret
+        END NEW OBJDUMP
+[...]
+
+---
+
+  4005ad:   48 b8 48 6f 6c 62 65    movabs rax,0x6f747265626c6f48
+  4005b4:   72 74 6f
+  4005b7:   48 89 45 e0             mov    QWORD PTR [rbp-0x20],rax

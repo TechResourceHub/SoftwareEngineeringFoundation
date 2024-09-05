@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Maze-project"
+       title="Maze project"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <procedure id="background_context" title="Background Context">
+        <p>
+            The goal of this project is to create a game in 3D using raycasting !
+        </p>
+        <p>
+            You don’t have to do the tasks in order, except for the first one (obviously), or if a task depends on a
+            previous one
+        </p>
+        <p>
+            You have a link to a very good and very long tutorial about raycasting in the <code>Tips and links</code>
+            section below, so read it very carefully, and practice !
+        </p>
+        <p>
+            Please have a lot of fun doing this project !
+        </p>
+        <img alt="maze" border-effect="rounded" src="maze1.gif"/>
+    </procedure>
+
+    <procedure id="requirements" title="Requirements">
+        <deflist>
+            <def title="General">
+                <list>
+                    <li>All your files will be compiled on Ubuntu 14.04 LTS, using gcc (Ubuntu 4.8.4-2ubuntu1~14.04)
+                        4.8.4
+                    </li>
+                    <li>We will use the gcc flags <code>-Wall -Werror -Wextra -pedantic</code></li>
+                    <li>All your functions must be commented</li>
+                    <li>Your functions should be maximum 40 lines long (one statement per line)</li>
+                    <li>Your functions should be maximum 80 columns long</li>
+                    <li>No more than 5 functions per file</li>
+                </list>
+            </def>
+            <def title="Betty">
+                <list>
+                    <li>Your entire repository will be checked using
+                        <a href="https://github.com/alx-tools/Betty">Betty</a></li>
+                    <li>Don’t push any object files <code>.o</code> or temporary files <code>*~</code>, or any unused
+                        source file if you don’t
+                        want to lose points !
+                    </li>
+                    <li>It is advised to always keep a clear organisation in your repository. For example, store all
+                        your sources in a <code>src</code> directory, and all your headers in a <code>inc</code>, <code>headers</code>
+                        or <code>dependencies</code> folder
+                    </li>
+                </list>
+            </def>
+        </deflist>
+    </procedure>
+
+    <procedure id="more_info" title="More Info">
+        <deflist>
+            <def title="Tips and links">
+                <list>
+                    <li>
+                        <resource src="SDL2 - Get started.pdf"/>
+                    </li>
+                    <li><a href="https://lazyfoo.net/tutorials/SDL/index.php">SDL2 tutorials</a></li>
+                    <li>Be careful with tutorials/help online: We are using <code>SDL2</code>, and not
+                        <code>SDL-1.2</code> !
+                    </li>
+                    <li><a href="https://permadi.com/1996/05/ray-casting-tutorial-table-of-contents/">RAYCASTING !!!</a>
+                    </li>
+                    <li><a href="https://lodev.org/cgtutor/raycasting.html">Alternative Raycasting Tutorial</a></li>
+                </list>
+            </def>
+            <def title="Important">
+                <list>
+                    <li>Don’t forget to install <a href="https://lazyfoo.net/tutorials/SDL/index.php">SDL2 tutorials</a>
+                    </li>
+                    <li>There are no forbidden functions for this project. You are allowed to use any system call and/or
+                        standard library function.
+                    </li>
+                    <li>You are allowed to use
+                        <a href="https://wiki.libsdl.org/SDL2/CategoryAPI">all the functions provided by SDL2</a></li>
+                </list>
+            </def>
+        </deflist>
+    </procedure>
+
+    <procedure id="tasks" title="Tasks">
+        <deflist>
+            <def title="0. Walls !">
+                <p>In this first part, you’ll have to:</p>
+                <list>
+                    <li>Create a window with SDL2</li>
+                    <li>Use <a href="https://permadi.com/1996/05/ray-casting-tutorial-table-of-contents/">raycasting</a>
+                        to draw walls on your window !
+                    </li>
+                    <li>You don’t need to be able to rotate the camera during the execution in this part, but you must
+                        provide a way to change the angle of the camera in your code to see if it works after
+                        recompiling it
+                    </li>
+                    <li>The color of the walls must be different from the color of the ground/ceil</li>
+                    <li>The map doesn’t need to be parsed from a file, but you must provide a way to modify it in your
+                        code to see if it works after recompiling it. (e.g. using an array of arrays of integers or
+                        characters).
+                    </li>
+                </list>
+                <p>example</p>
+                <img alt="image_58.png" border-effect="rounded" src="image_58.png"/>
+            </def>
+            <def title="1. Orientation">
+                <p>
+                    In this part, you must draw a different color depending on the orientation of the walls.
+                </p>
+                <list>
+                    <li>
+                        You must at least draw walls facing <code>NORTH and SOUTH</code> in a different color from walls
+                        facing <code>EAST and WEST.</code>
+                    </li>
+                </list>
+                <p>Example</p>
+                <img alt="image_59.png" border-effect="rounded" src="image_59.png"/>
+            </def>
+        </deflist>
+    </procedure>
+
+    <procedure id="2_rotation" title="2. Rotation">
+        <p>You must provide a way to rotate the camera during the execution.</p>
+        <list>
+            <li>For example, you can rotate the camera when the <code>left,right</code> arrows are pressed on the
+                keyboard.
+            </li>
+            <li>Or you can rotate the camera when the mouse moves, just like a FPS game !</li>
+        </list>
+        <p>example</p>
+        <img alt="maze" border-effect="rounded" src="maze2.gif"/>
+    </procedure>
+
+    <procedure id="3_move" title="3. Move">
+        <p>You must provide a way to move the camera during the execution.</p>
+        <list>
+            <li>For example, you can move the camera when the <code>w,a,s,d</code> keys are pressed on the keyboard.
+            </li>
+        </list>
+        <p>example</p>
+        <img alt="maze" border-effect="rounded" src="maze3.gif"/>
+        <img alt="maze" border-effect="rounded" src="maze4.gif"/>
+    </procedure>
+
+    <procedure id="4_ouch_" title="4. Ouch !">
+        <p>
+            In this part, you must handle the collisions of the <code>player</code> (yes, let’s call the camera player
+            now, it’s getting serious) with the walls.
+        </p>
+        <list>
+            <li>The player must not be able to enter walls</li>
+            <li>You can make the player slide on the walls instead of just stop it.</li>
+        </list>
+    </procedure>
+
+    <procedure id="5_parser" title="5. Parser">
+        <p>In this part you must implement a parser to get the map from a file.</p>
+        <list>
+            <li>You are free to define the standards of your map (The character for a wall, the character for nothing,
+                the extension of the file if you want, …)
+            </li>
+            <li>Your program will need a parameter to run which will be the path to the map file</li>
+        </list>
+    </procedure>
+
+    <procedure id="6_draw_the_map" title="6. Draw the map">
+        <p>In this part, you must draw the map on the window.</p>
+        <list>
+            <li>You’re free to draw the map where you want, with the color you want, …</li>
+            <li>You must provide a way to enable/disable it during the execution</li>
+            <li>Include the player’s line of sight in the map</li>
+        </list>
+    </procedure>
+
+    <procedure id="7_coding_style_documentation" title="7. Coding style + Documentation">
+        <list>
+            <li>Check if you code fits the
+                <a href="https://github.com/alx-tools/Betty/wiki">Holberton School coding style.</a></li>
+            <li>Check if your code is well documented and respect the
+                <a href="https://github.com/alx-tools/Betty/wiki/Documentation:-Functions">Holberton School
+                    documentation format</a></li>
+        </list>
+        <p>You can check all of this by yourself, just follow the instructions on
+            <a href="https://github.com/alx-tools/Betty">this repository</a></p>
+        <b>Be careful</b>
+        <p>
+            The check will be done on each file present on your turn in repository. Even the files that was not
+            required. So don’t forget to always keep your turn in directory clean.
+        </p>
+    </procedure>
+
+    <procedure id="8_textures" title="8. Textures">
+        <p>In this part you have to add textures on your walls !</p>
+        <p>Example</p>
+        <img alt="image_60.png" border-effect="rounded" src="image_60.png"/>
+    </procedure>
+
+    <procedure id="9_multi_task_" title="9. Multi task !">
+        <p>
+            Add a way to move on several directions and rotate in the same time. Basically in this part you’ll have to
+            handle multiple events on the same frame.
+        </p>
+        <p>For example, if the keys to move are <code>w,a,s,d:</code></p>
+        <list>
+            <li>If the keys <code>w</code> and <code>s</code> are pressed in the same time, the player shouldn’t move.
+            </li>
+            <li>If the keys <code>w</code> and <code>d</code> are pressed in the same time, the player should move
+                forward and right in the same time,
+            </li>
+            <li>…</li>
+        </list>
+    </procedure>
+
+    <procedure id="10_ground_textures" title="10. Ground textures">
+        <p>
+            In this part you have to add textures on the ground and/or on the ceiling !
+        </p>
+        <p>Example</p>
+        <img alt="image_61.png" border-effect="rounded" src="image_61.png"/>
+        <img alt="maze" border-effect="rounded" src="maze10.gif"/>
+    </procedure>
+
+    <procedure id="11_weapons" title="11. Weapons">
+        <p>Add weapons textures !</p>
+        <p>Example</p>
+        <img alt="maze" border-effect="rounded" src="maze11.gif"/>
+    </procedure>
+
+    <procedure id="12_enemies" title="12. Enemies">
+        <p>Add some enemies !</p>
+        <p>Example from the game Wolfenstein 3D:</p>
+        <img alt="image_62.png" border-effect="rounded" src="image_62.png"/>
+    </procedure>
+
+    <procedure id="13_make_it_rain" title="13. Make it rain">
+        <p>
+            Add rain and possibility to stop / start the rain with a key.
+        </p>
+    </procedure>
+
+    <procedure id="14_extra_option" title="14. Extra option">
+        <p>
+            Shadows, special lightning, etc… get creative!
+        </p>
+    </procedure>
+
+</topic>

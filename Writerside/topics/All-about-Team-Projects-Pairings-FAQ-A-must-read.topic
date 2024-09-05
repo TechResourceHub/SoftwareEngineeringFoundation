@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="All-about-Team-Projects-Pairings-FAQ-A-must-read"
+       title="All about Team Projects + Pairings + FAQ (A must read)"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <deflist>
+        <def id="why-are-team-projects-important" title="Why are Team Projects Important?">
+            <img alt="image_21.png" border-effect="rounded" src="image_21.png"/>
+            <p>
+                As Software Engineers, we will very often work in teams. These teams will often be composed of people
+                from entirely different backgrounds and locales. This is why we have team projects, to get you
+                comfortable with this aspect of working as a Software Engineer. There are also many advantages to
+                working in a team, such as constant support and diverse perspectives.
+            </p>
+            <p>To make this teamwork smoother, we’ve crafted this special FAQ section just for you.</p>
+        </def>
+        <def title="Why is this FAQ so crucial?">
+            <p>
+                Because it’s your key to navigating team projects seamlessly. Think of it as a customized toolkit,
+                tailored to your success in our program. 🧰
+            </p>
+            <b>Let’s get started</b>
+            <p>
+                <i> What is the team pairing process in the ALX Software Engineering Program?</i>
+            </p>
+            <p>
+                Team pairing in the ALX Software Engineering Program involves matching participants to form project
+                teams. These teams work collaboratively on software engineering projects.
+            </p>
+            <b>How are teams formed?</b>
+            <p>
+                Pairing Requests: * Learners are required to find project partners. * You need to send pairing requests
+                to potential partners before the project begins.
+            </p>
+            <p>
+                Reminders: * Our mentors and staff regularly send reminders about finding project partners. * These
+                reminders are designed to ensure everyone has a chance to find a partner.
+            </p>
+            <p>
+                Automatic Pairing: * If you don’t secure a partner by the project’s start date: * You will be
+                automatically paired with another learner who also hasn’t found a partner.
+            </p>
+            <p>
+                This process aims to create a collaborative learning environment and ensure that no one is left without
+                a partner for their project work.
+            </p>
+            <img alt="image_22.png" border-effect="rounded" src="image_22.png"/>
+            <p>Can I choose my team members?</p>
+            <p>
+                Yes, you can. However, if you do not find yourself a partner before the project starts, you will be
+                automatically paired.
+            </p>
+            <b>How can I know my team members?</b>
+            <p>
+                You can see the names of all the learners in your team at the very top of the project page.
+            </p>
+            <img alt="image_23.png" border-effect="rounded" src="image_23.png"/>
+            <b>How Can I Find a Partner?</b>
+            <p>
+                Reach out to and interact with your peers in your cohort channels. Connect with them, not just for the
+                team project, but because you’re here to form bonds and create a network of great African engineers.
+            </p>
+            <b>How can I communicate with my team members?</b>
+            <p>
+                You can reach out to them through whatever medium that you agree upon. But as a start, you can try
+                sending them an email as well as a Slack message in the event you are automatically paired.
+            </p>
+            <b>What if I have conflicts with my team members?</b>
+            <p>
+                ALX encourages open communication and collaboration. If conflicts arise, you should address them
+                constructively with your team. If issues persist, reach out to ALX technical mentors for guidance.
+            </p>
+            <b>Can I change team members if necessary?</b>
+            <p>Yes you can!</p>
+            <b>How do I make this change?</b>
+            <p>Follow these steps carefully;</p>
+
+            <list>
+                <li>
+                    <p><b>Requesting a New Partner or Going Solo:</b></p>
+                    <list>
+                        <li>
+                            <p>Your mentors will provide a form for you to fill out, and you must complete it within a
+                                specific window of time that we’ll agree upon.</p>
+                        </li>
+                        <li>
+                            <p>If you want a new partner and have submitted their name in the form, you’ll be paired
+                                with them.</p>
+                        </li>
+                        <li>
+                            <p>If you prefer to work alone and have indicated that you’d like to be unpaired, you can
+                                proceed solo.</p>
+                        </li>
+                        <li>
+                            <p>Remember that your partner must also send a request to the mentor for the pairing to
+                                occur.</p>
+                        </li>
+                    </list>
+                </li>
+                <li>
+                    <p><b>Limited Duration:</b></p>
+                    <list>
+                        <li>
+                            <p>There will be a set duration during which your mentor will make the re-pairing or
+                                unpairing form available.</p>
+                        </li>
+                        <li>
+                            <p>Once this duration ends, you won’t have the option to get re-paired or unpaired.</p>
+                        </li>
+                    </list>
+                </li>
+                <li>
+                    <p><b>Start Working Right Away:</b></p>
+                    <list>
+                        <li>
+                            <p>Importantly, you DON’T have to wait for RE-PAIRING or UNPAIRING to start working on your
+                                project.</p>
+                        </li>
+                        <li>
+                            <p>As SOON as you FILL out the RE-PAIRING or UNPAIRING request form provided by your mentor,
+                                you can begin working on your project.</p>
+                        </li>
+                    </list>
+                </li>
+            </list>
+            <img alt="image_24.png" border-effect="rounded" src="image_24.png"/>
+            <p><b>What happens if a team member is not actively participating?</b></p>
+            <p>You can reach out to your mentor to get paired with another partner (it is your responsibility to find
+                yourself a new partner) or you can reach out to your mentor to get unpaired from your current
+                partner.</p>
+
+            <p><b>How are project topics selected for teams?</b></p>
+            <p>Project topics are typically assigned by ALX program administrators based on the curriculum and learning
+                objectives.</p>
+
+            <p><b>What if I have a specific project idea or request?</b></p>
+            <p>While you may have project preferences, final project assignments are determined by ALX program
+                administrators to ensure a balanced learning experience.</p>
+
+            <p><b>Can teams work remotely or in person?</b></p>
+            <p>The team will decide whether to work remotely or in person; it is up to you as learners to decide
+                this.</p>
+
+            <p><b>What support does ALX provide to project teams?</b></p>
+            <p>ALX offers guidance, mentorship, and resources to support project teams throughout the program.</p>
+
+            <p><b>How long will I work with my project team?</b></p>
+            <p>Team assignments typically last for the duration of the project phase, which can vary.</p>
+
+            <p><b>How can I provide feedback on the team pairing process?</b></p>
+            <p>ALX welcomes feedback from participants regarding the team pairing process, and you can provide input
+                through program surveys or by reaching out to program administrators and mentors.</p>
+
+            <p><b>Can I pair with a peer from another cohort?</b></p>
+            <p>No, you can only team up with peers in your cohort.</p>
+            <img alt="its okay" src="beyonce-its-okay.gif"/>
+            <p>
+                Please remember that you can reach out to your mentor on Discord if you have any issues
+            </p>
+        </def>
+    </deflist>
+
+</topic>

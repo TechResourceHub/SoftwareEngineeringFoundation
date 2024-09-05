@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Pointers-and-arrays"
+       title="Pointers and arrays"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+	<b>Read this page, write down and test all the examples (do not copy-paste!).</b>
+	<deflist>
+		<def title="Pointers">
+			<img alt="image_37.png" border-effect="rounded" src="image_37.png"/>
+			<p>
+				A pointer is a variable which contains a memory address.
+			</p>
+			<b>Types and memory</b>
+			<p>
+				Every time you declare a variable, the computer will reserve memory for this variable. The memory
+				reserved will then store the value of the variable.
+				Depending on the type of the variable, the computer will reserve more or less memory. The size of each
+				type is generally defined in bytes (1 byte = 8 bits, each bit being 0 or 1). The sizes of the types also
+				depend on the computer you are using. Here are the sizes of the most common types on most 64-bit Linux
+				machines:
+			</p>
+			<list>
+				<li>char -&gt; 1 byte</li>
+				<li>int -&gt; 4 bytes</li>
+				<li>float -&gt; 4 bytes</li>
+			</list>
+			<p>
+				To determine the size of those types on your computer, you can use the <code>sizeof</code> operator.
+			</p>
+			<code-block include-lines="1-23" lang="c" src="concept/pointers"/>
+			<p>
+				The size of a type will determine how many different possible values a variable of this type can hold.
+				For instance, a char variable could only hold 256 (2^8, 8 being the number of bits) different values:
+				from -128 to 127. And because the size of int is 4 bytes, so 32 bits, an int variable can hold 2^32
+				different possible values.
+			</p>
+			<p>
+				When we declare a variable, the computer will reserve the right amount of space for the variable in the
+				memory (depending on its type). The space reserved for the variable is its address. And when we assign a
+				value to this variable, the computer will store this value at its address.
+			</p>
+			<code-block lang="c">
+				char c;
+			</code-block>
+			<img alt="image_38.png" border-effect="rounded" src="image_38.png"/>
+			<p>
+				In this example, we simply declare a variable c of type char. The address of c is 8. At this stage, you
+				have not assigned a value to your variable c. So you do not know its value. It depends on what this
+				memory address was used for before. You should never assumed that it is 0.
+			</p>
+			<code-block lang="c">
+				char c;
+
+				c = 'H';
+			</code-block>
+			<p>When we assign the value 'H' to c, then 'H' is stored at c‘s address.</p>
+			<img alt="image_39.png" border-effect="rounded" src="image_39.png"/>
+			<p>
+				But you know that a byte can only store numbers. So actually, the byte will not hold exactly the letter
+				'H', but its ascii code, which is 72 (man ascii). So it really looks like this in memory:
+			</p>
+			<img alt="image_40.png" border-effect="rounded" src="image_40.png"/>
+			<p>
+				Since integers are stored within four bytes of memory, the same example with an int variable would look
+				like this:
+			</p>
+			<code-block lang="c">
+				int n;
+
+				n = 98;
+			</code-block>
+			<img alt="image_41.png" border-effect="rounded" src="image_41.png"/>
+			<p>
+				In this example, the address of the variable n is the smallest address of its bytes, so in this example,
+				26. Note that you do not control the address where the variable is stored. In order to know what is the
+				address of a variable, you can use the “address-of unary operator” &amp;.
+			</p>
+			<code-block include-lines="25-44" lang="c" src="concept/pointers"/>
+			<b>Note that:</b>
+			<list>
+				<li>
+					You can use %p to <code>print</code> addresses (the values of pointers) with <code>printf</code>
+				</li>
+				<li>
+					This example will not compile with our regular flags <code>-Wall -Wextra -Werror -pedantic
+					-std=gnu89</code>. You’ll learn why later
+				</li>
+			</list>
+		</def>
+		<def title="Storing memory addresses">
+			<p>
+				Now that we know how to get an address, we can store it in a… pointer! :)
+				A pointer is simply the address of a piece of data in memory. A pointer variable is a variable that
+				stores the address of that piece of data. Like any other variable it needs to be declared. General form
+				is: <code>var_type *var;</code>
+			</p>
+			<list>
+				<li>The <code>*</code> tells that the variable <code>var</code> is a pointer…</li>
+				<li>… that points to a <code>var_type</code>.</li>
+				<li>The value of var will be a memory address holding a value of type <code>var_type</code></li>
+			</list>
+			<code-block lang="c">
+				int *ptr;
+			</code-block>
+			<p>
+				In this example, <code>ptr</code> is the name of the variable, of type “pointer to an integer”. Anything
+				that is on the left of the last <code>*</code> before the name of the variable will give you the type
+				that the pointer points to.
+			</p>
+			<code-block lang="c">
+				/* ptr2 is a pointer to a char */
+				char *ptr2
+			</code-block>
+			<p>
+				Because a pointer is like any other variable, the computer will also reserve the right amount of memory
+				for it to store its value. On most 64 bits machines, the size of pointers is 8 bytes.
+			</p>
+			<code-block include-lines="46-62" lang="c" src="concept/pointers"/>
+			<img alt="image_42.png" border-effect="rounded" src="image_42.png"/>
+			<p>
+				To get the address where a pointer is stored, you can use the same technique as for any other variable:
+				use the <code>&amp;</code> operator.
+			</p>
+			<code-block include-lines="64-80" lang="c" src="concept/pointers"/>
+
+			<p>Ok, now let’s store the address of a variable into a pointer.</p>
+			<code-block lang="c">
+				int n;
+				int *p;
+
+				n = 98;
+				p = &amp;n;
+			</code-block>
+			<p>
+				Because <code>&amp;n</code> gives us the address of the variable <code>n</code>, the variable
+				<code>p</code> now holds the address of the variable <code>n</code>: <code>p</code> points to
+				<code>n</code>. If the variable <code>n</code>’s address were 26, then the value of our pointer
+				<code>p</code> would be 26.
+			</p>
+			<img alt="image_43.png" border-effect="rounded" src="image_43.png"/>
+			<code-block include-lines="82-103" lang="c" src="concept/pointers"/>
+
+			<p>
+				Remember that a pointer can only point to a variable of the type it is supposed to point to. The
+				following example is incorrect:
+			</p>
+			<code-block lang="c">
+				char c;
+				int *p;
+
+				p = &amp;c;
+			</code-block>
+			<b>Dereferencing</b>
+			<p>
+				You could argue that so far, we could have used an integer (or a <code>unsigned long int</code> that is
+				also 8 bytes				long on most 64 bits computers) to store an address, since it is a number. The real power of pointers is
+				that they can manipulate values stored at the memory address they point to. This is called
+				dereferencing. To do this, you can use the dereference operator <code>*</code>.
+			</p>
+
+			<code-block include-lines="105-131" lang="c" src="concept/pointers"/>
+
+			<b>Let’s walk through this example:</b>
+			<list>
+				<li>
+					<code>int *p;: *</code> is used in the declaration: p is a pointer to an integer, and so, after
+					dereferencing, <code>*p</code> is an integer.
+				</li>
+				<li>
+					<code>p = &amp;n;: &amp;</code> takes the address of n. So now <code>p == &amp;n</code>, so <code>*p
+					== n</code>
+				</li>
+			</list>
+			<p>At this point, the memory looks like this:</p>
+			<img alt="image_44.png" border-effect="rounded" src="image_44.png"/>
+			<list>
+				<li>
+					<code>*p = 402;</code>: equivalent to <code>n = 402</code>, since <code>p == &amp;n</code>. Now *p
+					== 402 so <code>n == 402.</code>
+				</li>
+			</list>
+			<p>This is what it looks like after this statement in memory:</p>
+			<img alt="image_45.png" border-effect="rounded" src="image_45.png"/>
+			<p>This works exactly the same for other types:</p>
+
+			<code-block include-lines="133-176" lang="c" src="concept/pointers"/>
+
+			<p>
+				Note that <code>*</code> has a different meaning depending on the context (declaring vs dereferencing
+				pointers).
+			</p>
+			<list>
+				<li>at declaration, it is used to declare a variable of type pointer to something. Example: <code>int
+					*n;</code>
+				</li>
+				<li>when used inside the code it is used to dereference pointers. Example <code>*n = 98;</code></li>
+			</list>
+		</def>
+		<def title="Functions parameters are passed by value">
+			<p>When we call a function in C, parameters are copied.</p>
+
+			<code-block include-lines="178-201" lang="c" src="concept/pointers"/>
+
+			<p>
+				In this example, when we call the <code>modif_my_param</code> function, the value of n (98) is copied
+				inside a new variable m, only available in the <code>modif_my_param</code> function. Here is what it
+				looks like in memory before the line <code>m = 402;</code> is executed:
+			</p>
+			<img alt="image_57.png" src="image_57.png" border-effect="rounded"/>
+			<p>After <code>m = 402;</code> the memory looks like this:</p>
+            <img alt="image_56.png" src="image_56.png" border-effect="rounded"/>
+			<p>
+				When we leave the function <code>modif_my_param</code> the variable <code>m</code> is destroyed and does
+				not exist anymore. Its value though, stays in memory until this space is used by the program for another
+				variable or something else.
+			</p>
+			<img alt="image_55.png" src="image_55.png" border-effect="rounded"/>
+			<p>
+				This rule applies to any type of variable. But since the values of pointers are addresses, it is
+				possible to modify a variable from outside the function it is declared, using a pointer.
+			</p>
+
+			<code-block include-lines="203-247" lang="c" src="concept/pointers"/>
+
+			<p>
+				In this example, here is what happens: Before the call to the function <code>modif_my_param</code>, the
+				memory looks like this:
+			</p>
+			<img alt="image_54.png" src="image_54.png" border-effect="rounded"/>
+			<p>
+				When we call the function <code>modif_my_param</code>, the value of p is stored in a new variable called
+				<code>m:</code>
+			</p>
+            <img alt="image_53.png" src="image_53.png" border-effect="rounded"/>
+			<p>
+				Since <code>m</code> stores the same memory address, it points to the same address, and so both
+				<code>p</code> and <code>m</code> now point to n. Therefore, when we execute the line <code>*m =
+				402;</code> we modify the value of <code>n</code> and <code>n</code> now holds <code>402</code>.
+			</p>
+			<img alt="image_52.png" src="image_52.png" border-effect="rounded"/>
+			<p>
+				When we leave the function <code>modif_my_param</code>, the variable m is destroyed, but n’s value is
+				still <code>402:</code>
+			</p>
+			<img alt="image_51.png" src="image_51.png" border-effect="rounded"/>
+			<p>
+				Using the same format, try to represent in memory what is happening at every step of the following
+				program. When done, add some <code>printfs</code> and compile to verify your hypothesis.
+			</p>
+
+			<code-block include-lines="249-274" lang="c" src="concept/pointers"/>
+
+		</def>
+		<def title="Arrays">
+			<p>
+				Arrays in C are contiguous memory areas that hold a number of values of the same type. Unlike some other
+				languages, in C, all elements of an array have the same type. To declare an array we use this syntax:
+				<code>type var_name[number_of_elements];</code>, where <code>number_of_elements</code> is the number of
+				elements of type <code>type</code> that we need.
+			</p>
+			<code-block lang="c">
+				int t[5];
+			</code-block>
+			<p>
+				In this example we declare an array of 5 integers. The computer will reserve a continuous space for 5
+				integers in memory. In memory, it would look like something like this.
+			</p>
+
+			<img alt="image_50.png" src="image_50.png" border-effect="rounded"/>
+			<p>
+				We access the different elements of an array this way: t[0] will access the first element, t[1] the
+				second element, and so on.
+			</p>
+
+			<code-block include-lines="276-315" lang="c" src="concept/pointers"/>
+
+			<p>Memory would look like this before exiting the <code>main</code> function:</p>
+
+			<img alt="image_49.png" src="image_49.png" border-effect="rounded"/>
+		</def>
+		<def title="Pointers vs Arrays">
+			<p>In C, an array is NOT a pointer, the variables we declare as arrays do not hold a memory address.</p>
+			<p>
+				When we declare an array, we use a name to refer to it, but it is only a name. Array names are
+				identifiers that identify the entire array object. They are not pointers to anything. That is why we can
+				not change the value of a 'variable’ which is an array.
+			</p>
+
+			<code-block include-lines="317-345" lang="c" src="concept/pointers"/>
+
+			<p>
+				But, you can still use the name of the array in your code, and its value will be… the address of the
+				first element of the array. Wait… WAT?
+			</p>
+
+			<img src="wat.gif" alt="wat" border-effect="rounded"/>
+
+			<code-block include-lines="347-365" lang="c" src="concept/pointers"/>
+
+			<p>So what is happening here? If arrays are not pointers, why is it that the value of an array is the
+				address of the first element of the same array. Isn’t this the definition of a pointer: “a variable
+				which contains the address”? Well… YES, this is a pointer, but the variable a (the array) is NOT. This
+				is why:</p>
+			<p>When the name of an array is used in an expression, the array type gets automatically implicitly
+				converted to pointer-to-element type in almost all contexts (this is often referred to as “array type
+				decay”). The resultant pointer is a completely independent temporary value, that is the address of the
+				first element of the array.</p>
+
+			<code-block include-lines="367-404" lang="c" src="concept/pointers"/>
+
+			<p>There are two exceptions to this: when the array name is an operand of sizeof or unary &amp;
+				(address-of), the name of the array then refers to the array object itself.</p>
+			<b>sizeof</b>
+			<p>In the context of <code>sizeof</code>, the name of the array refers to the array object itself (composed
+				of all its elements). Thus, <code>sizeof</code> an array will give you the amount of memory space used
+				by all its elements.</p>
+
+			<code-block include-lines="406-422" lang="c" src="concept/pointers"/>
+
+			<b>&amp;</b>
+			<p>
+				In the context of <code>&amp;</code>, the name of the array refers to the array object itself (composed
+				of all its elements). So the <code>address-of</code> the array name will give you the address of the
+				whole array, which is the same as the address of its first element.
+			</p>
+
+			<code-block include-lines="427-442" lang="c" src="concept/pointers"/>
+
+			<p>
+				As a consequence, the value of b is the same as the value of <code>&amp;b</code>. But they do not have
+				the same type:
+			</p>
+			<list>
+				<li>b: in this context, general rule applies, so using b will be evaluated as the address of the first
+					element of the array. Thus, b is of type char *
+				</li>
+				<li>&amp;b: in this context (one of the two exceptions to the general rule), b will be evaluated as the
+					array object itself. so b is of type char[98] - an array of 98 characters - and then &amp;b is of
+					type char (*)[98], a pointer to an array of 98 characters.
+				</li>
+			</list>
+			<p>
+				This is important because when we will manipulate those two pointers, they will behave differently,
+				since the size of their type is different:
+			</p>
+			<list>
+				<li><code>sizeof b is 98</code> (see above)</li>
+				<li><code>sizeof &amp;b</code> is 8, (if you are using a regular 64 bits machine) (see below)</li>
+			</list>
+
+			<code-block include-lines="444-466" lang="c" src="concept/pointers"/>
+
+		</def>
+		<def title="Pointers Arithmetic">
+			<p>
+				Another way to access different elements of an array, is to use this other notation: *(var + x), where
+				var is the name of an array, and x is the (x+1)th element (starting counting elements at 0 of course) of
+				this array. For instance if we declare:
+			</p>
+			<code-block lang="c">
+				int i[10];
+			</code-block>
+			<p>
+				then, when we will use i in the code, i[5] will be the same as *(i + 5). We already knew that i is
+				evaluated as a pointer to the first element of the array, since i is an array. But now, we also know
+				that i + 5 will be evaluated as a pointer to the 6th element of the array i.
+			</p>
+
+			<code-block include-lines="468-505" lang="c" src="concept/pointers"/>
+
+			<p>
+				But wait a second, if the value of a is 0x7ffff8f19240, how come <code>a + 1 == 0x7ffff8f19244</code>
+				and not <code>0x7ffff8f19241?</code> This is the pointers arithmetic. The computer knows that a points
+				to an integer. The computer also knows that the size of an integer in memory is <code>sizeof(int)</code>
+				bytes - in this case 4 bytes - and concludes that the next element of this type will be stored 4 bytes
+				later in memory.
+			</p>
+
+			<img alt="image_48.png" src="image_48.png" border-effect="rounded"/>
+
+			<p>
+				If this works for arrays, which are evaluated as pointers in this context, this means that this
+				arithmetic also works for “regular” pointers.
+			</p>
+
+			<code-block include-lines="507-540" lang="c" src="concept/pointers"/>
+
+			<p>
+				Try to understand and draw the memory state at each step of the following program. Once you feel you
+				understand everything, add some printfs, compile and run it to verify your hypothesis.
+			</p>
+
+			<code-block include-lines="542-563" lang="c" src="concept/pointers"/>
+
+			<b>Strings</b>
+
+			<p>
+				Of course, we can also create an array of chars. It would work exactly the same way.
+			</p>
+
+			<code-block include-lines="565-589" lang="c" src="concept/pointers"/>
+
+			<p>In this example, memory looks like this before exiting the program:</p>
+
+			<img alt="image_47.png" src="image_47.png" border-effect="rounded"/>
+
+			<p>
+				That would be one way to store strings, but this is not very efficient. If we wanted to store a very
+				long text, imagine how much time would we spend storing each character of the string in our array!
+				Fortunately, we can also use text in double quotes ".
+			</p>
+
+			<code-block lang="c">
+				char a[7] = "School";
+			</code-block>
+
+			<p>You probably noticed that in this example, we used an array of 7 characters to store a string of 6
+				characters. This is because in C, strings end with the char '\0' (ascii value = 0).</p>
+
+			<p>In the above example, note that this statement will actually copy the string “School” into the variable
+				a. Strings also have values in C: the address of their first character in memory:</p>
+
+			<code-block include-lines="591-612" lang="c" src="concept/pointers"/>
+			<p>Memory will look like:</p>
+			<img alt="image_46.png" src="image_46.png" border-effect="rounded"/>
+			<p>
+				Since every string in C ends with a '\0' we do not need to know their size to use them. By knowing the
+				address of the first character of strings (with a pointer to a char), C functions can easily print them
+				using a loop, one character at a time, until they hit the character '\0'.
+			</p>
+			<p>
+				<code>#cisfun #pointersarefun #everythingisawesome</code>
+			</p>
+			<img src="blown-mind-explosion-gif.gif" alt="blown-mind-explosion" border-effect="rounded"/>
+		</def>
+		<def title="BONUS">
+			<p>Our memory templates:</p>
+			<list>
+				<li>
+					<a href="https://intranet.alxswe.com/rltoken/0A41AUjhFj2TMIT5S_Q74Q">Memory template.xlsx</a>
+				</li>
+				<li><a href="https://intranet.alxswe.com/rltoken/p1XS_Ei3qH-z3wbn_RUkHA">Memory template.ods</a> or
+					<resource src="5b15142e4c3fb2a321fecb8da3f604348c451cd4.zip"/>
+				</li>
+			</list>
+		</def>
+	</deflist>
+</topic>

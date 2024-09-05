@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Command-line-for-the-win"
+       title="Command line for the win"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+	<procedure id="background_context" title="Background Context">
+		<img alt="cmd-challenge.png" border-effect="rounded" src="cmd-challenge.png"/>
+		<p>
+			<a href="https://cmdchallenge.com/">
+				<format color="BurlyWood">CMD CHALLENGE</format>
+			</a>
+			is a pretty cool game challenging you on Bash skills. Everything is done via
+			the command line and the questions are becoming increasingly complicated. It’s a good training to improve
+			your command line skills!
+		</p>
+		<p>Have fun!</p>
+	</procedure>
+	<procedure id="requirements" title="Requirements">
+		<b>General</b>
+		<step>
+			A <code>README.md</code> file, at the root of the folder of the project, is mandatory
+		</step>
+		<step>Create a screenshot, showing that you completed the required levels</step>
+		<step>Push this screenshot with the right name to GitHub, in either the PNG or JPEG format</step>
+		<b>Specific</b>
+		<p>
+			In addition to completing the project tasks and submitting the required <code>screenshots</code> to
+			<code>GitHub</code>, you are also required to demonstrate the use of the <code>SFTP(Secure File Transfer
+			Protocol)</code> command-line tool to move your local screenshots to a remote environment.
+		</p>
+		<b>
+			<format color="Coral">References:</format>
+		</b>
+		<list>
+			<li>
+				<a href="https://man.openbsd.org/sftp">
+					<format color="BurlyWood">SFTP Guide</format>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server">
+					<format color="BurlyWood">How To Use SFTP to Securely Transfer Files with a Remote Server</format>
+				</a>
+			</li>
+		</list>
+		<b>Here are the steps to follow:</b>
+		<list>
+			<li>
+				Take the <code>screenshots</code> of these completed levels as mentioned in the <code>general</code>
+				requirements
+			</li>
+			<li>
+				Open a terminal or command prompt on your local machine.
+			</li>
+			<li>
+				Use the <code>SFTP command-line tool</code> to establish a connection to a remote environment. You will
+				need the <code>hostname</code>, <code>username</code>, and <code>password</code>.
+			</li>
+			<li>
+				Once connected, navigate to the <code>directory</code> where you want to upload the
+				<code>screenshots</code>
+			</li>
+			<li>
+				Use the SFTP <code>put</code> command to upload the <code>screenshots</code> from your local machine to
+				the remote environment.
+			</li>
+			<li>Confirm that the <code>screenshots</code> have been successfully transferred</li>
+			<li>
+				Once the <code>screenshots</code> are transferred, you can proceed to push the <code>screenshots</code>
+				to <code>GitHub</code> as mentioned in the initial requirements.
+			</li>
+			<li>
+				Make sure to include the steps you followed to use the SFTP command-line tool in your project’s
+				<code>README.md</code> file. This will help the reviewers understand how you performed the file transfer
+				using <code>SFTP</code>.
+			</li>
+		</list>
+		<b>NOTE:</b>
+		<p>
+			The screenshots of completed level should be inside the dir <code>/root/alx-system_engineering-devops/command_line_for_the_win/</code>
+		</p>
+	</procedure>
+	<chapter id="tasks" title="Tasks">
+		<procedure id="0_first_tasks" title="0. First 九 tasks">
+			<p>Complete the first nine tasks</p>
+		</procedure>
+		<procedure id="1_reach_completed_tasks" title="1. Reach חי completed tasks">
+			<p>Complete the nine next tasks, getting to total 18.</p>
+		</procedure>
+		<procedure id="2_reach_the_perfect_cube_27" title="2. Reach the perfect cube, 27">
+			<p>Complete the nine next tasks, getting to total 27.</p>
+		</procedure>
+		<procedure collapsible="true" id="repo" title="Repo">
+			<step>
+				<format color="DarkCyan">Repo:</format>
+
+				<list>
+					<li>GitHub repository:
+						<code>
+							alx-system_engineering-devops
+						</code>
+					</li>
+					<li>Directory:
+						<code>
+							command_line_for_the_win
+						</code>
+					</li>
+					<li>File:
+						<code>
+							0-first_9_tasks.jpg, 0-first_9_tasks.png,
+						</code>
+						<code>
+							1-next_9_tasks.jpg, 1-next_9_tasks.png,
+						</code>
+						<code>
+							2-next_9_tasks.jpg, 2-next_9_tasks.png
+						</code>
+					</li>
+				</list>
+
+			</step>
+		</procedure>
+	</chapter>
+</topic>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Research-Project-Approval-Overview"
+       title="Research &amp; Project Approval Overview"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <p>
+        Before starting any coding, you will need to research and define your portfolio project over the course of 3
+        weeks. Each part will be released on a Friday, and be due the following week on Friday.
+    </p>
+    <p>
+        A second deadline will be available for the first two parts but not the third. If a project is not approved by
+        the Part 3 deadline, then a student will default to working on the Maze project
+    </p>
+    <b>Part 1</b>
+    <p>
+        This first part is focused on creating a Project Proposal and requires that a Google Document is submitted for
+        Manual Review by a technical staff member. Please take time to brainstorm, research, and explore what currently
+        exists during this first phase.
+    </p>
+    <b>Part 2</b>
+    <p>
+        Create a specification for the first version of your software, the Minimum Viable Product (MVP).
+    </p>
+    <b>Part 3</b>
+    <p>
+        Create a Trello board where the features defined in the MVP are broken down into tasks with specific deadlines
+        and team member assignments.
+    </p>
+    <b>A Note about Staff Approval</b>
+    <p>
+        Members of technical staff will be reviewing your project throughout these 3 weeks to ensure a plan is in place,
+        and progress is being made. Please do not rely on the technical staff to provide detailed technical feedback. If
+        there is bandwidth, they may be able to offer some notes to guide you in the right direction. It is your
+        responsibility to seek out the support you need to reach the challenge you’ve defined for yourself. The
+        technical work is yours to research, prove, and navigate through this final series of projects.
+    </p>
+
+    <b>Examples of the past</b>
+    <p>
+        Explore some student projects from previous cohorts!
+    </p>
+    <list>
+        <li>
+            <a href="https://ww25.eggventure.online/?subid1=20240901-2230-2770-b390-2f23da240936">Eggify</a>
+            (<a href="https://github.com/ad-egg/eggify">Github</a>)
+            – by
+            <a href="https://ad-egg.github.io/">Athena Deng</a>
+            &amp;
+            <a href="https://sazad44.github.io/">Samie Azad</a>
+        </li>
+        <li>
+            <a href="https://ww25.ideadog.site/home?subid1=20240901-2237-06c9-92ea-86f6a54e8999">IdeaDog</a>
+            (<a href="https://github.com/bdbaraban/ideadog">Github</a>)
+            – by
+            <a href="https://www.bdov.dev/">Brennan D Baraban</a>
+        </li>
+        <li>
+            <a href="https://jobodyssey.com/">Job Odyssey</a>
+            (<a href="https://github.com/christopherchoe/jobodyssey_hbtn">Github</a>)
+            – by
+            <a href="https://susansu.site/">Susan Su</a>
+            &amp;
+            <a href="https://christopherchoe.github.io/">Christopher Choe</a>
+        </li>
+        <li>
+            <a href="https://github.com/bennettdixon/synth">Synth (Github)</a> – by
+            <a href="https://www.jackgindi.com/">Jack Gindi</a> &amp;
+            <a href="https://bencodesit.com/">Bennett Dixon</a>
+        </li>
+        <li>
+            <a href="https://ww25.detweet.online/?subid1=20240901-2245-12e8-b091-34f6f55b3361">DeTweet</a>
+            (<a href="https://github.com/robertglatzel/detweet">Github</a>) – by
+            <a href="https://robertglatzel.github.io/">Robert Glatzel</a>
+        </li>
+        <li>
+            <a href="https://giphsearchy.firebaseapp.com/">GIPSY</a> (
+            <a href="https://github.com/AfaMadza/GIPSY">Github</a>) – by
+            <a href="https://www.linkedin.com/in/afa-madza">Afa Mazda</a>
+        </li>
+    </list>
+
+</topic>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Automatic-and-dynamic-allocation-malloc-and-free"
+       title="Automatic and dynamic allocation, malloc and free"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <p>
+        The <code>malloc</code> function is used to allocate a certain amount of memory during the execution of a
+        program. It will request a block of memory from the heap. If the request is granted, the operating system will
+        reserve the requested amount of memory and <code>malloc</code> will return a pointer to the reserved space.
+    </p>
+    <p>
+        When the amount of memory is not needed anymore, you must return it to the operating system by calling the
+        function <code>free</code>.
+    </p>
+
+    <procedure id="automatic_allocation" title="Automatic allocation">
+        <p>
+            When you declare variables or when you use strings within double quotes, the program is taking care of all
+            the memory allocation. You do not have to think about it.
+        </p>
+        <code-block include-lines="1-16" lang="c" src="concept/ada"/>
+        <p>
+            In the above example, the arguments and the local variables are stored automatically in memory when the
+            function is called. The program reserves space and uses it without you having to think about it.
+        </p>
+        <img alt="image_71.png" border-effect="rounded" src="image_71.png"/>
+        <p>
+            By default, the memory used to store those variables can be read and written. When the program leaves the
+            function, the memory used for all the above variables is released for future use.
+        </p>
+        <b>Special case: string literals</b>
+        <p>
+            One special case we have seen so far is the memory used to store strings that we put within double quotes
+            (") in our programs. For instance:
+        </p>
+        <code-block lang="c">
+            char *str;
+
+            str = “Holberton”;
+        </code-block>
+        <p>
+            The string <code>"Holberton"</code> that was just declared is stored automatically in memory when the
+            program is launched. But, the memory that stores the string is only readable. In fact, if you try to change
+            a character using <code>str</code>, you will have a little surprise :)
+        </p>
+        <code-block include-lines="20-47" lang="c" src="concept/ada"/>
+        <p>
+            In the above example, the variable <code>str</code> is a pointer to a char, that is initialized to the
+            address of the first character of the string “Holberton”. But the memory storing the string “Holberton” is
+            read-only, and will also not be released when the function returns. This is the state of the memory after
+            the line <code>str = "Holberton";</code> is executed (in red: read-only memory):
+        </p>
+        <img alt="image_72.png" border-effect="rounded" src="image_72.png"/>
+        <p>And this is the state of the memory after the function returns</p>
+        <img alt="image_73.png" border-effect="rounded" src="image_73.png"/>
+        <p>
+            Note that when using the notation: <code>char s[] = "Holberton"</code>, the array <code>s</code> holds a
+            copy of the string <code>"Holberton"</code>. So it is possible to modify this copy.
+        </p>
+        <code-block include-lines="51-80" lang="c" src="concept/ada"/>
+        <p>This is the memory before the call to <code>print_school</code>:</p>
+        <img alt="image_74.png" border-effect="rounded" src="image_74.png"/>
+        <p>Note that the string <code>"Holberton"</code> is always present in the memory. We will see why later.</p>
+        <p>This is the memory right before the line <code>str[0] = 's';</code> is executed:</p>
+        <img alt="image_75.png" border-effect="rounded" src="image_75.png"/>
+        <p>Note the difference:</p>
+        <list>
+            <li>
+                The variable <code>str</code> is not a pointer, it’s an array. <code>str</code> does not hold the memory
+                address of the string <code>"Holberton"</code>, but a copy of it
+            </li>
+            <li>The string “Holberton” is copied into this array</li>
+        </list>
+        <p>And this is the memory state when the program leaves the function <code>print_school:</code></p>
+        <img alt="image_76.png" border-effect="rounded" src="image_76.png"/>
+        <p>Note, again, that the string <code>"Holberton"</code> is still present in the memory.</p>
+        <b>Why would I need dynamic allocation?</b>
+        <p>
+            So far we only have seen functions and programs that had fixed inputs. What happens when we do not know in
+            advance how much memory you need and we will only know this at runtime, after compilation?
+        </p>
+        <p>
+            For instance, imagine we have to create a program that will store all the words contained in a file in an
+            array. That file is passed as an argument to our program. There is no way we could know in advance how many
+            words the file will contain. We can not declare a big array like <code>char *words[1024];</code> and assume
+            that there will never be more than 1024 words in the file. That’s when <code>malloc</code> and friends come
+            to the rescue, and will permit us to allocate dynamically the amount of memory we need.
+        </p>
+
+    </procedure>
+
+    <procedure id="dynamic_allocation" title="Dynamic allocation">
+        <deflist>
+            <def title="Malloc">
+                <p>
+                    The <code>malloc</code> function allocates a specific number of bytes in memory and returns a
+                    pointer to the allocated memory. This memory will have read and write permissions.
+                </p>
+                <list>
+                    <li>Prototype: <code>void *malloc(size_t size);</code></li>
+                    <li>where <code>void *</code> means it is a pointer to the type of your choice</li>
+                    <li>and <code>size</code> is the number of bytes your need to allocate</li>
+                </list>
+                <code-block include-lines="84-107" lang="c" src="concept/ada"/>
+                <p>
+                    In the above example we use <code>malloc</code> to create a 3 byte allocated space in memory, and we
+                    fill this space with characters. Note the use the operator <code>sizeof</code>. It is very important
+                    because as you know, the size of the different types will be different on different machines: we
+                    want 3 times the size of a <code>char</code> (which happens to be 3 times 1 byte on our 64-bit
+                    machine). Always use <code>sizeof</code> for a better portability.
+                </p>
+                <p>Let’s see another example, with integers</p>
+                <code-block include-lines="111-134" lang="c" src="concept/ada"/>
+                <p>
+                    In the above example, we are using <code>malloc</code> to create a space in memory where we can
+                    store three integers. Again, by using <code>sizeof</code> instead of directly a number of bytes
+                    (<code>12</code> for instance in this case if using a 64 bits machine) we are sure to get the right
+                    amount of memory, no matter what system we are compiling and running on.
+                </p>
+            </def>
+            <def title="memory">
+                <p>
+                    Contrary to local variables and function parameters, the memory that is allocated with
+                    <code>malloc</code> is not automatically released when the function returns.
+                </p>
+                <code-block include-lines="138-173" lang="c" src="concept/ada"/>
+                <p>This is what the memory would look like before the function <code>m</code> returns:</p>
+                <img alt="image_77.png" border-effect="rounded" src="image_77.png"/>
+                <p>And this will be the state of the memory after the function <code>m</code> returns</p>
+                <img alt="image_78.png" border-effect="rounded" src="image_78.png"/>
+                <b>The memory is not initialized</b>
+                <p>
+                    Just like with automatic allocation, the memory allocated by <code>malloc</code> is not initialized.
+                </p>
+            </def>
+            <def title="free">
+                <p>
+                    When you are using malloc, you have to handle the memory yourself. This means that:
+                </p>
+                <list>
+                    <li>
+                        You need to keep track of all the addresses of the allocated memory (in a variable of type
+                        pointer)
+                    </li>
+                    <li>
+                        You have to deallocate every memory space you previously allocated yourself. If you do not do
+                        this, then your program can run out of memory. Your operating system could even kill your
+                        program while it is running
+                    </li>
+                </list>
+                <code-block include-lines="177-197" lang="c" src="concept/ada"/>
+                <p>
+                    The <code>free</code> function frees the memory space which have been allocated by a previous call
+                    to <code>malloc</code> (or <code>calloc, or realloc</code>).
+                </p>
+                <list>
+                    <li>Prototype: <code>void free(void *ptr);</code></li>
+                    <li>where <code>ptr</code> is the address of the memory space previously allocated by and returned
+                        by a call to <code>malloc</code>
+                    </li>
+                </list>
+                <p>Example:</p>
+                <code-block include-lines="201-236" lang="c" src="concept/ada"/>
+                <p>
+                    In the above example, the memory allocated by <code>malloc</code> is <code>free</code>‘d with a call
+                    to the function <code>free</code>.
+                </p>
+                <p>You should always <code>free</code> all <code>malloc</code>'ed memory spaces.</p>
+            </def>
+            <def title="Valgrind">
+                <p>
+                    When writing big and complex programs, it is not always easy to keep track of all allocated and
+                    deallocated memory. We can use the program <a href="https://valgrind.org/">Valgrind</a> in order to
+                    ensure we are freeing all allocated memory. It is a programming tool for memory debugging, memory
+                    leak detection, and profiling.
+                </p>
+                <code-block include-lines="240-298" lang="c" src="concept/ada"/>
+                <p>In the above example, we definitely lost: 12 bytes in 1 blocks.</p>
+                <code-block include-lines="302-355" lang="c" src="concept/ada"/>
+                <p>
+                    In the above example, we get All heap blocks were freed – no leaks are possible. This is what you
+                    should always aim for.
+                </p>
+            </def>
+            <def title="Don’t trust anyone">
+                <p>
+                    On error, <code>malloc</code> returns <code>NULL</code>. As for any other C library function, you
+                    should always check the <code>malloc</code> return value before using it. If you don’t you will run
+                    into segfaults.
+                </p>
+                <code-block include-lines="360-383" lang="c" src="concept/ada"/>
+                <p>This is an example on how to check the return value of <code>malloc:</code></p>
+                <code-block include-lines="387-419" lang="c" src="concept/ada"/>
+            </def>
+            <def title="String literals and .rodata (advanced)">
+                <p>
+                    The string literals are stored in your executable at compilation. The way it is stored is actually
+                    dependent on both the operating system you are using and the linker. This is what happens when you
+                    compile the program on most modern operating systems:
+                </p>
+                <list>
+                    <li>
+                        The compiler puts the string into a read-only data-section, usually <code>.rodata</code>
+                    </li>
+                    <li>
+                        The linker collects all the data in such read-only sections and puts them into a single segment.
+                        This segment resides in the executable file and is flagged with a “read only”-attribute.
+                    </li>
+                </list>
+                <p>
+                    When you run the program, the operation system executable loader loads the executable (or maps it
+                    into memory to be more exact). Once this is done, the loader walks the sections and sets
+                    access-permissions for each segment. For a read-only data segment it will most likely disable
+                    code-execute and write access. Code (for example, your functions) gets execute rights but no write
+                    access. Ordinary data like static variables gets read and write access and so on…
+                </p>
+                <p>
+                    One very easy way to check that the string literal is actually stored in your executable is to use
+                    the command <code>strings (man strings)</code>.
+                </p>
+                <code-block include-lines="423-461" lang="c" src="concept/ada"/>
+                <p>
+                    It is also possible to use <code>objdump</code> to print the <code>.rodata</code> section contents.
+                </p>
+                <code-block include-lines="465-471" lang="c" src="concept/ada"/>
+                <b>String literals are not always read-only</b>
+                <p>
+                    On most modern operating system, string literals will be read-only. But this is (and certainly was)
+                    not always the case. It actually depends which operating system and linker you are using. For
+                    instance, if you were to compile <code>segf.c</code> for DOS, the program would not segfault. It
+                    would actually run because the memory where the string “Holberton” would be stored would have write
+                    access. This would happen because the DOS loader does not know about read-only sections.
+                </p>
+                <b>String literals are not always stored as strings in the executable</b>
+                <note>Note that we are using a 64-bit machine for the following example</note>
+                <p>Wait… WAT?</p>
+                <code-block include-lines="475-511" lang="c" src="concept/ada"/>
+                <img alt="ada" border-effect="rounded" src="ada.gif"/>
+                <p>
+                    So how does the program know what to print, without actually using the string? Well, sometimes
+                    (actually more often than you think), the compiler will optimize your code and modify it, without
+                    telling you. Let’s analyse what happens with <code>objdump:</code>
+                </p>
+                <code-block include-lines="515-569" lang="c" src="concept/ada"/>
+                <p>
+                    <code>4005ad: 48 b8 48 6f 6c 62 65 movabs rax,0x6f747265626c6f48</code> is where the trick happens.
+                    The program moves the value <code>0x6f747265626c6f48</code> into the 64-bit register
+                    <code>rax</code>, and then copies this value on the stack, at the address where the array str is
+                    stored <code>(4005b7: 48 89 45 e0 mov QWORD PTR [rbp-0x20],rax)</code>. Note that the value <code>0x6f747265626c6f48</code>
+                    takes 8 bytes in memory. As a result, this is what the memory looks like after the execution of
+                    <code>mov QWORD PTR [rbp-0x20],rax:</code>
+                </p>
+                <img alt="image_79.png" border-effect="rounded" src="image_79.png"/>
+                <p>
+                    Since <code>str</code> is an array of <code>char</code>, those bytes stored in <code>str</code> will
+                    be used as ASCII values of chars. Looking quickly at the ASCII table <code>(man ascii)</code>, we
+                    can translate this into chars:
+                </p>
+                <list>
+                    <li>0x48 = 'H’</li>
+                    <li>0x6f = ‘o’</li>
+                    <li>0x6c = ‘l’</li>
+                    <li>0x62 = ‘b’</li>
+                    <li>0x65 = ‘e’</li>
+                    <li>0x72 = ‘r’</li>
+                    <li>0x74 = ‘t’</li>
+                    <li>0x6f = ‘o’</li>
+                </list>
+                <p>
+                    This is the beginning of the string <code>Holberton!</code> We are just missing two chars:
+                    <code>n</code> and <code>\0</code>. This is what the line <code>4005bb: 66 c7 45 e8 6e 00 mov WORD
+                    PTR [rbp-0x18],0x6e</code> is taking care of:
+                </p>
+                <list>
+                    <li><code>0x6e</code> is the ASCII value of the char <code>n</code></li>
+                    <li>
+                        <code>mov WORD</code> ensures that you actually moves <code>0x006e</code>, as a
+                        <code>WORD</code> is two-byte long*, and <code>0x00</code> is the
+                        ASCII code for the <code>\0</code> char, that marks the end of a C string
+                    </li>
+                </list>
+                <i>
+                    * In this context, a <code>WORD</code> is 2-byte long, as we are referring to the Intel assembly
+                    language
+                </i>
+                <p>
+                    After the execution of the line <code>mov WORD PTR [rbp-0x18],0x6e</code>, the memory looks like
+                    this:
+                </p>
+                <img alt="image_80.png" border-effect="rounded" src="image_80.png"/>
+                <p>
+                    And you have the complete string <code>Holberton</code> stored in the array. In other words, it is
+                    possible that a string is stored as “code” and not as “data” in your executable.
+                </p>
+                <img alt="blown" border-effect="rounded" src="blown.gif"/>
+                <b>HolbertoH</b>
+                <p>
+                    Note that if you look at the strings of the executable with <code>strings</code> you will find the
+                    string <code>HolbertoH.</code>
+                </p>
+                <code-block lang="c">
+                    julien@holberton:~/c/strings$ strings ph | grep HolbertoH
+                    HolbertoH
+                    julien@holberton:~/c/strings$
+                </code-block>
+                <p>
+                    The way the program <code>strings</code> works: <code>strings</code> prints the printable character
+                    sequences that are at least 4 characters long and are followed by an unprintable character. It
+                    doesn’t know about sections and tries to interpret every bytes of the executable as a char.
+                    Therefore, as our executable contains the bytes <code>48 b8 48 6f 6c 62 65 72 74 6f,</code>
+                    immediately followed by the bytes <code>48 89 45 e0,</code>
+                </p>
+                <code-block include-lines="573-575" lang="c" src="concept/ada"/>
+                <p>
+                    <code>strings</code> recognizes Holberto <code>(48 b8 48 6f 6c 62 65 72 74 6f)</code>, followed by
+                    an <code>H (48)</code> and followed by a non-printable char (89), and prints <code>HolbertoH</code>
+                </p>
+            </def>
+        </deflist>
+    </procedure>
+
+</topic>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="0x0B-SSH"
+       title="0x0B. SSH"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+	<deflist>
+		<def id="background-context" title="Background Context">
+			<img alt="dance" border-effect="rounded" src="dance.gif"/>
+		</def>
+	</deflist>
+
+	<deflist>
+		<def id="resources" title="Resources">
+			<tabs>
+				<tab title="Read">
+					<list>
+						<li>
+							<a href="https://en.wikipedia.org/wiki/Server_computing">
+								<format color="DarkOrange">What is a (physical) server</format>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys">
+								<format color="DarkOrange">SSH Essentials</format>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.ssh.com/academy/ssh/config">
+								<format color="DarkOrange">SSH config</format>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.ssh.com/academy/ssh/public-key-authentication">
+								<format color="DarkOrange">SSH Public Key</format>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.digitalocean.com/community/tutorials/understanding-the-ssh-encryption-and-connection-process">
+								<format color="DarkOrange">
+									Understanding the SSH Encryption and Connection Process
+								</format>
+							</a>
+						</li>
+						<li>
+							<a href="https://en.wikipedia.org/wiki/Secure_Shell">
+								<format color="DarkOrange">
+									Secure Shell Wiki
+								</format>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.ietf.org/rfc/rfc4251.txt">
+								<format color="DarkOrange">
+									IETF RFC 4251 (Description of the SSH Protocol)
+								</format>
+							</a>
+						</li>
+						<li>
+							<a href="https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force">
+								<format color="DarkOrange">
+									Internet Engineering Task Force
+								</format>
+							</a>
+						</li>
+						<li>
+							<a href="https://en.wikipedia.org/wiki/Request_for_Comments">
+								<format color="DarkOrange">
+									Request for Comments
+								</format>
+							</a>
+						</li>
+					</list>
+				</tab>
+				<tab title="Video">
+					<b>What is a Server.</b>
+					<video src="https://www.youtube.com/watch?v=B1ANfsDyjeA"/>
+					<b>How Secure Shell Works (SSH) - Computerphile</b>
+					<video src="https://www.youtube.com/watch?v=ORcvSkgdA58"/>
+					<b>SSH Crash Course | With Some DevOps</b>
+					<video src="https://www.youtube.com/watch?v=hQWRp-FdTpc"/>
+				</tab>
+				<tab title="man or help:">
+					<code-block lang="shell">
+						ssh
+						ssh-keygen
+						env
+					</code-block>
+				</tab>
+			</tabs>
+		</def>
+	</deflist>
+
+	<deflist>
+		<def id="learning-objectives" title="Learning Objectives">
+			<p>
+				At the end of this project, you are expected to be able to
+				<a href="https://fs.blog/feynman-learning-technique/">
+					<format color="DarkOrange">explain to anyone</format>
+				</a> , <b>without the help of Google:</b>
+			</p>
+			<b>General</b>
+			<list>
+				<li>What is a server</li>
+				<li>Where servers usually live</li>
+				<li>What is SSH</li>
+				<li>How to create an SSH RSA key pair</li>
+				<li>The advantage of using <code>#!/usr/bin/env bash</code> instead of <code>/bin/bash</code></li>
+			</list>
+		</def>
+	</deflist>
+
+	<deflist>
+		<def id="requirements" title="Requirements">
+			<list>
+				<li>Allowed editors: <code>vi, vim, emacs</code></li>
+				<li>All your files will be interpreted on Ubuntu 20.04 LTS</li>
+				<li>All your files should end with a new line</li>
+				<li>A <code>README.md</code> file, at the root of the folder of the project, is mandatory</li>
+				<li>All your Bash script files must be executable</li>
+				<li>The first line of all your Bash scripts should be exactly <code>#!/usr/bin/env bash</code></li>
+				<li>
+					The second line of all your Bash scripts should be a comment explaining what is the script doing
+				</li>
+			</list>
+		</def>
+	</deflist>
+
+	<chapter id="tasks" title="Tasks">
+		<procedure collapsible="true" id="0_use_a_private_key" title="0. Use a private key">
+			<p>
+				Write a Bash script that uses <code>ssh</code> to connect to your server using the private key
+				<code>~/.ssh/school</code> with the user <code>ubuntu</code>.
+			</p>
+			<step>
+				<b>Requirements:</b>
+				<list>
+					<li>Only use <code>ssh</code> single-character flags</li>
+					<li>You cannot use <code>-l</code></li>
+					<li>You do not need to handle the case of private key protected by a passphrase</li>
+				</list>
+			</step>
+			<code-block lang="shell">
+				sylvain@ubuntu$ ./0-use_a_private_key
+				ubuntu@server01:~$ exit
+				Connection to 8.8.8.8 closed.
+				sylvain@ubuntu$
+			</code-block>
+
+			<deflist collapsible="true">
+				<def title="GitHub Repository:">
+					<code-block lang="shell">alx-system_engineering-devops</code-block>
+				</def>
+				<def title="Directory:">
+					<code-block lang="shell"> 0x0B-ssh</code-block>
+				</def>
+				<def title="File:">
+					<code-block lang="shell"> 0-use_a_private_key</code-block>
+				</def>
+			</deflist>
+
+		</procedure>
+
+		<procedure collapsible="true" id="1_create_an_ssh_key_pair" title="1. Create an SSH key pair">
+			<p>Write a Bash script that creates an RSA key pair.</p>
+			<step>
+				<b>Requirements:</b>
+				<list>
+					<li>Name of the created private key must be <code>school</code></li>
+					<li>Number of bits in the created key to be created <code>4096</code></li>
+					<li>The created key must be protected by the paraphrase <code>betty</code></li>
+				</list>
+			</step>
+			<deflist>
+				<def title="Example:">
+					<code-block include-lines="1-23" lang="shell" src="alx-system_engineering-devops/0x00-ssh/console"/>
+				</def>
+			</deflist>
+
+			<deflist collapsible="true">
+				<def title="GitHub Repository:">
+					<code-block lang="shell">alx-system_engineering-devops</code-block>
+				</def>
+				<def title="Directory:">
+					<code-block lang="shell"> 0x0B-ssh</code-block>
+				</def>
+				<def title="File:">
+					<code-block lang="shell">1-create_ssh_key_pair</code-block>
+				</def>
+			</deflist>
+		</procedure>
+
+		<procedure collapsible="true" id="2_client_configuration_file" title="2. Client configuration file">
+			<p>
+				Your machine has an SSH configuration file for the local SSH client, let’s configure it to our needs so
+				that you can connect to a server without typing a password. Share your SSH client configuration in your
+				answer file.
+			</p>
+			<step>
+				<b>Requirements:</b>
+				<list>
+					<li>
+						Your SSH client configuration must be configured to use the private key
+						<code>~/.ssh/school</code>
+					</li>
+					<li>Your SSH client configuration must be configured to refuse to authenticate using a password</li>
+				</list>
+			</step>
+			<deflist>
+				<def title="Example:">
+					<code-block include-lines="25-65" lang="shell"
+					            src="alx-system_engineering-devops/0x00-ssh/console"/>
+				</def>
+			</deflist>
+			<p>
+				In the example above, we can see that <code>ssh</code> tries to authenticate using <code>school</code>
+				and does not try to authenticate using a password. You can replace <code>98.98.98.98</code> by the IP of
+				your server for testing purposes.
+			</p>
+			<deflist collapsible="true">
+				<def title="GitHub Repository:">
+					<code-block lang="shell">alx-system_engineering-devops</code-block>
+				</def>
+				<def title="Directory:">
+					<code-block lang="shell"> 0x0B-ssh</code-block>
+				</def>
+				<def title="File:">
+					<code-block lang="shell">2-ssh_config</code-block>
+				</def>
+			</deflist>
+		</procedure>
+
+		<procedure collapsible="true" id="3_client_configuration_file_w_puppet_"
+		           title="3. Client configuration file (w/ Puppet)">
+			<p>
+				Let’s practice using Puppet to make changes to our configuration file. Just as in the previous
+				configuration file task, we’d like you to set up your client SSH configuration file so that you can
+				connect to a server without typing a password.
+			</p>
+			<step>
+				<b>Requirements:</b>
+				<list>
+					<li>
+						Your SSH client configuration must be configured to use the private key
+						<code>~/.ssh/school</code>
+					</li>
+					<li>Your SSH client configuration must be configured to refuse to authenticate using a password</li>
+				</list>
+			</step>
+			<deflist>
+				<def title="Example:">
+					<code-block lang="shell">
+						vagrant@ubuntu:~$ sudo puppet apply 100-puppet_ssh_config.pp
+						Notice: Compiled catalog for ubuntu-xenial in environment production in 0.11 seconds
+						Notice: /Stage[main]/Main/File_line[Turn off passwd auth]/ensure: created
+						Notice: /Stage[main]/Main/File_line[Declare identity file]/ensure: created
+						Notice: Finished catalog run in 0.03 seconds
+						vagrant@ubuntu:~$
+					</code-block>
+				</def>
+			</deflist>
+
+			<deflist collapsible="true">
+				<def title="GitHub Repository:">
+					<code-block lang="shell">alx-system_engineering-devops</code-block>
+				</def>
+				<def title="Directory:">
+					<code-block lang="shell"> 0x0B-ssh</code-block>
+				</def>
+				<def title="File:">
+					<code-block lang="shell">100-puppet_ssh_config.pp</code-block>
+				</def>
+			</deflist>
+		</procedure>
+
+	</chapter>
+
+</topic>

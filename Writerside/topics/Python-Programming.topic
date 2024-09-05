@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Python-Programming"
+       title="Python Programming"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <deflist>
+        <def title="Resources">
+
+            <img alt="image_33.png" border-effect="rounded" src="image_33.png"/>
+            <list>
+                <li><a href="https://docs.python.org/3.4/tutorial/index.html">The Python Tutorial</a></li>
+                <li>
+                    <resource src="Python Programming _ an introduction to computer science- 3rd Edition.pdf"/>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt">
+                        Derek Banas’ Learn to program With Python (Playlist)
+                    </a>
+                </li>
+                <li><a href="https://thepythonguru.com/">The Python Guru</a></li>
+                <li><a href="https://pyformat.info/">New string formatting</a></li>
+                <li>
+                    <resource src="python_gc_final_2012-01-22.pdf"/>
+                </li>
+                <li>
+                    <a href="https://aosabook.org/en/500L/a-python-interpreter-written-in-python.html">
+                        Python Interpreter
+                    </a>
+                </li>
+                <li><a href="https://docs.python.org/3.4/library/dis.html">Python bytecode</a></li>
+            </list>
+        </def>
+    </deflist>
+
+</topic>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Portfolio-Project-Deeper-Overview"
+       title="Portfolio Project Deeper Overview"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <chapter id="portfolio_project_guide" title="Portfolio Project Guide">
+        <p>
+            Welcome to an exciting phase in your ALX journey—Section 3, where you’ll embark on a Portfolio Project. This
+            guide aims to provide you with all the necessary details to navigate this project successfully.
+        </p>
+        <procedure id="what_is_a_portfolio_project_" title="What is a Portfolio Project?">
+            <p>
+                The Portfolio Project is a capstone endeavor designed to encapsulate all the skills and knowledge you’ve
+                acquired during the ALX Foundations program. You will be tasked with creating a project from scratch,
+                showcasing your ability to apply what you’ve learned in a real-world context.
+            </p>
+        </procedure>
+        <procedure id="freedom_to_explore" title="Freedom to Explore">
+            <p>
+                We’re setting you free on this one. There are no strict guidelines on what to build. Your heart’s
+                desire, guided by your creative spirit, is the limit. Mobile apps, web applications, game
+                development—pick your passion and run with it.
+            </p>
+        </procedure>
+    </chapter>
+
+    <chapter id="project_structure_overview" title="Project Structure Overview">
+        <p>
+            Your Portfolio Project will unfold in three distinct stages, each with its own set of objectives and
+            deliverables.
+        </p>
+        <procedure id="1_research_phase" title="1. Research Phase">
+            <step>
+                <p><b>Duration:</b> 3 weeks, comprising 3 mini-projects.</p>
+                <list>
+                    <li>
+                        <b>Idea Generation:</b> begin with brainstorming and documenting your project idea.
+                    </li>
+                    <li>
+                        <b>MVP Design:</b> Develop a concept for a Minimum Viable Product (MVP)
+                    </li>
+                    <li>
+                        <b>Project Mapping:</b> Draft a detailed plan on how you will execute the projects.
+                    </li>
+                </list>
+            </step>
+        </procedure>
+
+        <procedure id="2_building_phase" title="2. Building Phase">
+            <step>
+                <p><b>Duration:</b> 3 weeks, also with 3 projects.</p>
+                <list>
+                    <li>
+                        <b>Development:</b> This is where your project starts to take shape. Begin with the MVP and
+                        expand from there
+                    </li>
+                    <li>
+                        <b>Landing Page Creation:</b> Develop a compelling landing page for your project.
+                    </li>
+                    <li>
+                        <b>Presentation Preparation:</b> Start preparing for your project presentation.
+                    </li>
+                </list>
+            </step>
+        </procedure>
+
+        <procedure id="3_post_project_phase" title="3. Post-Project Phase">
+            <step>
+                <b>Duration:</b> 1-2 weeks
+                <list>
+                    <li>
+                        <b>Blog Post:</b> Write your experience and what you learned during the project development
+                        process.
+                    </li>
+                    <li>
+                        <b>GitHub Clean-up:</b> Refine your project's GitHun repository, focusing on improving the
+                        <code>README</code> and documentation.
+                    </li>
+                    <li>
+                        <b>Final Presentation:</b> If you have not presented you project yet, now is the time.
+                    </li>
+                </list>
+            </step>
+        </procedure>
+    </chapter>
+
+    <chapter id="key_considerations" title="Key Considerations">
+        <procedure id="teams" title="Teams">
+            <p>
+                You can choose to work individually or collaborate in teams of up to three. However, the team you choose
+                for the Research and Project Approval (Part 1) is the team you will work throughout these seven weeks.
+                Team adjustments won't be possible.
+            </p>
+            <p>
+                We highly encourage you to make informed decisions when picking your teammates. Whoever you pick in
+                Research and Project Approval (Part 1) is the person you will be stuck with for the next 8 weeks. Don’t
+                randomly pair up with people. Before making a pairing request to someone or accepting a pairing request
+                from someone, make sure to have a conversation with them.
+            </p>
+            <p>
+                If you want to work in a team of 3 people, you are supposed to send a request to the 2 other people at
+                the same time. If you make a request to only one person, you will end up in a team of 2 people.
+            </p>
+            <p>
+                Team Repairing is not going to be done for the portfolio project, therefore kindly follow the
+                instructions.
+            </p>
+        </procedure>
+
+        <procedure id="time_management" title="Time Management">
+            <p>
+                We’ve seen so many cases of learners under-estimating the amount of work required in their portfolio
+                project. Please begin working on your project as soon as possible. Don’t wait until the last minute.
+                Plan your time really well. The Reasrach and Planning project Part 3 will help you with this, make sure
+                you follow the plan you come up with.
+            </p>
+        </procedure>
+        <procedure id="presentation" title="Presentation">
+            <p>
+                After you are done building you will be expected to present your project to senior learners. There is a
+                process in place for this you will learn more when we get to this part. The presentation is very
+                important. If you fail to present your project and consequently not get scored for the Portfolio project
+                you will not be validated and you won’t be able to proceed to specialization.
+            </p>
+        </procedure>
+        <procedure id="no_project_idea_" title="No Project Idea?">
+            <p>
+                As indicated in the other concept page, if you are unable to come up with your own idea, you can build
+                the Maze Project. If you pick the maze project you are still expected to do all the other projects i.e
+                Research, Building … The only difference is that your project idea is provided by ALX. You will do your
+                Research Part of the project around the Maze Project.
+            </p>
+        </procedure>
+        <procedure id="support_and_questions" title="Support and Questions">
+            <p>
+                If you have any questions or need clarifications, feel free to ask on Discord. We’ll also have sessions
+                throughout the 7-week period to help you overcome any obstacles.
+            </p>
+        </procedure>
+        <b>
+            We’re thrilled to see the amazing projects you’ll create. Your ALX journey is reaching new heights, and
+            we’re here to support you every step of the way.
+        </b>
+    </chapter>
+
+</topic>
