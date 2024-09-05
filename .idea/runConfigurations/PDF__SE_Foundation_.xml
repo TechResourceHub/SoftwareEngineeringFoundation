@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="PDF (SE-Foundation)" type="StardustRunConfiguration" factoryName="build-pdf">
+    <option name="addCover" value="true" />
+    <option name="copyright" />
+    <option name="description" value="Software Engineering Foundation" />
+    <option name="folderPath" value="$PROJECT_DIR$" />
+    <option name="footer" />
+    <option name="header" />
+    <option name="instanceId" value="SE-Foundation" />
+    <option name="instanceName" value="SE-Foundation" />
+    <option name="layout" />
+    <option name="logoPath" value="$PROJECT_DIR$/Writerside/images/Logo.png" />
+    <option name="title" value="SoftwareEngineeringFoundation" />
+    <method v="2" />
+  </configuration>
+</component>
