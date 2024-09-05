@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Research-Project-approval-Part-3"
+       title="Research &amp; Project approval (Part 3)"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <deflist>
+        <def title="Concepts">
+            <p><i>For this project, we expect you to look at this concept:</i></p>
+            <list>
+                <li>
+                    <a href="Maze-project.topic"/>
+                </li>
+            </list>
+        </def>
+    </deflist>
+
+    <procedure id="portfolio-project" title="Portfolio Project">
+        <img alt="image_87.png" border-effect="rounded" src="image_87.png"/>
+        <deflist>
+            <def title="What’s a Portfolio Project?">
+                <p>
+                    The portfolio project will be a project you will showcase on your resume, online and during
+                    interviews. A completed Portfolio Project will consist of:
+                </p>
+                <list>
+                    <li>A landing page describing your project</li>
+                    <li>A comprehensive <code>README.md</code></li>
+                    <li>A demo of the project</li>
+                    <li>A presentation</li>
+                    <li>A blog post</li>
+                </list>
+            </def>
+            <def title="Why build a Portfolio Project?">
+                <p>The Portfolio Project serves several different purposes:</p>
+                <list type="decimal">
+                    <li>
+                        Highlights a Student’s unique interests and background when networking, or interviewing with
+                        potential employers.
+                    </li>
+                    <li>
+                        Provides a realistic workplace scenario where engineers create a solution to fit loosely defined
+                        requirements, break this down into concrete tasks and implement on a deadline.
+                    </li>
+                    <li>
+                        Allows for self-directed learning to explore a new technical topic, deepen understanding of a
+                        curriculum-covered topic, or use technology to bring an idea to life.
+                    </li>
+                </list>
+            </def>
+            <def title="Timeline and Checkpoints">
+                <p>
+                    Projects can be developed alone or in teams of up to 3 students. The technologies and project
+                    concepts are defined by the student teams.
+                </p>
+                <p>Research and project approval (Part 1-3)</p>
+                <list>
+                    <li>
+                        Week 1: Project proposal (staff review, approval required)
+                    </li>
+                    <li>
+                        Week 2: MVP (Minimum Viable Product) proposal (staff review, approval required)
+                    </li>
+                    <li>
+                        Week 3: <a href="https://trello.com/">Trello</a> board <b>(staff review, approval required)</b>
+                    </li>
+                </list>
+                <p>Build Portfolio Project</p>
+                <list>
+                    <li>Week 4: Development</li>
+                    <li>Week 5: MVP completed (staff review, approval required)</li>
+                    <li>
+                        Week 6: Landing page deployed, final presentation delivered (staff review, approval required)
+                    </li>
+                    <li>Week 7: Blog post reflection (peer review)</li>
+                </list>
+            </def>
+            <def title="What is the Trello board?">
+                <p>
+                    <a href="https://trello.com/">Trello</a> is a free project management software that uses a
+                    <a href="https://en.wikipedia.org/wiki/Kanban_board">kanban board</a> to visually track the
+                    implementation of a feature set from “to-do” to “done”. Trello makes it easy to assign tasks,
+                    collaborate and collect notes in a central location.</p>
+                <p>
+                    There are other project management tools, such as <a href="https://asana.com/">Asana</a>,
+                    <a href="https://www.airtable.com/">Airtable</a>, and
+                    <a href="https://www.atlassian.com/software/jira">Jira</a>. <a href="https://trello.com/">Trello</a>
+                    has been selected for ease of use and ability to visualize progress.</p>
+            </def>
+            <def title="Some things to think about">
+                <b>Scope of tasks</b>
+                <p>
+                    Creating well-scoped tasks is a skill that requires practice. Also explore creating subtasks within
+                    a task.
+                </p>
+                <b>Dependencies</b>
+                <p>
+                    Some tasks will rely on other ones to first be completed. Other tasks can be done in parallel but
+                    may require integration with other components along the way. Define your tasks with dependencies in
+                    mind.
+                </p>
+                <b>Priority</b>
+                <p>
+                    Similar to thinking about dependencies, it will also be important to complete the highest-risk part
+                    of your software first to ensure that the central workflows of your software can be completed. It
+                    may make sense to prioritize tasks that the team is least knowledgeable about, or require the
+                    greatest resources.
+                </p>
+            </def>
+            <def title="Default Project">
+                <p>
+                    If you do not have an idea, and do not submit a proposal or do not gain approval for your proposed
+                    projects, you’ll be expected to complete the 2D Game: <a href="Maze-project.topic">The Maze</a> -
+                    concept page available on top of this project.
+                </p>
+            </def>
+        </deflist>
+    </procedure>
+
+    <procedure id="tasks" title="Tasks">
+        <deflist>
+            <def title="0. Share your Trello board">
+                
+            </def>
+        </deflist>
+    </procedure>
+
+</topic>
