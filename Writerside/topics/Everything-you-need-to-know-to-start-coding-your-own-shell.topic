@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Everything-you-need-to-know-to-start-coding-your-own-shell"
+       title="Everything you need to know to start coding your own shell"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <deflist>
+        <def title="PID &amp; PPID">
+            <p>
+                A process is an instance of an executing program, that has a unique process ID. This process ID is used
+                by many functions and system calls to interact with and manipulate processes. In order to retrieve the
+                current process’ ID, you can use the system call <code>getpid</code> (<code>man 2 getpid)</code>:
+            </p>
+            <code-block include-lines="1-24" lang="c" src="concept/own-shell"/>
+            <note>
+                Note in the example above, that every time you run the program, a new process is created, and its ID is
+                different.
+            </note>
+            <p>
+                Each process has a parent: the process that created it. It is possible to get the PID of a parent
+                process by using the <code>getppid</code> system call (<code>man 2 getppid</code>), from within the
+                child process.
+            </p>
+            <b>Exercises</b>
+            <p><b>0. getppid</b></p>
+            <p>
+                Write a program that prints the PID of the parent process. Run your program several times within the
+                same shell. It should be the same. Does <code>echo $$</code> print the same value? Why?
+            </p>
+            <p><b>1. /proc/sys/kernel/pid_max</b></p>
+            <p>
+                Write a shell script that prints the maximum value a process ID can be
+            </p>
+        </def>
+        <def title="Arguments">
+            <p>
+                The command arguments are passed through the <code>main</code> function
+            </p>
+            <code-block lang="c">
+                int main(int argc, char* argv[]) {}
+            </code-block>
+            <list>
+                <li>
+                    <code>argv</code> is a <code>NULL</code> terminated array of strings
+                </li>
+                <li>
+                    <code>argc</code> is the number of items in <code>argv</code>
+                </li>
+            </list>
+            <p>
+                <code>argv[0]</code> usually contains the name used to invoke the current program. <code>argv[1]</code>
+                is the first argument of the program, <code>argv[2]</code> is the second argument and so on ...
+            </p>
+            <b>Exercises</b>
+            <p><b>0. argv</b></p>
+            <p>
+                Write a program that prints all the arguments passed, without using <code>argc</code>
+            </p>
+            <p><b>1. Read line</b></p>
+            <p>
+                Write a program that prints <code>"$ "</code>, wait for the user to enter a command, prints it on the
+                next line.
+            </p>
+            <code-block lang="shell">
+                man 3 getline
+            </code-block>
+            <note>
+                make sure you read the man, and the RETURN VALUE section, in order to know when to stop reading Keyword:
+                <code>“end-of-file”</code>, or <code>EOF</code> (or
+                <shortcut>Ctrl+D</shortcut>
+                ).
+            </note>
+            <tip title="#Advanced">
+                Write your own version of <code>getline</code>
+            </tip>
+            <code-block include-lines="28-32" lang="shell" src="concept/own-shell"/>
+            <p><b>2. command line to <code>argv</code></b></p>
+            <p>
+                Write a function that splits a string and returns an array of each word of the string.
+            </p>
+            <code-block lang="shell">
+                man strtok
+            </code-block>
+            <tip title="#advanced:">Write the function without <code>strtok</code></tip>
+        </def>
+        <def title="Executing a program">
+            <p>
+                The system call <code>execve</code> allows a process to execute another program (<code>man 2
+                execve</code>). Note that this system call does load the new program into the current process’ memory in
+                place of the “previous” program: on success <code>execve</code> does not return to continue the rest of
+                the “previous” program.
+            </p>
+            <warning>
+                in this example, <code>execve</code> is used without the current environment (last argument), <b>don’t
+                forget</b> to add it in your Shell!
+            </warning>
+            <code-block include-lines="36-72" lang="c" src="concept/own-shell"/>
+        </def>
+        <def title="Creating processes">
+            <p>
+                The system call <code>fork</code> (<code>man 2 fork</code>) creates a new child process, almost
+                identical to the parent (the process that calls fork). Once fork successfully returns, two processes
+                continue to run the same program, but with different stacks, datas and heaps.
+            </p>
+            <code-block include-lines="76-107" lang="c" src="concept/own-shell"/>
+            <note>
+                There is no typo in the above example
+            </note>
+            <p>
+                Using the <code>return value of fork</code>, it is possible to know if the current process is the father
+                or the child: fork will return <code>0</code> to the child, and the <code>PID</code> of the child to the
+                father.
+            </p>
+            <code-block include-lines="111-148" lang="c" src="concept/own-shell"/>
+        </def>
+        <def title="Wait">
+            <p>
+                The <code>wait</code> system call (<code>man 2 wait</code>) suspends execution of the calling process
+                until one of its children terminates.
+            </p>
+            <code-block include-lines="152-190" lang="c" src="concept/own-shell"/>
+        </def>
+        <def title="Exercise: fork + wait + execve">
+            <p>
+                Write a program that executes the command <code>ls -l /tmp</code> in <b>5 different child processes.</b>
+                Each child should be created by the same process (the father). Wait for a child to exit before creating
+                a new child.
+            </p>
+        </def>
+        <def title="Exercise: super simple shell">
+            <p>
+                Using everything we saw, write a first version of a super simple shell that can run commands with their
+                full path, without any argument.
+            </p>
+            <code-block include-lines="194-225" lang="c" src="concept/own-shell"/>
+        </def>
+        <def title="File information">
+            <p>
+                The <code>stat</code> (<code>man 2 stat</code>) system call gets the status of a file. On success,
+                <code>0</code> is returned. On error, <code>-1</code> is returned.
+            </p>
+            <code-block include-lines="229-270" lang="c" src="concept/own-shell"/>
+        </def>
+        <def title="Exercise: find a file in the PATH">
+            <p>
+                Write a program that looks for files in the current <code>PATH</code>
+            </p>
+            <b>Usage: </b>
+            <code-block lang="shell">
+                _which filename ...
+            </code-block>
+        </def>
+        <def title="Environment">
+            <p>
+                We have seen earlier that the <b>shell uses an environment list</b>, where environment variables are <b>“stored”</b>.
+                The list is an array of strings, with the following <code>format: var=value</code>, where var is the
+                name of the variable and value its value. As a reminder, you can list the environment with the command
+                <code>printenv:</code>
+            </p>
+            <code-block include-lines="274-336" lang="c" src="concept/own-shell"/>
+            <p>
+                Actually, every process comes with an environment. When a new process is created, it inherits a copy of
+                its parent’s environment. To access the entire environment within a process, you have several options:
+            </p>
+            <list>
+                <li>
+                    via the <code>main</code> function
+                </li>
+                <li>
+                    via the global <code>environ (man environ)</code>
+                </li>
+            </list>
+            <b>main</b>
+            <p>So far we have seen that <code>main</code> could have different prototypes:</p>
+            <list>
+                <li><code>int main(void);</code></li>
+                <li><code>int main(int argc, char argv[]);</code></li>
+                <li><code>int main(int argc, char **argv);</code></li>
+            </list>
+            <p>
+                There is actually another prototype:
+            </p>
+            <list>
+                <li><code>int main(int argc, char **argv, char **env)</code></li>
+            </list>
+            <p>
+                where <code>env</code> is a <code>NULL</code> terminated array of strings.
+            </p>
+            <code-block include-lines="340-422" lang="c" src="concept/own-shell"/>
+        </def>
+        <def title="Exercise">
+            <p><b>0. printenv with environ</b></p>
+            <p>
+                Write a program that prints the environment using the global variable <code>environ</code>.
+            </p>
+
+            <p><b>1. env vs environ</b></p>
+            <p>
+                Write a program that prints the <code>address of env</code> (the third parameter of the main function)
+                and <code>environ</code>
+                (the global variable). Are they they same? Does this make sense?
+            </p>
+
+            <p><b>2. getenv()</b></p>
+            <p>Write a function that <b>gets an environment variable</b>. (without using <code>getenv</code>)</p>
+
+            <p><b>Prototype:</b></p>
+            <code-block lang="c">
+                char *_getenv(const char *name);
+            </code-block>
+            <code>man 3 getenv</code>
+
+            <p><b>3. PATH</b></p>
+            <p>
+                Write a function that prints each directory contained in the the environment variable <code>PATH</code>,
+                one
+                directory per line.
+            </p>
+
+            <p><b>4. PATH</b></p>
+            <p>Write a function that builds a <b>linked list of the <code>PATH</code> directories</b>.</p>
+
+            <p><b>5. setenv</b></p>
+            <p>Write a function that changes or adds an environment variable (without using <code>setenv</code>).</p>
+
+            <p><b>Prototype:</b></p>
+            <code-block lang="c">
+                int _setenv(const char *name, const char *value, int overwrite);
+            </code-block>
+            <code>man 3 setenv</code>
+
+            <p><b>6. unsetenv</b></p>
+            <p>
+                Write a function that deletes the variable name from the environment (without using
+                <code>unsetenv</code>).
+            </p>
+
+            <b>Prototype:</b>
+            <code-block lang="c">
+                int _unsetenv(const char *name);
+            </code-block>
+            <code>man 3 unsetenv</code>
+        </def>
+    </deflist>
+
+</topic>
