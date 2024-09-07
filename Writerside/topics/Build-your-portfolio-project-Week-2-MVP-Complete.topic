@@ -8,6 +8,88 @@
 
     <procedure id="and_now_we_ship_that_mvp_" title="And now, we ship that MVP!">
         <img alt="mvp" border-effect="rounded" src="864a45bae8cdb7fa2de1.gif"/>
+        <p>
+            This week is still all about execution! Hopefully you are on track and have gotten many of the riskiest
+            aspects of your projects completed. It’s time to integrate all the pieces of your project so that you have a
+            functioning project. The deliverable for the upcoming week will be an MVP and a self-assessment of your
+            project.
+        </p>
+        <b>PLD: MVP Review</b>
+        <p>
+            During the PLD this week, these are the objectives:
+        </p>
+        <list>
+            <li>
+                Each team meets with 3 teams they didn’t meet with last week, one at a time for 40 minutes.
+            </li>
+            <li>
+                During the team-team meeting, each team presents for 20 minutes, then observes for 20 minutes.
+            </li>
+            <li>
+                When a team is presenting, they share their MVP and walk through code any they’ve implemented and
+                technical choices they have made.
+            </li>
+            <li>
+                When a team is observing, they ask questions, share observations, and code review. Act more as an
+                interviewer than a mentor.
+            </li>
+        </list>
+        <b>Some things to think about</b>
+        <p><b>End-to-end</b></p>
+        <p>
+            Prioritize getting all the pieces put together and proving the entire user experience. If you are doing a
+            web project, lets say a food delivery app, it will be important that an order can be placed, received by a
+            delivery-person, and marked as delivered. Refer back to the user stories and ensure each of those workflows
+            is functional.
+        </p>
+        <p><b>If you’re done early</b></p>
+        <p>
+            Keep going! Add more features, tests, and polish the features you’ve completed. If you don’t have ideas for
+            how to enhance your project, then ask your peers.
+        </p>
+    </procedure>
+
+    <procedure id="tasks" title="Tasks">
+        <deflist>
+            <def title="0. Share your project progress!">
+                <p>
+                    Share a link here to a Google Document where your team provides a written status update. This can be
+                    the same document you submitted last week, but please make it clear that there is a new entry for
+                    this week.
+                </p>
+            </def>
+            <def title="1. GitHub Link">
+                <p>Share a link here to your MVP’s Repository</p>
+            </def>
+            <def title="2. Progress">
+                <p>In a section named “Progress” in your status document, answer:</p>
+                <list>
+                    <li>On a scale of 1 to 10, how would you rate the progress you’ve made this week?</li>
+                    <li>Provide an explanation of your progress assessment this week.</li>
+                    <li>What parts of your project are completed as planned?</li>
+                    <li>What aspects of your project are incomplete?</li>
+                </list>
+            </def>
+            <def title="3. Challenges">
+                <p>In a section named “Challenges” in your status document, answer:</p>
+                <list>
+                    <li>
+                        Explain the most difficult technical challenge you encountered in this second week. This answer
+                        must be more than 200 words.
+                    </li>
+                    <li>
+                        Describe the most difficult non-technical challenge you encountered in this second week. This
+                        answer must be more than 200 words.
+                    </li>
+                </list>
+            </def>
+            <def title="4. Share screenshots">
+                <p>
+                    In a section named “Screenshots” in your status document, include at least 2 screenshots of your
+                    app.
+                </p>
+            </def>
+        </deflist>
     </procedure>
 
 </topic>
