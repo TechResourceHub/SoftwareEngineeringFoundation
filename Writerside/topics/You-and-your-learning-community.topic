@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="You-and-your-learning-community"
+       title="You and your learning community"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <deflist>
+        <def title="Concepts">
+            <p><i>For this project, we expect you to look at these concepts:</i></p>
+            <list>
+                <li><a href="Your-Learning-Community.topic"/></li>
+            </list>
+        </def>
+    </deflist>
+
+    <procedure id="what_s_the_mindset_you_need_to_succeed_in_this_program"
+               title="What’s the mindset you need to succeed in this program">
+        <deflist>
+            <def title="Learning Objectives">
+                <p id="learning-objective-p">
+                    At the end of this project, you are expected to be able to
+                    <a href="https://fs.blog/feynman-learning-technique/">explain to anyone</a>, <b>without the help of
+                    Google</b>
+                </p>
+            </def>
+            <def title="General">
+                <list>
+                    <li>what is community?</li>
+                    <li>why is community important?</li>
+                    <li>what are unacceptable behaviours within the ALX community?</li>
+                    <li>What is considered bad etiquette?</li>
+                </list>
+            </def>
+        </deflist>
+    </procedure>
+
+    <procedure id="tasks" title="Tasks">
+        <deflist>
+            <def title="0. Reflection">
+                <b>On a google document reflect and answer the following questions</b>
+                <p>What is the most meaningful community you’ve been apart of? Name it here.</p>
+                <list>
+                    <li>What is your best memory of that community?</li>
+                    <li>How well did that community welcome new people?</li>
+                    <li>How well did that community create deep bonds between members?</li>
+                </list>
+            </def>
+        </deflist>
+    </procedure>
+
+</topic>

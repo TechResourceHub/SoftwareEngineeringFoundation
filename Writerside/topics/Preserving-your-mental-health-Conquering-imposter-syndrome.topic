@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Preserving-your-mental-health-Conquering-imposter-syndrome"
+       title="Preserving your mental health &amp; Conquering imposter syndrome"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <procedure>
+        <p>
+            As you dive into this program, you are likely to have different kinds of days. These could be easy days
+            where everything makes sense, hard days where you feel you like crushing your computer because for some
+            reason you don’t understand why your code is working. Other days you just want to quit because it feels you
+            can’t push through the program.
+        </p>
+
+        <p>
+            Irrespective of the days you have, always remember your mental health is key and important, just by getting
+            started, you can do it and even when you think you can’t continue and you feel your peers are ahead of you,
+            look at your journey and own.
+        </p>
+
+        <deflist>
+            <def title="Resources">
+                <tabs>
+                    <tab title="Read">
+                        <list>
+                            <li>
+                                <a href="https://hbr.org/2022/01/youre-not-an-imposter-youre-actually-pretty-amazing">
+                                    You’re Not an Imposter. You’re Actually Pretty Amazing.
+                                </a>
+                            </li>
+                        </list>
+                    </tab>
+                    <tab title="Watch">
+                        <video src="https://www.youtube.com/watch?v=ZQUxL4Jm1Lo"/>
+                        <video preview-src="yt.png" src="https://www.youtube.com/watch?v=SeLmwYdegLA"/>
+                    </tab>
+                </tabs>
+            </def>
+            <def title="Learning Objectives">
+                <p id="learning-objective-p">
+                    At the end of this project, you are expected to be able to
+                    <a href="https://fs.blog/feynman-learning-technique/">explain to anyone</a>, <b>without the help of
+                    Google</b>
+                </p>
+            </def>
+            <def title="General">
+                <list>
+                    <li>What is imposter syndrom?</li>
+                    <li>why is it important?</li>
+                    <li>How do you deal with imposter syndrom"</li>
+                </list>
+            </def>
+        </deflist>
+
+    </procedure>
+
+    <procedure id="tasks" title="Tasks">
+        <deflist>
+            <def title="0. Quiz passed!">
+                <p>Nothing else, you made it</p>
+            </def>
+        </deflist>
+    </procedure>
+
+</topic>

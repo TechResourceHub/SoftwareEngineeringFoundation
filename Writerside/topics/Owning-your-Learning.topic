@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Owning-your-Learning"
+       title="Owning your Learning"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <deflist>
+        <def title="Concepts">
+            <p><i>
+                For this project, we expect you to look at these concepts:
+            </i></p>
+            <list>
+                <li><a href="Technical-Questioning.topic"/></li>
+                <li><a href="The-Framework.topic"/></li>
+                <li><a href="Peer-Learning-Day-How-To-Get-Started.topic"/></li>
+                <li><a href="Approaching-a-Project.topic"/></li>
+            </list>
+        </def>
+        <def title="Resources">
+            <tabs>
+                <tab title="Read">
+                    <list>
+                        <li>
+                            <a href="https://fs.blog/feynman-learning-technique/">
+                                The Feynman Learning Technique
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://medium.com/alx-africa/how-i-tackle-my-software-engineering-projects-at-alx-610f3f5a6448">
+                                How I Tackle My Software Engineering Projects at ALX
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.brainscape.com/academy/focused-vs-diffuse-thinking-learning/">
+                                Focused vs. diffuse thinking: which is better for learning?
+                            </a>
+                        </li>
+                    </list>
+                </tab>
+                <tab title="Watch">
+                    <video src="https://www.youtube.com/watch?v=WTr12dK2Se0"/>
+                </tab>
+            </tabs>
+        </def>
+        <def title="Learning Objectives">
+            <p id="learning-objective-p">
+                At the end of this project, you are expected to be able to
+                <a href="https://fs.blog/feynman-learning-technique/">explain to anyone</a>, <b>without the help of
+                Google</b>
+            </p>
+        </def>
+        <def title="General">
+            <list>
+                <li>what steps do i need to learn how to learn?</li>
+                <li>What is the Feynman learning technique and how can I implement it?</li>
+                <li>What does it mean to own my own learning journey?</li>
+                <li>In what ways can I crack through if I don’t get it***:)“</li>
+            </list>
+        </def>
+    </deflist>
+
+    <procedure id="tasks" title="Tasks">
+        <deflist>
+            <def title="0. Quiz passed!">
+                <p>Nothing else, you made it</p>
+            </def>
+        </deflist>
+    </procedure>
+
+</topic>

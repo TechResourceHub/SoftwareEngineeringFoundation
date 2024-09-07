@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Map-your-mind"
+       title="Map your mind"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <deflist>
+        <def title="Concepts">
+            <p><i>For this project, we expect you to look at these concepts:</i></p>
+            <list>
+                <li><a href="White-boarding.topic"/></li>
+                <li><a href="Flowcharts.topic"/></li>
+            </list>
+        </def>
+        <def title="Resources">
+            <tabs>
+                <tab title="Read">
+                    <list>
+                        <li>
+                            <a href="https://www.geeksforgeeks.org/how-to-write-a-pseudo-code/">
+                                How to write a pseudocode?
+                            </a>
+                        </li>
+                        <li>
+                            <!-- https://computersciencewiki.org/images/e/ea/Pseudo_Code_Practice_Problems.pdf -->
+                            <resource src="Pseudo_Code_Practice_Problems.pdf">
+                                More practise examples
+                            </resource>
+                        </li>
+                        <li>
+                            <a href="https://profiles.canterbury.ac.nz/Tim-Bell">
+                                deep-dive [Optional]
+                            </a>
+                        </li>
+                    </list>
+                </tab>
+                <tab title="Watch">
+                    <video src="https://www.youtube.com/watch?v=rWMuEIcdJP4"/>
+                    <video src="https://www.youtube.com/watch?v=PwGA4Lm8zuE"/>
+                    <video src="https://www.youtube.com/watch?v=6hfOvs8pY1k"/>
+                    <video src="https://www.youtube.com/watch?v=preyTbKXDoQ"/>
+                </tab>
+            </tabs>
+        </def>
+        <def title="Learning Objectives">
+            <p id="learning-objective-p">
+                At the end of this project, you are expected to be able to
+                <a href="https://fs.blog/feynman-learning-technique/">explain to anyone</a>, <b>without the help of
+                Google</b>
+            </p>
+        </def>
+        <def title="General">
+            <list>
+                <li>What is a Pseudocode?</li>
+                <li>why is Pseudocode important in programming?</li>
+                <li>How do you write Pseudocode?</li>
+            </list>
+        </def>
+    </deflist>
+
+    <procedure id="tasks" title="Tasks">
+        <deflist>
+            <def title="0. Being a square keeps you from going around in circles.">
+                <p>To develop an algorithm</p>
+                <b>calculate the sum of a given input of numbers</b>
+                <p>You are going to create a flowchart and pseudocode.</p>
+                <list>
+                    <li>Create the algorithm in a flow chart</li>
+                    <li>Create the algorithm in a pseudocode</li>
+                </list>
+            </def>
+            <def title="1. Order marches with weighty and measured strides. Disorder is always in a hurry.">
+                <p>To develop an algorithm that</p>
+                <b>reads in three numbers and writes them all in sorted order</b>
+                <p>You are going to create a flowchart and pseudocode.</p>
+                <list>
+                    <li>Create the algorithm in a flow chart</li>
+                    <li>Create the algorithm in a pseudocode</li>
+                </list>
+            </def>
+            <def title="2. It is not enough to run; one must start in time">
+                <p>To develop an algorithm</p>
+                <b>calculate a running sum</b>
+                <p>
+                    A user will enter numbers that will be added to the sum and when a negative number is encountered,
+                    stop adding numbers and write out the final result
+                </p>
+                <p>You are going to create a flowchart and pseudocode.</p>
+                <list>
+                    <li>Create the algorithm in a flow chart</li>
+                    <li>Create the algorithm in a pseudocode</li>
+                </list>
+            </def>
+        </deflist>
+    </procedure>
+
+</topic>

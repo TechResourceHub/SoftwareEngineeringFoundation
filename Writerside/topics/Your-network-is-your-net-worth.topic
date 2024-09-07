@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Your-network-is-your-net-worth"
+       title="Your network is your net worth"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <procedure>
+        <img alt="image_117.png" border-effect="rounded" src="image_117.png"/>
+
+        <p>
+            <a href="https://www.linkedin.com/">
+                LinkedIn
+            </a>
+            can be a valuable tool for software engineers looking to build their professional network, find job
+            opportunities, showcase their skills and experience, and stay up-to-date with industry trends and insights.
+        </p>
+
+        <p>
+            It’s important to start building your LinkedIn professional network as early as possible, so let’s start
+            LinkedIn today!
+        </p>
+    </procedure>
+
+    <procedure id="tasks" title="Tasks">
+        <deflist>
+            <def title="0. Create your LinkedIn account if needed and populate your Intranet profile!">
+                <p>
+                    If you don’t have one already, create your <a href="https://www.linkedin.com/">LinkedIn account.</a>
+                </p>
+                <p>
+                    The LinkedIn URL should look like this: <a href="https://www.linkedin.com/in/&lt;name&gt;"/>
+                </p>
+            </def>
+            <def title="1. Create a professional LinkedIn profile">
+                <p>To have a professional-looking LinkedIn profile, here are some important things to do:</p>
+
+                <list>
+                    <li>
+                        Use a professional profile photo: Your profile photo is the first thing people see when they
+                        visit your LinkedIn profile. Make sure it’s a professional headshot that reflects your industry
+                        and personal brand. If you do not have a professional headshot (like most of us), simply put a
+                        picture of yourself.
+                        <a href="https://www.linkedin.com/business/talent/blog/product-tips/tips-for-taking-professional-linkedin-profile-pictures">
+                            Here is an article with examples and advice
+                        </a>
+                    </li>
+                    <li>
+                        Craft a compelling headline: Your headline should be a brief summary of your professional
+                        experience, skills, and expertise. It should make people want to learn more about you. You are
+                        allowed to use ChatGPT for this.
+                    </li>
+                    <li>
+                        Write a summary that showcases your strengths: Your summary should highlight your professional
+                        strengths, experience, and career goals. It should be well-written and engaging, and it should
+                        make people want to connect with you. You are allowed to use ChatGPT for this.
+                    </li>
+                    <li>
+                        Customize your LinkedIn URL: Customizing your LinkedIn URL can make it easier for people to find
+                        you and remember your profile. It also looks more professional than the default URL.
+                    </li>
+                    <li>
+                        List your work experience and education: Make sure your work experience and education are
+                        up-to-date and complete. Be sure to include any relevant certifications, awards, or
+                        achievements.
+                    </li>
+                    <li>
+                        Use keywords: Use keywords throughout your profile to help people find you when they search for
+                        specific skills or expertise.
+                    </li>
+                    <li>
+                        Ask for recommendations: Recommendations from colleagues and supervisors can help to validate
+                        your skills and experience. Be sure to ask for recommendations from people who know your work
+                        well.
+                    </li>
+                </list>
+                <p>
+                    Overall, a professional-looking LinkedIn profile should be well-written, complete, and engaging. It
+                    should showcase your strengths and expertise and make people want to connect with you.
+                </p>
+            </def>
+            <def title="2. Connect with 10 persons">
+                <p>Connect with 10 new persons (you can do more if you would like of course). It could be:</p>
+                <list>
+                    <li>your friends</li>
+                    <li>someone from the ALX SE staff</li>
+                    <li>your peers</li>
+                    <li>someone from your family</li>
+                </list>
+                <p>
+                    When you ask someone to connect with you, make sure you add a personalized message. For instance, if
+                    you would like to connect with
+                    <a href="https://www.linkedin.com/in/julienbarbier/">
+                        Julien Barbier,
+                    </a>
+                    make sure to mention that you are one of his students
+                    from ALX SE. If you would like to connect with your ALX peers, make sure to mention you are going
+                    through ALX. etc.
+                </p>
+
+                <p>
+                    From this day on, anytime you meet someone (online, email, offline, etc.) get into the habit of
+                    connecting with them on LinedIn. Remember ALX SE permits you to meet with so many incredible people.
+                    Take advantage of this. You should have at least hundreds of connections at the end of the program
+                    just by adding peers you interact with.
+                </p>
+            </def>
+            <def title="3. Follow 5 influencers">
+                <p>
+                    You can also follow people on LinkedIn without connecting to them. It could be people or even
+                    brands. If you don’t know where to start, you can follow
+                    <a href="https://www.linkedin.com/company/faces-of-alx-se/">
+                        Faces of ALX SE
+                    </a>
+                </p>
+            </def>
+        </deflist>
+    </procedure>
+
+</topic>
