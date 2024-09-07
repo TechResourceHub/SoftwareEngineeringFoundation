@@ -122,7 +122,62 @@
     <procedure id="tasks" title="Tasks">
         <deflist>
             <def title="0. Share your Trello board">
-                
+                <p>
+                    Share a link here to a public Trello board where each of the following tasks are addressed.
+                </p>
+            </def>
+            <def title="1. Column Headers">
+                <p>Set up your Trello board with the following columns:</p>
+                <list>
+                    <li>Proposed</li>
+                    <li>Approved</li>
+                    <li>In Progress</li>
+                    <li>Dev Complete</li>
+                    <li>Tested</li>
+                    <li>Deployed</li>
+                </list>
+                <p>Example:</p>
+                <img alt="image_88.png" border-effect="rounded" src="image_88.png"/>
+            </def>
+            <def title="2. Create Cards">
+                <p>
+                    In the “proposed” column, create cards to fully represent the engineering tasks necessary to
+                    implement to satisfy the User Stories defined for your MVP. For each card, attach detailed
+                    descriptions, mockups, diagrams or technical specifications relevant to the engineering task.
+                </p>
+                <img alt="image_89.png" border-effect="rounded" src="image_89.png"/>
+            </def>
+            <def title="3. Assign cards">
+                <p>
+                    For each card, assign ownership to a team member. This should make sense given the roles specified
+                    in the project proposal.
+                </p>
+                <img alt="image_90.png" border-effect="rounded" src="image_90.png"/>
+            </def>
+            <def title="4. Invite collaborators">
+                <p>
+                    Invite the technical staff to be a collaborator on the Trello board so that each proposed task can
+                    be commented upon and moved into the approved column.
+                </p>
+                <img alt="image_91.png" border-effect="rounded" src="image_91.png"/>
+            </def>
+            <def title="5. Set Due Dates">
+                <p>
+                    For each task, based on priority and dependencies, assign a due date within the 2 week development
+                    window.
+                </p>
+                <img alt="image_92.png" border-effect="rounded" src="image_92.png"/>
+            </def>
+            <def title="6. Add a few mandatory tasks">
+                <p>Include the following tasks to the “Approved” column:</p>
+                <list>
+                    <li>Create presentation</li>
+                    <li>Create project landing page</li>
+                    <li>Write comprehensive README.md</li>
+                    <li>Make demo of the project</li>
+                    <li>Write blog post</li>
+                </list>
+                <img alt="image_93.png" border-effect="rounded" src="image_93.png"/>
             </def>
         </deflist>
     </procedure>
