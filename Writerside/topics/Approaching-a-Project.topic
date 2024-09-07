@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Approaching-a-Project"
+       title="Approaching a Project"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <p>
+        It can be difficult to know how to approach a project. You’ve read resources and tried some examples, and now
+        it’s time to apply what you know. Where do you start? The following framework can help you focus how you
+        approach a project.
+    </p>
+    <p>
+        Read the steps below and think about how you would follow them for a task.
+    </p>
+
+    <list type="decimal">
+        <li>Read the task or challenge.</li>
+        <li>Rephrase it in your own words.</li>
+        <li>
+            Verify expected behavior by getting example inputs and outputs.
+        </li>
+        <li>Whiteboard your solution with words.</li>
+        <li>
+            Walk through your solution with an example as if you were a machine. Do only what is written down. Correct
+            your solution if needed.
+        </li>
+        <li>Whiteboard your solution with pseudocode.</li>
+        <li>
+            Walk through your solution with an example as if you were a machine. Do only what is written down. Correct
+            your solution if needed.
+        </li>
+        <li>Whiteboard your solution with code.</li>
+        <li>
+            Walk through your solution with an example as if you were a machine. Do only what is written down. Correct
+            your solution if needed.
+        </li>
+        <li>
+            Write your code on your computer. [Note: This is this first time you are using your computer! Only when you
+            know exactly what to code.]
+        </li>
+        <li>Test your code on your computer.</li>
+        <li>Debug if necessary.</li>
+        <li>
+            You complete the task or challenge!
+        </li>
+    </list>
+
+    <p>
+        Be sure to break your task or project into smaller and smaller pieces, until you are comfortable solving each
+        piece with the above steps.
+    </p>
+
+    <p>
+        When you are in step 10, “Write your code on your computer”, you should code each piece one at a time and debug
+        right after each small step to make sure everything works properly. This will also prevent you from having to
+        debug multiple pieces at the same time and thus, will make your life much easier.
+    </p>
+
+</topic>

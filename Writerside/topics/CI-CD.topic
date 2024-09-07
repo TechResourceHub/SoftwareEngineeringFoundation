@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="CI-CD"
+       title="CI/CD"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <p>
+        <a href="https://agilemanifesto.org/"/>
+    </p>
+
+    <p>
+        The lean/agile methodology (See:
+        <a href="https://agilemanifesto.org/principles.html">
+            Twelve Principles of Agile Software
+        </a>)
+        is now widely used by the industry and one
+        of its key principles is to iterate as fast as possible. If you apply this to software engineering, it means
+        that you should:
+    </p>
+
+    <list>
+        <li>code</li>
+        <li>ship your code</li>
+        <li>measure the impact</li>
+        <li>learn from it</li>
+        <li>fix or improve it</li>
+        <li>start over</li>
+    </list>
+    <p>
+        As fast as possible and with small iterations in days or even hours (whereas it used to be weeks or even
+        months). One big advantage is that if product development is going the wrong direction, fast iteration will
+        allow to quickly detect this, and avoid wasting time.
+    </p>
+
+    <p>
+        From a technical point of view, quicker iterations mean fewer lines of code being pushed at every deploy, which
+        allows easy performance impact measurement and easy troubleshooting if something goes wrong (better to debug a
+        small code change than weeks of new code).
+    </p>
+    <img alt="image_115.png" border-effect="rounded" src="image_115.png"/>
+    <p>
+        Applied to software engineering,
+        <a href="https://digital.ai/catalyst-blog/walk-before-you-run-understanding-ci-in-cd/">
+            CI/CD (Continuous Integration/Continuous Deployment)
+        </a>
+        is a principle that allows individuals or teams to have a lean/agile way of working.
+    </p>
+
+    <p>
+        This translates to a “shipping pipeline” which is often built with multiple tools such as:
+    </p>
+
+    <list>
+        <li>
+            <p>Shipping the code:</p>
+            <list>
+                <li>
+                    Capistrano, Fabric
+                </li>
+            </list>
+        </li>
+        <li>
+            Encapsulating the code
+            <list>
+                <li>
+                    Docker, Packer
+                </li>
+            </list>
+        </li>
+        <li>
+            Testing the code
+            <list>
+                <li>
+                    Jenkins, CircleCi, Travis
+                </li>
+            </list>
+        </li>
+        <li>
+            Measuring the code
+            <list>
+                <li>
+                    Datadog, Newrelic, Wavefront
+                </li>
+            </list>
+        </li>
+    </list>
+</topic>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Pair-Programming-How-To"
+       title="Pair Programming - How To"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <img alt="image_109.png" border-effect="rounded" src="image_109.png"/>
+    <tip>
+        Regardless of if you think you understand something, pair programming is an invaluable industry skill that you
+        need to practice
+    </tip>
+    <p>
+        Perhaps, it seems obvious what you need to do, but ensure you know what you’re doing by learning through the
+        examples below.
+    </p>
+    <p>
+        Let’s say we have two students, Kristen and Stuart. Stuart is trying to understand a few things that Kristen
+        wants to help with. Here’s how it’d break down:
+    </p>
+
+    <p>
+        Kristen is not allowed to touch the computer; instead, they need to make sure that Stuart goes through The ALX
+        Framework.
+    </p>
+
+    <p>
+        Kristen should try to prevent Stuart from searching Google if the answer can be found in the man or
+        documentations provided on the Intranet.
+    </p>
+
+    <p>
+        If Stuart struggles too much solving one task, Kristen is allowed to use the computer and code the solution in
+        front of Stuart, and explain the thought process.
+    </p>
+
+    <p>
+        Kristen should make sure that Stuart understands everything, though. When done, Kristen deletes all the files
+        containing the solution, and Stuart tries again.
+    </p>
+    <b>If you’re trying to help someone:</b>
+    <list>
+        <li>
+            When explaining a concept, make sure you give examples to illustrate. Try to use whiteboards as much as you
+            can.
+        </li>
+        <li>
+            Be patient and understand that people think differently about the same problem. Sometimes, something will
+            seem obvious to you, but to someone else, it may not be.
+        </li>
+        <li>
+            Most of the time, if you explain the same concept twice and your peer doesn’t get it, it’s because you
+            didn’t explain it well enough :) It’s your fault, not theirs.
+        </li>
+        <li>
+            Try to rephrase, break it into smaller pieces, find new examples
+        </li>
+        <li>
+            To ensure someone understands a concept, it is not enough to ask “do you understand”. You should start with
+            this question, yes, but you should ask them to solve a similar small task using the same concept. A good way
+            to test is to ask a knowledgeable peer to explain it again to you.
+        </li>
+    </list>
+    <p>
+        For Instance, if [following our prior example] Kristen explains permissions / modes, the questions should be:
+    </p>
+    <list>
+        <li>Do you understand?</li>
+        <li>Yes</li>
+        <li>Great! Explain it back to me now please :)</li>
+        <li>…</li>
+        <li>Great, explain what does rwxr-xr– mean</li>
+        <li>…</li>
+        <li>Great, so what would be the octal notation of rwxr—-x?</li>
+        <li>…</li>
+        <li>Great! what would be the permissions of a directory with a mode of 755?</li>
+        <li>…</li>
+    </list>
+
+    <b>Pair programming Continued …</b>
+
+    <p>
+        When a peer receiving support completes all tasks demonstrated by the peer helping, they should work together on
+        the remaining tasks (including the advanced tasks). Same rules apply: * Read the documentation
+    </p>
+    <list>
+        <li>Don’t code before you have a potential solution</li>
+        <li>Explain out loud your thought process</li>
+        <li>Etc..</li>
+    </list>
+    <p>
+
+        For each task, switch the students who is typing. The student needing support should start. When switching, the
+        new student needs to code the same task again. No copy-paste.
+    </p>
+    <p>
+        Example: There are 3 tasks remaining: T0, T1, T2, and Kristen and Stuart are still our examples of collaborating
+        students.
+    </p>
+
+    <list>
+        <li>Stuart and Kristen solve all tasks together, but:</li>
+        <li>Stuart starts typing for T0 and when done pushes on his github.</li>
+        <li>Then Kristen types again the solution of T0 and pushes to her github.</li>
+        <li>Then Kristen types for T1, pushes on her github.</li>
+        <li>Then Stuart types again the solution of T1, pushes, and starts T2.</li>
+        <li>When Stuart and Kristen found the solution for T2, Stuart pushes to his github.</li>
+        <li>Then Kristen types the solution again and pushes on her github.</li>
+    </list>
+
+</topic>

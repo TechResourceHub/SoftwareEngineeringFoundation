@@ -1,33 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic
-		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic id="Welcome-on-board"
        title="Welcome on board"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
 
 
-	<deflist>
-		<def id="concepts" title="Concepts">
-			<i>For this project, we expect you to look at these concepts:</i>
-			<list>
-				<li>
-					<a href="Web-Stack-Portfolio-Project-Criteria.topic">
-						<format color="DarkOrange">
-							Web Stack Portfolio Project Criteria
-						</format>
-					</a>
-				</li>
-				<li>
-					<a href="Web-Stack-Portfolio-Project-Criteria.topic">
-						<format color="DarkOrange">
-							Web Stack Portfolio Project Criteria
-						</format>
-					</a>
-				</li>
-			</list>
-		</def>
-	</deflist>
+    <deflist>
+        <def id="concepts" title="Concepts">
+            <i>For this project, we expect you to look at these concepts:</i>
+            <list>
+                <li>
+                    <a href="Web-Stack-Portfolio-Project-Criteria.topic"/>
+                </li>
+                <li>
+                    <a href="Guidelines-Take-the-Hot-Seat-Live-Interview-and-Leetcode-Problem-DEMOs-ALXLevelUp.topic"/>
+                </li>
+                <li>
+                    <a href="ALX-Software-Engineer-Program-Cheatsheet.topic"/>
+                </li>
+                <li>
+                    <a href="The-Essential-Cheat-Sheet-for-Open-Source-Projects-ALXLevelUp.topic"/>
+                </li>
+                <li>
+                    <a href="The-Framework.topic"/>
+                </li>
+            </list>
+            <video src="https://www.youtube.com/watch?v=-QObEqKvSIg"/>
+        </def>
+        <def title="You can do hard things">
+            <p>
+                Take a deep breath. You’re here - you made it. Take note of how you’re feeling after watching that
+                video, and give that feeling a name. Think about where in your body you felt it and what it felt like.
+            </p>
+
+            <p>
+                You are joining a movement of thousands of people across Africa who know in the marrow of their bones
+                how great Africa’s potential is; who hold in their hearts her greatest hopes, dreams, and ambitions; and
+                whose hands are ready to be a part of building the future that they know is possible.
+            </p>
+
+            <p>
+                Joining the Software Engineering Community means that you recognize the immense potential that
+                technology has for transforming Africa and solving grand challenges ranging from agriculture and food
+                security to access to quality healthcare and education. You are willing to contribute your most
+                important resources, your time and energy, to build a future where tech unlocks this potential.
+            </p>
+
+            <p>
+                You are willing and able to do the hard things - even when no one believes in you.
+            </p>
+        </def>
+    </deflist>
+
+    <procedure id="tasks" title="Tasks">
+        <deflist>
+            <def title="0. Do hard things">
+                <b>You can do hard things</b>
+                <p>You have watched Fred’s video.</p>
+                <p>
+                    Of all the hard things we have to do everyday, the most difficult one of them all is to keep going”.
+                    In less than 100 words, what is your understanding of the above quote from the video. In what ways
+                    have you lived by this quote in the past.
+                </p>
+                <p>
+                    Create a google document and add it to the url box. It is easiest to allow access to anyone with the
+                    link.
+                </p>
+                <p>Ask a peer to review your project.</p>
+            </def>
+        </deflist>
+    </procedure>
 
 
 </topic>

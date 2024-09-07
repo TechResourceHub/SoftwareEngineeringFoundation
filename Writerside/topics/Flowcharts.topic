@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Flowcharts"
+       title="Flowcharts"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <deflist>
+        <def title="What is a Flowcharts">
+            <p>
+                A flowchart is a type of diagram that visually represents a workflow or process using a set of symbols
+                or icons to denote different actions/decisions/steps within the process with arrows showing the
+                direction of the flow. Flowcharts are used across many different professions to help analyze, design,
+                document, and/or manage a workflow or process.
+            </p>
+        </def>
+        <def title="Why use a Flowchart?">
+            <p>
+                Similarly to pseudo-code, flowcharts provide another way of approaching and/or understanding a workflow.
+                Another benefit is that, when done well, flowcharts can be understood by non-developers and by
+                developers that do not know the language the process is written in.
+            </p>
+        </def>
+        <def title="Flowchart Symbols">
+            <p>
+                This type of diagram is extremely versatile and is used across many professional fields. Due to the
+                number of industries using flowcharts, many sets of symbols and styles have been created with a specific
+                industry in mind. A good symbol set to use is the ISO 5807 symbol set, as they are well-known and often
+                used in the technology industry.
+            </p>
+            <b>Some commonly used ISO 5807 symbols</b>
+            <table>
+                <tr>
+                    <td><img alt="image_97.png" border-effect="rounded" src="image_97.png"/></td>
+                    <td>Flowline / Arrowhead</td>
+                    <td>Shows the order. Comes from one symbol to another</td>
+                </tr>
+                <tr>
+                    <td><img alt="image_98.png" border-effect="rounded" src="image_98.png"/></td>
+                    <td>Terminal / Terminator</td>
+                    <td>Shows where a process (or sub-process) starts or ends; text is
+                        usually &ldquo;Start&rdquo;, &ldquo;Begin&rdquo;, or &ldquo;End&rdquo;
+                    </td>
+                </tr>
+                <tr>
+                    <td><img alt="image_99.png" border-effect="rounded" src="image_99.png"/></td>
+                    <td>Process / Rectangle</td>
+                    <td>Process, action step, or operation; text is usually a verb, examples include: “Edit Video”,
+                        “Choose Plan”, “Set variable to ‘hello’”
+                    </td>
+                </tr>
+                <tr>
+                    <td><img alt="image_100.png" border-effect="rounded" src="image_100.png"/></td>
+                    <td>Data (I/O)</td>
+                    <td>Inputs to (entering data) and Outputs from (displaying results) a process</td>
+                </tr>
+                <tr>
+                    <td><img alt="image_101.png" border-effect="rounded" src="image_101.png"/></td>
+                    <td>Decision / Conditional</td>
+                    <td>Used to ask a question whose answer determines the route taken from the question. Arrow from
+                        bottom is Yes / True, Arrow from side(s) is No / False, (Always label the arrows to make it
+                        clear)
+                    </td>
+                </tr>
+                <tr>
+                    <td><img alt="image_102.png" border-effect="rounded" src="image_102.png"/></td>
+                    <td>Document (s)</td>
+                    <td>Represents a document or report</td>
+                </tr>
+                <tr>
+                    <td><img alt="image_103.png" border-effect="rounded" src="image_103.png"/></td>
+                    <td>Subroutine / Predefined Process</td>
+                    <td>A process that can be used in the current process but defined elsewhere (should have a separate
+                        flowchart for it)
+                    </td>
+                </tr>
+                <tr>
+                    <td><img alt="image_104.png" border-effect="rounded" src="image_104.png"/></td>
+                    <td>Annotation (Comment)</td>
+                    <td>Additional info about a step; the line connecting to the step can be solid or dashed</td>
+                </tr>
+                <tr>
+                    <td><img alt="image_105.png" border-effect="rounded" src="image_105.png"/></td>
+                    <td>On-page Connector</td>
+                    <td>Replaces long or confusing lines, use a letter to reference</td>
+                </tr>
+                <tr>
+                    <td><img alt="image_106.png" border-effect="rounded" src="image_106.png"/></td>
+                    <td>Off-page Connector</td>
+                    <td>To connect this process to the next step, which is on another page; use page number for
+                        reference
+                    </td>
+                </tr>
+                <tr>
+                    <td><img alt="image_107.png" border-effect="rounded" src="image_107.png"/></td>
+                    <td>Data File / Database</td>
+                    <td>Data represented by a cylinder (originally representative of disk drive)</td>
+                </tr>
+            </table>
+        </def>
+        <def title="An Example">
+            <p>
+                Let’s think about Foundation task, and include a flowchart example for it:
+            </p>
+            <p>
+                The task instructions are as follows:
+            </p>
+            <list>
+                <li>
+                    <p>Write a function that draws a straight line in the terminal.</p>
+                    <list>
+
+                        <li>Prototype: <code>void print_line(int n);</code></li>
+                        <li>You can only use <code>_putchar</code> function to print</li>
+                        <li>
+                            Where <code>n</code> is the number of times the character <code>_</code> should be printed
+                        </li>
+                        <li>The line should end with a <code>\n</code></li>
+                        <li>If <code>n</code> is 0 or less, the function should only print <code>\n</code></li>
+                    </list>
+                </li>
+            </list>
+        </def>
+    </deflist>
+    <note>
+        Take a moment to write out a solution in pseudo-code.
+    </note>
+    <p><i>No, really. It’s good practice. :)</i></p>
+    <p>
+        Okay. Below is what I came up with.
+    </p>
+    <deflist collapsible="true">
+        <def title="Pseudocode">
+            <list type="decimal">
+                <li>Set a variable equal <code>n (int nCopy)</code></li>
+                <li>Set up a while loop (condition: <code>nCopy is greater than 0</code>)</li>
+                <li>Print <code>-</code></li>
+                <li>Decrease <code>nCopy</code> by 1</li>
+                <li>Print <code>\n</code></li>
+            </list>
+        </def>
+    </deflist>
+
+    <note>
+        Now, using the ISO 5807 symbols from the table above, draw out a flowchart for this function.
+    </note>
+    <i>No peeking!</i>
+
+    <deflist collapsible="true">
+        <def title="Flowchart">
+            <p>
+                Alright, does your flowchart look similar to the diagram below?
+            </p>
+            <img alt="image_108.png" border-effect="rounded" src="image_108.png"/>
+        </def>
+    </deflist>
+
+    <deflist>
+        <def title="Bonus Info">
+            <p>Some good uses of flowchart</p>
+            <list>
+                <li>Create a flowchart before coding a task to either help create or validate pseudo-code</li>
+                <li>Add to a README.md to visually show how your project/process works</li>
+                <li>
+                    Use in a presentation to aide audience understanding
+                </li>
+                <li>
+                    Your function or process is not working as expected? Create a flowchart of how it CURRENTLY is.
+                    Then, walk through the chart with some example input.
+                </li>
+            </list>
+            <p>
+                A flowchart can be as high-level or as detailed as you want. For example, you could break the flowchart
+                above down further to include what is happening in memory. You can even create flowcharts from your
+                everyday non-technical experiences. Choosing a movie or a place to eat could be displayed as a
+                flow-chart!
+            </p>
+            <p>
+                A helpful tool to create flowcharts is <a href="https://app.diagrams.net/">draw.io</a>. There are
+                premade symbols for you to use and your diagrams can be saved to your Google Drive.
+            </p>
+            <p>
+                For more information on Flowcharts and related diagrams, a google search with simply “
+                <a href="https://www.google.com/search?q=flowchart">
+                    flowchart
+                </a> ” can get you started. ;)
+            </p>
+        </def>
+    </deflist>
+
+</topic>

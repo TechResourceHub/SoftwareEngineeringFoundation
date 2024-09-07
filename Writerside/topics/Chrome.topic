@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Chrome"
+       title="Chrome"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <img alt="image_111.png" border-effect="rounded" src="image_111.png"/>
+    <p>
+        Chrome is a web browser developed by Google. While you can access the Intranet via other browsers, we recommend
+        getting used to Chrome, as it is what we match in project outputs for frontend curriculum.
+    </p>
+
+    <b>Setting Up Users</b>
+
+    <p>
+        After signing into one Google account, you can set up multiple users. This can be helpful if you’d like to be
+        able to switch back and forth between google accounts for services like Gmail and Google Calendar.
+    </p>
+    <p>
+        You can sign into multiple users or switch accounts by going to your Chrome preferences.
+    </p>
+    <b>Bookmarks</b>
+
+    <p>
+        Bookmarks are sites that you’ve saved. These can be saved at the top of your browser in the Bookmark Bar and you
+        can organize them into files.
+    </p>
+
+    <p>
+        We suggest that you bookmark Gmail, Google Calendar, the Intranet, and resources that you find helpful.
+    </p>
+
+    <p>
+        To bookmark a page, click the star icon on the right of the URL or save it via the Bookmark dropdown menu.
+    </p>
+
+    <img alt="image_112.png" border-effect="rounded" src="image_112.png"/>
+
+    <p>
+        At the minimum, you should bookmark your Gmail, your Google Calendar, and the Intranet. To organize your
+        bookmarks, open the Bookmark Manager via the Bookmark dropdown menu.
+    </p>
+    
+</topic>

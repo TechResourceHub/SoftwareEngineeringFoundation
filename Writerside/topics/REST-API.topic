@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="REST-API"
+       title="REST API"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <p>REST API is a software architectural style for Backend.</p>
+    <p>
+        <b>
+            REST = “REpresentational State Transfer”. API = Application Programming Interface
+        </b>
+    </p>
+    <p>
+        Its purpose is to induce performance, scalability, simplicity, modifiability, visibility, portability, and
+        reliability.
+    </p>
+    <p>
+        REST API is Resource-based, a resource is an object and can be access by a URI. An object is
+        “displayed”/transferred via a representation (typically JSON). HTTP methods will be actions on a resource.
+    </p>
+    <deflist>
+        <def title="Example">
+            <list>
+                <li>Resou<code>rce:</code> <code>Person (John)</code></li>
+                <li>Serv<code>ice:</code> contact information <code>(GET)</code></li>
+                <li>
+                    <p>Representation:</p>
+                    <list>
+                        <li><code>first_name, last_name, date_of_birth</code></li>
+                        <li>JSON format</li>
+                    </list>
+                </li>
+            </list>
+        </def>
+        <def title="There are 6 constraints:">
+            <b>1. Uniform Interface</b>
+            <list>
+                <li>Define the interface between client-server</li>
+                <li>Simple and can be split in small parts</li>
+            </list>
+            <b>HTTP verbs</b>
+            <list>
+                <li>
+                    <code>GET:</code>
+                    Read representation of a resource or a list of resources
+                </li>
+                <li>
+                    <code>POST:</code>
+                    Create a new resource
+                </li>
+                <li>
+                    <code>PUT:</code>
+                    Update an existing resource
+                </li>
+                <li>
+                    <code>DELETE:</code>
+                    Remove an existing resource
+                </li>
+            </list>
+        </def>
+        <def title="URIs - resource name">
+            <p>A resource representation is accessible by a URI:</p>
+            <list>
+                <li>
+                    <code>GET /users:</code> path for listing all user resources
+                </li>
+                <li>
+                    <code>GET /users/12:</code> path for the user id = 12
+                </li>
+                <li>
+                    <code>GET /users/12/addresses:</code> path for listing all addresses of the user id = 12
+                </li>
+                <li>
+                    <code>POST /users:</code> path for creating a user resource
+                </li>
+                <li>
+                    <code>PUT /users/12:</code> path for updating the user id = 12
+                </li>
+                <li>
+                    <code>DELETE /users/12/addresses/2:</code> path for deleting the address id = 2 of the user id = 12
+                </li>
+            </list>
+        </def>
+        <def title="HTTP Response">
+            <p>
+                In the HTTP Response, the client should verify the information of two things:
+            </p>
+            <list>
+                <li>status code: result of the action</li>
+                <li>body: JSON or XML representation of resources</li>
+            </list>
+            <p>Some important status code</p>
+            <list>
+                <li><code>200:</code> OK</li>
+                <li><code>201:</code> created =&gt; after a POST request</li>
+                <li><code>204:</code> no content =&gt; can be return after a DELETE request</li>
+                <li><code>400:</code> bad request =&gt; the server doesn’t understand the request</li>
+                <li><code>401:</code> unauthorized =&gt; client user can’t be identified</li>
+                <li><code>403:</code> forbidden =&gt; client user is identified but not allowed to access a resource
+                </li>
+                <li><code>404:</code> not found =&gt; resource doesn’t exist</li>
+                <li><code>500:</code> internal server error</li>
+            </list>
+        </def>
+        <def title="2. Stateless">
+            <p>
+                The server is independent of the client. The server doesn’t store user client information/state. Each
+                request contains enough context to process it (HTTP Headers, etc.)
+            </p>
+            <p>
+                Some authentication systems like OAuth have to store information on the server side but they do it with
+                REST API design.
+            </p>
+        </def>
+        <def title="3. Cacheable">
+            <p>All server responses (resource representation) are cacheable:</p>
+            <list>
+                <li>Explicit</li>
+                <li>Implicit</li>
+                <li>Negotiated</li>
+            </list>
+            <p>
+                Caches are here to improve performances. In a REST API, clients don’t care about the caching strategy,
+                if the resource representation comes from a cache or from a database…
+            </p>
+        </def>
+        <def title="4. Client-Server">
+            <p>
+                REST API is designed to separate Client from the Server. The server doesn’t know who is talking to it.
+                Clients are not concerned with data storage => the portability of client code is improved. Servers are
+                not concerned with the user interface or user state so that servers can be simpler and more scalable
+            </p>
+        </def>
+        <def title="5. Layered System">
+            <p>
+                Client can’t assume direct connection to server. Intermediary servers may improve system scalability by
+                enabling load-balancing and by providing shared caches. Layers may also enforce security policies.
+            </p>
+        </def>
+        <def title="6. Code on Demand (optional)">
+            <p>Server can temporarily:</p>
+
+            <list>
+                <li>Transfer logic to client</li>
+                <li>Allow client to execute logic</li>
+                <li>Example: JavaScript</li>
+            </list>
+        </def>
+    </deflist>
+</topic>

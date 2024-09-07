@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Database-administration"
+       title="Database administration"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <deflist>
+        <def title="Resources">
+            <list>
+                <li>
+                    <a href="https://www.techtarget.com/searchdatamanagement/definition/database">
+                        What is a database
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.digitalocean.com/community/tutorials/how-to-choose-a-redundancy-plan-to-ensure-high-availability#sql-replication">
+                        What is a database primary/replicate cluster
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-replication-in-mysql">
+                        MySQL primary/replicate setup
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.databasejournal.com/ms-sql/developing-a-sql-server-backup-strategy/">
+                        Build a robust database backup strategy
+                    </a>
+                </li>
+            </list>
+        </def>
+    </deflist>
+
+</topic>
