@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Job-Search-Resources"
+       title="Job Search Resources"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <deflist>
+        <def title="ReadMe [Regardless of Goals]">
+            <list>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/5-key-learnings-from-the-post-bootcamp-job-search-9a07468d2331">
+                        Reality of Job Searching
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.crackingthecodinginterview.com/">
+                        Cracking the Coding Interview
+                    </a>
+                </li>
+                <li>
+                    <a href="https://medium.com/@nick.ciubotariu/ace-the-coding-interview-every-time-d169ce1fd3fc">
+                        Ace the Coding Interview, Every Time
+                    </a>
+                </li>
+            </list>
+        </def>
+        <def title="Fullstack / Backend">
+            <list>
+                <li>
+                    <a href="http://steve-yegge.blogspot.com/2008/03/get-that-job-at-google.html">
+                        Get that Job at Google
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/yangshun/tech-interview-handbook">
+                        Tech Interview Handbook
+                    </a>
+                </li>
+            </list>
+        </def>
+        <def title="Coding Tools">
+            <list>
+                <li>
+                    <a href="https://www.hackerrank.com/interview/interview-preparation-kit">
+                        The HackerRank Interview Preparation Kit
+                    </a>
+                </li>
+                <li>
+                    <a href="https://leetcode.com/problemset/top-interview-questions/">
+                        Top 100 Interview Questions via Leetcode
+                    </a>
+                </li>
+            </list>
+        </def>
+        <def title="Front End Specific">
+            <list>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/cracking-the-front-end-interview-9a34cd46237">
+                        Cracking the Front-end Interview
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/yangshun/front-end-interview-handbook">
+                        Front-End Interview Handbook
+                    </a>
+                </li>
+                <li>
+                    <a href="https://frontendmasters.com/guides/front-end-handbook/2017/practice/interview-q.html?">
+                        A Very Comprehensive Guide to Front-End Interview Prep
+                    </a>
+                </li>
+            </list>
+        </def>
+        <def title="SRE specific">
+            <list>
+                <li>
+                    <resource src="SREFieldGuide.pdf">
+                        SRE Interview Prep Stuff.pdf (shhh, remember to keep it solely in the HBTN fam)
+                    </resource>
+                </li>
+                <li>
+                    <a href="https://tammybutow.medium.com/graduating-from-bootcamp-and-interested-in-becoming-a-site-reliability-engineer-b69a38ce858b">
+                        Guide to Getting into SRE
+                    </a>
+                    by
+                    <a href="https://x.com/tammybutow">Tammy Butow</a>
+                </li>
+                <li>
+                    <a href="https://syedali.net/engineer-interview-questions/">
+                        SRE Interview Questions
+                    </a>
+                </li>
+            </list>
+        </def>
+        <def title="Project Management">
+            <list>
+                <li>
+                    <a href="https://www.airtable.com/">
+                        AirTable
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.atlassian.com/software/jira">
+                        Jira
+                    </a>
+                </li>
+                <li>
+                    <a href="https://asana.com/">
+                        Asana
+                    </a>
+                </li>
+                <li>
+                    <a href="https://trello.com/">
+                        Trello
+                    </a>
+                </li>
+            </list>
+        </def>
+    </deflist>
+
+</topic>

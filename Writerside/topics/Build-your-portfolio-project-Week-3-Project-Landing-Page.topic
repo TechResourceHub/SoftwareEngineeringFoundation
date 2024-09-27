@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Build-your-portfolio-project-Week-3-Project-Landing-Page"
+       title="Build your portfolio project (Week 3): Project Landing Page"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <procedure>
+        <deflist>
+            <def title="What is a Landing Page">
+                <img alt="image_120.png" border-effect="rounded" src="image_120.png"/>
+                <p>
+                    The portfolio Project landing page is a webpage that presents information without requiring the
+                    visitor to signup, login or even use the application. It is possible that the landing page is also
+                    the main webpage for the project
+                </p>
+                <p>
+                    Let's take a closer look at what makes a great landing page.
+                </p>
+                <p>
+                    Open an incognito browser and visit <a href="https://google.com"/>. What do you see? The page has a
+                    few links in the header and footer section, but the majority of the page is empty except for the
+                    Google logo, a text input field, a microphone icon and two clickable buttons "Google Search" and
+                    "I'm Feeling Lucky"
+                </p>
+                <img alt="image_121.png" border-effect="rounded" src="image_121.png"/>
+                <p>
+                    This is not a landing page. This is an application that is looking for a search term as input.
+                </p>
+                <p>
+                    Now take a look at <a href="https://www.google.com/search/about/"/>
+                </p>
+                <p>
+                    There is a splash banner with a tagline "Be in the know" with a logo.
+                </p>
+                <img alt="image_122.png" border-effect="rounded" src="image_122.png"/>
+                <p>
+                    As you scroll down, there are three features that are briefly explained, and a gift to help
+                    visualize the features they are referencing. After reading the page, the webpage visitor learns that
+                    the Google Search Application provide information, including current events relevant to a user's
+                    favourite topic or location and in-depth knowledge to be explored. This page does not have a text
+                    field to take in a search term!
+                </p>
+                <img alt="image_123.png" border-effect="rounded" src="image_123.png"/>
+                <b>Examples of Landing Page</b>
+                <list>
+                    <li><a href="https://slack.com"/></li>
+                    <li><a href="https://stripe.com"/></li>
+                    <li><a href="https://ghost.org"/></li>
+                    <li><a href="https://coinbase.com"/></li>
+                </list>
+                <b>Examples of Non-landing Page</b>
+                <list>
+                    <li><a href="https://www.amazon.com"/></li>
+                    <li><a href="https://www.airbnb.com"/></li>
+                    <li><a href="https://www.booking.com"/></li>
+                    <li><a href="https://www.pintest.com"/></li>
+                </list>
+                <i>Note: Not accessed from an incognito browser</i>
+                <p><b>More information about landing page</b></p>
+                <list>
+                    <li>
+                        <a href="https://instapage.com/blog/best-landing-page-examples"/>
+                    </li>
+                    <li>
+                        <a href="https://blog.hubspot.com/blog/tabid/6307/bid/7177/what-is-a-landing-page-and-why-should-you-care.aspx"/>
+                    </li>
+                    <li>
+                        <a href="https://www.quora.com/What-is-the-difference-between-a-landing-page-and-a-website"/>
+                    </li>
+                </list>
+            </def>
+            <def title="Goal">
+                <p>
+                    Your Portfolio Project landing page is intended to:
+                </p>
+                <list>
+                    <li>
+                        Share information about your project
+                    </li>
+                    <li>
+                        Tell the story about yourself as the developer
+                    </li>
+                    <li>
+                        Direct traffic to your deployed app, and your GitHub
+                    </li>
+                </list>
+                <b>Resources</b>
+                <p>
+                    You are welcome to build your own. We recommend using <a href="https://pages.github.com">GitHub
+                    Pages</a>. Select "Project site" to see instructions for creating a landing page for a repo.
+                </p>
+                <p>
+                    If you would instead like to use an external service, here are some free options:
+                </p>
+                <list>
+                    <li><a href="https://wix.com"/></li>
+                    <li><a href="https://mailchimp.com/features/landing-pages/"/></li>
+                    <li><a href="https://quickpages.co/"/></li>
+                </list>
+            </def>
+        </deflist>
+    </procedure>
+
+    <procedure id="tasks" title="Tasks">
+        <deflist>
+            <def title="0. Share link to landing page and deployed app or video demo">
+                <p>Share two links here</p>
+                <list type="decimal">
+                    <li>Landing page URL</li>
+                    <li>
+                        Deployed project page URL or link to a <a href="https://youtube.com">Youtube</a> video of a demo
+                        of the app
+                    </li>
+                </list>
+            </def>
+            <def title="1. Intro section">
+                <p>
+                    On page load, your project is introduced with:
+                </p>
+                <list>
+                    <li>A large cover image</li>
+                    <li>The name of your project</li>
+                    <li>A one-line phrase and/or description of your project</li>
+                    <li>
+                        Navigation elements in the header bar to access each section you have defined (please have at
+                        least 2)
+                    </li>
+                    <li>
+                        A labeled button that navigates to the deployed project application
+                    </li>
+                </list>
+            </def>
+            <def title="2. Feature Section">
+                <p>
+                    Somewhere following the intro section, include a section where the landing page highlights 3 key
+                    features
+                </p>
+                <p>For each feature include:</p>
+                <list>
+                    <li>An image, screenshot, gif, or video</li>
+                    <li>The name of the feature</li>
+                    <li>A description of the feature</li>
+                </list>
+            </def>
+            <def title="3. About Section">
+                <p>
+                    Somewhere following the feature section, include an About section.
+                </p>
+                <p>This about section needs to include:</p>
+                <list>
+                    <li>
+                        A description of what inspired the project. Make this is a personal story, and not “because
+                        Holberton required this project”. It is reasonable to include the timeline, and feel free to
+                        also mention this is a Portfolio Project for Holberton School with a link.
+                    </li>
+                    <li>
+                        Links to each team member's LinkedIn, GitHub, and Twitter
+                    </li>
+                    <li>
+                        A link to the GitHub repository for the project
+                    </li>
+                </list>
+            </def>
+            <def title="4. Optional">
+                <p>
+                    Add video to your landing page that includes:
+                </p>
+                <list>
+                    <li>
+                        An introduction to each of your team members
+                    </li>
+                    <li>
+                        Explain the story of what inspired your project
+                    </li>
+                    <li>
+                        Walk through 1 - 3 of the features
+                    </li>
+                    <li>
+                        Talk about what comes next for your project
+                    </li>
+                </list>
+            </def>
+        </deflist>
+    </procedure>
+
+</topic>

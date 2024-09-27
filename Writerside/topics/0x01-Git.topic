@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="0x01-Git"
+       title="0x01. Git"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <deflist>
+        <def title="Concepts">
+            <p><i>
+                For this project, we expect you to look at these concepts:
+            </i></p>
+            <list>
+                <li>
+                    <a href="Using-Docker-WSL-on-your-local-host.topic"/>
+                </li>
+                <li>
+                    <a href="Authenticating-Git.topic"/>
+                </li>
+            </list>
+        </def>
+        <def title="Resources">
+            <tabs>
+                <tab title="Read">
+                    <list>
+                        <li>
+                            <a href="https://docs.github.com/en/get-started/getting-started-with-git/set-up-git">
+                                Set up Git
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes">
+                                About READMEs
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://cbea.ms/git-commit/">
+                                How to write a Git Commit Message
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://learngitbranching.js.org/">
+                                Learn Git Branching
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://codeinthehole.com/tips/pull-requests-and-other-good-practices-for-teams-using-github/">
+                                Effective pull requests and other good practices for teams using GitHub
+                            </a>
+                        </li>
+                    </list>
+                </tab>
+            </tabs>
+        </def>
+        <def title="Learning Objectives">
+            <p id="learning-objective-p">
+                At the end of this project, you are expected to be able to
+                <a href="https://fs.blog/feynman-learning-technique/">explain to anyone</a>, <b>without the help of
+                Google</b>
+            </p>
+        </def>
+        <def title="General">
+            <list>
+                <li>What is sourcecode management</li>
+                <li>What is Git</li>
+                <li>What is GitHub</li>
+                <li>What is the difference between Git and GitHub</li>
+                <li>How to create repository</li>
+                <li>What is a README</li>
+                <li>How to write good READMEs</li>
+                <li>How to commit</li>
+                <li>How to write helpful commit messages</li>
+                <li>How to push code</li>
+                <li>How to pull updates</li>
+                <li>How to create a branch</li>
+                <li>How to merge branches</li>
+                <li>How to work as collaborators on a project</li>
+                <li>Which files should and which files should not appear in your repo</li>
+            </list>
+        </def>
+        <def title="Copyright - Plagiarism">
+            <list>
+                <li>
+                    You are tasked to come up with solutions for the tasks below yourself to meet with the above
+                    learning objectives.
+                </li>
+                <li>
+                    You will not be able to meet the objectives of this or any following project by copying and
+                    pasting someone else’s work.
+                </li>
+                <li>You are not allowed to publish any content of this project.</li>
+                <li>Any form of plagiarism is strictly forbidden and will result in removal from the program.</li>
+            </list>
+        </def>
+        <def title="Requirements">
+            <list>
+                <li>
+                    A <code>README.md</code> file at the root of the <code>alx-pre_course</code> repo, containing a
+                    description of the repository
+                </li>
+                <li>
+                    A <code>README.md</code> file, at the root of the folder of this project (i.e. <code>0x01-git</code>),
+                    describing what this project is about
+                </li>
+                <li>
+                    <b>Do not use GitHub’s web UI</b>, but the command line to perform the exercise (except for
+                    operations that can not possibly be done any other way than through the web UI). You won’t be able
+                    to perform many of the task requirements on the web UI, and you should start getting used to the
+                    command line for simple tasks because many complex tasks can only be done via the command line.
+                </li>
+                <li>
+                    Your answer files should only contain the command, and nothing else
+                </li>
+            </list>
+        </def>
+        <def title="Basic Usage">
+            <p>
+                At the end of this project you should be able to reproduce and understand these command line:
+            </p>
+            <code-block lang="shell">
+                $ git clone &lt;repo&gt;
+                $ touch test
+                $ git add test
+                $ git commit -m "Initial commit"
+                $ git push origin main
+            </code-block>
+        </def>
+    </deflist>
+
+    <procedure id="tasks" title="Tasks">
+        <deflist>
+            <def title="0. Create and setup your Git and GitHub account">
+                <b>Step 0 - Create an account on GitHub [ if you don't have one already ]</b>
+                <p>
+                    You will need a GitHub account for all your projects. If you don't have a
+                    <a href="https://github.com">github.com</a> account, you can create one
+                    <a href="https://github.com/signup">here</a>
+                </p>
+                <b>Step 1 - Create a Personal Access Token on Github</b>
+                <p>
+                    To have access to your repositories and authenticate yourself, you need to create a Personal Access
+                    Token on Github.
+                </p>
+                <p>
+                    You can follow this
+                    <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens">
+                        tutorial
+                    </a> to create a token.
+                </p>
+                <p>
+                    Once it is created you should have a token that looks like this:
+                </p>
+                <img alt="image_118.png" border-effect="rounded" src="image_118.png"/>
+                <b>Step 2 - Create your first repository</b>
+                <p>
+                    Using the
+                </p>
+            </def>
+        </deflist>
+    </procedure>
+
+
+</topic>

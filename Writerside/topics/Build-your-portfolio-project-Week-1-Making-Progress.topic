@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Build-your-portfolio-project-Week-1-Making-Progress"
+       title="Build your portfolio project (Week 1): Making Progress"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <deflist>
+        <def title="Concepts">
+            <i>
+                For this project, we expect you look at these concepts
+            </i>
+            <list>
+                <li>
+                    <a href="3-Ways-to-Make-a-Portfolio-Project-Great.topic"/>
+                </li>
+                <li>
+                    <a href="Portfolio-Project-Overview.topic"/>
+                </li>
+                <li>
+                    <a href="Maze-project.topic"/>
+                </li>
+            </list>
+        </def>
+        <def title="And now, we build!">
+            <img alt="build" border-effect="rounded" src="build.gif"/>
+            <p>
+                This week is all about execution! You have a detailed plan and you’ve thought through many aspects of
+                your project. Now, get to work and try to hit the goals you’ve set for yourself or your team. The
+                deliverable for the upcoming week will be a status report to share the challenges and progress you’ve
+                encountered this week.
+            </p>
+        </def>
+        <def title="PLD: Portfolio Project Checkin">
+            <p>During the PLD this week, these are the objectives</p>
+            <list>
+                <li>
+                    Each team meets with 3 other teams, one at a time for 40 minutes.
+                </li>
+                <li>
+                    During the team-team meeting, each team presents for 20 minutes, then observes for 20 minutes.
+                </li>
+                <li>
+                    When a team is presenting, they share their proposal, problem statement, and walk through code any
+                    they’ve implemented and technical choices they have made.
+                </li>
+                <li>
+                    When a team is observing, they ask questions, share observations, and code review.
+                </li>
+            </list>
+        </def>
+        <def title="Some things to think about">
+            <b>Front-load the biggest challenges first</b>
+            <p>
+                This is the best time to tackle the areas you defined as the riskiest parts, and prioritizing them so
+                that you can be confident that the project is feasible end-to-end. By taking this on first, it also
+                allows for time to update your plan and rework your solution if necessary.
+            </p>
+
+            <b>Organize the collaboration</b>
+            <p>
+                If you’re working as a team, clarify the integration points, schedule and expectations. Frequent
+                checkins, and co-locating to work in-person can be very effective.
+            </p>
+
+            <b>Implement specified branch strategy; merge often</b>
+            <p>
+                Merging code frequently is a great way to avoid a broken application the night before the presentation.
+            </p>
+        </def>
+        <def title="Maze Project">
+            <p>
+                If you are doing our Maze project, you can find all instructions in the <a href="Maze-project.topic">
+                Maze concept page </a>
+            </p>
+        </def>
+    </deflist>
+    <b>Have Fun!</b>
+    <procedure id="tasks" title="Tasks">
+        <deflist>
+            <def title="0. Share your project progress!">
+                <p>
+                    Share a link here to a new Google Document where your team provides a written status update.
+                </p>
+            </def>
+            <def title="2. Challenges">
+                <p>In a section named “Challenges”, answer:</p>
+                <list>
+                    <li>
+                        What challenges have you discovered about your project that were not obvious when you did your
+                        research?
+                    </li>
+                    <li>
+                        How have you had to change your plan to adapt to these unearthed challenges?
+                    </li>
+                    <li>
+                        Describe any unexpected non-technical challenges?
+                    </li>
+                </list>
+            </def>
+            <def title="3. Collaboration/Communication">
+                <p>In a section named “Collaboration”, answer:</p>
+                <p>If you are working in a team:</p>
+                <list>
+                    <li>Discuss the challenges and/or success your team has had with collaborating</li>
+                </list>
+                <p>If you are not working in a team</p>
+                <list>
+                    <li>Discuss any help you’ve received or provide from/to peers, staff, mentors, etc.</li>
+                    <li>
+                        Note: if this is empty, please consider finding more opportunities to collaborate with people
+                        more.
+                    </li>
+                </list>
+            </def>
+            <def title="4. Project Updates">
+                <p>In a section name "Project Updates":</p>
+                <list>
+                    <li>
+                        Outline any changes you are making to your portfolio project’s deliverables. Provide reasoning
+                        for each.
+                    </li>
+                </list>
+            </def>
+            <def title="5. Progress">
+                <p>In a section name "Progress", answer:</p>
+                <list>
+                    <li>On a scale of 1 to 10, how would you rate the progress you’ve made this week?</li>
+                    <li>How are you measuring your progress?</li>
+                    <li>Discuss why you have given your team (or yourself) this rating.</li>
+                    <li>
+                        Provide an assessment of whether your project will be completed on time as specified in your
+                        Project Proposal and MVP definition.
+                    </li>
+                </list>
+            </def>
+        </deflist>
+    </procedure>
+
+</topic>

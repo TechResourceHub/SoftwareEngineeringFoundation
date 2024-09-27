@@ -27,6 +27,7 @@
 		<toc-element topic="Python-Programming.topic"/>
 		<toc-element topic="HTML-CSS.topic"/>
 		<toc-element topic="Shell.topic"/>
+		<toc-element topic="Job-Search-Resources.topic"/>
 		<toc-element topic="White-boarding.topic"/>
 		<toc-element topic="Right-engineering-right-documenting.topic"/>
 		<toc-element topic="Using-Emacs-as-editor.topic"/>
@@ -80,7 +81,12 @@
 			<toc-element topic="Owning-your-Learning.topic"/>
 			<toc-element topic="Preserving-your-mental-health-Conquering-imposter-syndrome.topic"/>
 		</toc-element>
-		<toc-element topic="Onboarding-Tools.topic"/>
+		<toc-element topic="Onboarding-Tools.topic">
+			<toc-element topic="0x00-Shell-navigation.topic"/>
+			<toc-element topic="0x02-Emacs.topic"/>
+			<toc-element topic="0x03-vi.topic"/>
+			<toc-element topic="0x01-Git.topic"/>
+		</toc-element>
 	</toc-element>
 	<toc-element topic="0-Day.topic">
 		<toc-element topic="0-Day-0-Day.topic"/>
@@ -91,6 +97,7 @@
 			<toc-element topic="0x01-C-Variables-if-else-while.topic"/>
 			<toc-element topic="First-Day-of-C-Programming.topic"/>
 			<toc-element topic="0x02-C-Functions-nested-loops.topic"/>
+			<toc-element topic="0x03-C-Debugging.topic"/>
 		</toc-element>
 		<toc-element topic="Low-level-programming-Algorithm-Data-structures-and-Algorithms.topic"/>
 		<toc-element topic="Low-level-programming-Algorithm-Linux-and-Unix-system-programming.topic"/>
@@ -144,7 +151,12 @@
 			<toc-element topic="Research-Project-approval-Part-1.topic"/>
 			<toc-element topic="Research-Project-approval-Part-2.topic"/>
 			<toc-element topic="Research-Project-approval-Part-3.topic"/>
+			<toc-element topic="Build-your-portfolio-project-Week-1-Making-Progress.topic"/>
 			<toc-element topic="Build-your-portfolio-project-Week-2-MVP-Complete.topic"/>
+			<toc-element topic="Build-your-portfolio-project-Week-3-Project-Landing-Page.topic"/>
+			<toc-element topic="Build-your-portfolio-project-Week-3-Presentation.topic"/>
+			<toc-element topic="Cleanup-your-Portfolio-Project.topic"/>
+			<toc-element topic="Portfolio-Project-Blog-post.topic"/>
 		</toc-element>
 	</toc-element>
 </instance-profile>

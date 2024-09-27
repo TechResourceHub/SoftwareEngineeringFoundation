@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="0x02-Emacs"
+       title="0x02. Emacs"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+
+    <procedure>
+        <b>Congrats!</b>
+
+
+        <deflist>
+            <def title="Congrats!">
+                <p>Now you know how to navigate into a Unix system!</p>
+                <p>It’s time to test and decide what will be your favorite text editor on your sandbox: Emacs or Vi.</p>
+                <p>During this project you will play with Emacs.</p>
+            </def>
+            <def title="Resources">
+                <tabs>
+                    <tab title="Read">
+                        <list>
+                            <li>
+                                <a href="https://www.gnu.org/software/emacs/tour/">
+                                    A Guided Tour of Emacs
+                                </a>
+                            </li>
+                        </list>
+                    </tab>
+                </tabs>
+            </def>
+            <def title="Learning Objectives">
+                <p id="learning-objective-p">
+                    At the end of this project, you are expected to be able to
+                    <a href="https://fs.blog/feynman-learning-technique/">explain to anyone</a>, <b>without the help of
+                    Google</b>
+                </p>
+            </def>
+            <def title="General">
+                <list>
+                    <li>What is Emacs</li>
+                    <li>Who is Richard Stallman</li>
+                    <li>How to open and save files</li>
+                    <li>What is a buffer and how to switch from one to the other</li>
+                    <li>How to use the mark and the point to set the region</li>
+                    <li>How to cut and paste lines and regions</li>
+                    <li>How to search forward and backward</li>
+                    <li>How to invoke commands by name</li>
+                    <li>How to undo</li>
+                    <li>How to cancel half-entered commands</li>
+                    <li>How to quit Emacs</li>
+                </list>
+            </def>
+            <def title="Copyright - Plagiarism">
+                <list>
+                    <li>
+                        You are tasked to come up with solutions for the tasks below yourself to meet with the above
+                        learning objectives.
+                    </li>
+                    <li>
+                        You will not be able to meet the objectives of this or any following project by copying and
+                        pasting someone else’s work.
+                    </li>
+                    <li>You are not allowed to publish any content of this project.</li>
+                    <li>
+                        Any form of plagiarism is strictly forbidden and will result in removal from the program.
+                    </li>
+                </list>
+            </def>
+            <def title="Requirements">
+                <list>
+                    <li>All tasks must be done inside the sandbox <code>Ubuntu 20.04</code></li>
+                    <li>The answer of a task must be in a specific file</li>
+                    <li>
+                        Each answer file must contain only the command to execute in Emacs for solving the task.
+                        Example: “What is the command to write buffer to a specified file?” -&gt; the file should
+                        contain only
+                        <shortcut>C-x C-w</shortcut>
+                    </li>
+                </list>
+            </def>
+        </deflist>
+    </procedure>
+
+    <procedure id="tasks" title="Tasks">
+        <deflist>
+            <def title="0. Create your answer directory">
+                <p>
+                    Navigate to <code>/root</code> and create a directory named <code>0x02_emacs</code>
+                </p>
+            </def>
+            <def title="1. Opening">
+                <p>What is the command to open a file from within emacs?</p>
+                <p>Write the answer into the file <code>/root/0x02_emacs/opening.</code></p>
+                <p>You can validate if the format of your answer is correct by displaying the file information:</p>
+                <code-block lang="shell">
+                    root@hex:~# ls -l /root/0x02_emacs/opening
+                    -rw-r--r-- 1 root root 9 Nov 11 04:34 /root/0x02_emacs/opening
+                    root@hex:~#
+                </code-block>
+            </def>
+            <def title="2. Saving">
+                <p>What is the command to save a file?</p>
+                <p>
+                    Write the answer into the file <code>/root/0x02_emacs/saving.</code>
+                </p>
+            </def>
+            <def title="3. Cutting">
+                <p>What is the command to cut an entire line?</p>
+                <p>
+                    Write the answer into the file <code>/root/0x02_emacs/cutting.</code>
+                </p>
+            </def>
+            <def title="4. Pasting">
+                <p>What is the command to paste?</p>
+                <p>
+                    Write the answer into the file <code>/root/0x02_emacs/pasting.</code>
+                </p>
+            </def>
+            <def title="5. Searching">
+                <p>What is the command to search forward?</p>
+                <p>
+                    Write the answer into the file <code>/root/0x02_emacs/searching.</code>
+                </p>
+            </def>
+            <def title="6. Undoing">
+                <p>What is the command to undo?</p>
+                <p>
+                    Write the answer into the file <code>/root/0x02_emacs/undoing.</code>
+                </p>
+            </def>
+            <def title="7.Quiting">
+                <p>What is the command to quit Emacs?</p>
+                <p>
+                    Write the answer into the file <code>/root/0x02_emacs/quitting.</code>
+                </p>
+            </def>
+        </deflist>
+    </procedure>
+
+
+</topic>

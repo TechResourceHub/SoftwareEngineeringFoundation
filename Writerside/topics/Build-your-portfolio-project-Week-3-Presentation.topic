@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Build-your-portfolio-project-Week-3-Presentation"
+       title="Build your portfolio project (Week 3): Presentation"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <deflist>
+        <def title="The Presentation">
+            <p>You’ve done so much! You’ve come so far. The day to present your portfolio project is nearly here.</p>
+            <p>The presentation will consist of several parts:</p>
+            <list>
+                <li>A slidedeck made with Google Slides</li>
+                <li>Introduction of team members, and each person’s role</li>
+                <li>Story of how your project was inspired</li>
+                <li>Technology &amp; Architecture</li>
+                <li>Core algorithms and code snippet</li>
+                <li>Discussion of process, collaboration and timeline</li>
+                <li>Challenge(s) overcome</li>
+                <li>Live Demo</li>
+                <li>Learnings about technical interests as a result of this project</li>
+                <li>Time to answer questions from the audience</li>
+                <li>Feedback and comments provided by technical staff, possibly alum guests</li>
+            </list>
+            <p>The length of time for a presentation will be 18 minutes</p>
+            <p>You will have 2 minutes setup, 8 minutes to present followed by 8 min Q&amp;A.</p>
+            <p>Presentations take practice. The mid-week PLD will give you that opportunity! Come prepared to
+                practice.</p>
+        </def>
+        <def title="Great Presentations">
+            <p>
+                It might be helpful to take a look at this playlist of
+                <a href="https://www.ted.com/playlists/574/how_to_make_a_great_presentation">
+                    Ted talks about giving great presentations.
+                </a>
+            </p>
+            <p>Here are some great speakers to observe and pattern your speaking after:</p>
+            <list>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=1i9kcBHX2Nw">
+                        Steve Jobs at Stanford Commencement 2005
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=_U-CRqK8M1c">
+                        Sheryl Sandberg: Take the Lead Challenge
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=ji5_MqicxSo">
+                        Randy Pausch’s Last Lecture: Achieving your childhood dreams
+                    </a>
+                </li>
+            </list>
+            <p>What do these speakers have in common? Why are their presentations effective?</p>
+        </def>
+    </deflist>
+    <procedure id="tasks" title="Tasks">
+        <deflist>
+            <def title="0. Share a link to your Google Slides">
+            </def>
+            <def title="1. Presentation Content">
+                <p>The presentation covers:</p>
+                <list>
+                    <li>Introduction of team members, and each person’s role (1pt)</li>
+                    <li>Story of how your project was inspired (1pt)</li>
+                    <li>Technology &amp; Architecture (5pt)</li>
+                    <li>Core algorithms and code snippet (5pt)</li>
+                    <li>Discussion of process, collaboration and timeline (2pt)</li>
+                    <li>Challenge(s) overcome (5pt)</li>
+                    <li>Learnings about technical interests as a result of this project (1 pt)</li>
+                </list>
+            </def>
+            <def title="2. Presentation Delivery">
+                <p>
+                    Whether you are presenting onsite or remotely, here are the things we look for when you are
+                    presenting.
+                </p>
+                <p>
+                    Please note, if you are presenting remotely, you will need to have your webcam on while your group
+                    is presenting.
+                </p>
+                <list>
+                    <li>Were the Presenters audible?</li>
+                    <li>Did the Presenters speak clearly and at an understandable pace?</li>
+                    <li>Were there minimal filler words, like “Uhm”, “uhh”, “like”?</li>
+                    <li>Were the Presenters well-positioned on stage/in the camera’s view?</li>
+                    <li>Did the Presenters’ postures demonstrate confidence?</li>
+                    <li>Were the Presenters dressed professionally?</li>
+                    <li>Did the presentation utilize the time allotted? (it was not too long, or too short)</li>
+                    <li>Were the Presenters energetic?</li>
+                    <li>Did the Presenters engage the audience with a question?</li>
+                </list>
+            </def>
+            <def title="3. Live Demo">
+                <p>
+                    For teams who are working on web apps, a live demo means that the presentation must load the
+                    deployed website during the presentation and demonstrate at least one of the key features.
+                </p>
+                <p>
+                    For teams who are not working on a web application, please prepare a video of the application being
+                    used. This includes the Maze project.
+                </p>
+                <p>
+                    Not all parts of the application need to be demonstrated. As an example, if a project required
+                    uploading a file and waiting for 30m to process the data, it is enough to show that the file can be
+                    uploaded and that there is output generated from a previous run that is representative of the
+                    eventual output.
+                </p>
+                <p>
+                    Scoring will be as follows: 5/5 points for a functional, engaging demo 3/5 points for a simple demo
+                    0/5 points for a demo that meets unworkable errors or failures
+                </p>
+            </def>
+            <def title="4. Answering audience questions">
+                <p>
+                    This is a great list of guidelines for how to answer questions during a presentation:
+                    <a href="http://wittcom.com/how-to-handle-questions-and-answers-qa-made-simple/">wittcom.com</a>
+                </p>
+                <p>
+                    If the Presenters receive questions from the audience, they are answered in a satisfactory way, or
+                    there is an offer to followup with an answer.
+                </p>
+            </def>
+            <def title="5. Book for your review">
+                <p>
+                    Now that you have completed your portfolio project, kindly book an appointment
+                    <a href="https://jasper.alx-tools.com/portfolio-project-review">here</a>
+                </p>
+            </def>
+        </deflist>
+    </procedure>
+
+</topic>

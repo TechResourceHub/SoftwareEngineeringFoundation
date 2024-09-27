@@ -1,345 +1,623 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic
-		SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic id="0x02-C-Functions-nested-loops"
        title="0x02. C - Functions, nested loops"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
 
-	<var name="id_postfix"></var>
-	<procedure id="resources" title="Resources">
-		<tabs>
-			<tab id="read" title="Read">
-				<list>
-					<li>
-						<a href="https://www.tutorialspoint.com/cprogramming/c_functions.htm">
-							<format color="BurlyWood">Functions in C</format>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.geeksforgeeks.org/what-is-the-purpose-of-a-function-prototype/">
-							<format color="BurlyWood">What is the purpose of a function prototype?</format>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.tutorialspoint.com/cprogramming/c_header_files.htm">
-							<format color="BurlyWood">Header Files in C</format>
-						</a>
-					</li>
-				</list>
-			</tab>
-			<tab id="watch" title="Watch">
-				<format color="BurlyWood">Nested While Loops</format>
-				<video src="https://www.youtube.com/watch?v=Z3iGeQ1gIss"/>
-				<format color="BurlyWood">Learning to Program in C (Part 06)</format>
-				<video src="https://www.youtube.com/watch?v=qMlnFwYdqIw"/>
-				<format color="BurlyWood">C Programming Loops &amp; Functions</format>
-				<video src="https://www.youtube.com/watch?v=3i1IPkzFVcM"/>
-				<format color="BurlyWood">Functions in C programming</format>
-				<video src="https://www.youtube.com/watch?v=u40rF7zCYaQ"/>
-			</tab>
-		</tabs>
-	</procedure>
+    <procedure id="resources" title="Resources">
+        <tabs>
+            <tab id="read" title="Read">
+                <list>
+                    <li>
+                        <a href="https://www.tutorialspoint.com/cprogramming/c_functions.htm">
+                            <format color="BurlyWood">Functions in C</format>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.geeksforgeeks.org/what-is-the-purpose-of-a-function-prototype/">
+                            <format color="BurlyWood">What is the purpose of a function prototype?</format>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.tutorialspoint.com/cprogramming/c_header_files.htm">
+                            <format color="BurlyWood">Header Files in C</format>
+                        </a>
+                    </li>
+                </list>
+            </tab>
+            <tab id="watch" title="Watch">
+                <format color="BurlyWood">Nested While Loops</format>
+                <video preview-src="yt.png" src="https://www.youtube.com/watch?v=Z3iGeQ1gIss"/>
+                <format color="BurlyWood">Learning to Program in C (Part 06)</format>
+                <video src="https://www.youtube.com/watch?v=qMlnFwYdqIw"/>
+                <format color="BurlyWood">C Programming Loops &amp; Functions</format>
+                <video src="https://www.youtube.com/watch?v=3i1IPkzFVcM"/>
+                <format color="BurlyWood">Functions in C programming</format>
+                <video src="https://www.youtube.com/watch?v=u40rF7zCYaQ"/>
+            </tab>
+        </tabs>
+    </procedure>
 
-	<chapter id="learning_objectives" title="Learning Objectives">
-		<procedure id="the-feynman-learning-technique">
-			<p>
-				At the end of this project, you are expected to be able to
-				<a href="https://fs.blog/feynman-learning-technique" summary="The Feynman Learning Technique">
-					<format color="BurlyWood">
-						explain to anyone
-					</format>
-				</a>, without <b>the help of Google:</b>
-			</p>
-		</procedure>
+    <chapter id="learning_objectives" title="Learning Objectives">
+        <procedure id="the-feynman-learning-technique">
+            <p>
+                At the end of this project, you are expected to be able to
+                <a href="https://fs.blog/feynman-learning-technique" summary="The Feynman Learning Technique">
+                    <format color="BurlyWood">
+                        explain to anyone
+                    </format>
+                </a>, without <b>the help of Google:</b>
+            </p>
+        </procedure>
 
-		<procedure id="general" title="General" type="choices">
-			<step>What are nested loops and how to use them</step>
-			<step>What is a function and how do you use functions</step>
-			<step>What is the difference between a declaration and a definition of a function</step>
-			<step>What is a prototype</step>
-			<step>Scope of variables</step>
-			<step>
-				What are the gcc flags
-				<code-block lang="shell" src="gcc"/>
-			</step>
-			<step>What are header files and how to to use them with <code>#include</code></step>
-		</procedure>
+        <procedure id="general" title="General" type="choices">
+            <step>What are nested loops and how to use them</step>
+            <step>What is a function and how do you use functions</step>
+            <step>What is the difference between a declaration and a definition of a function</step>
+            <step>What is a prototype</step>
+            <step>Scope of variables</step>
+            <step>
+                What are the gcc flags
+                <code-block lang="shell" src="gcc"/>
+            </step>
+            <step>What are header files and how to to use them with <code>#include</code></step>
+        </procedure>
 
-		<procedure id="requirements" title="Requirements" type="choices">
-			<b>General</b>
-			<step>Allowed editors: <code>vi, vim, emacs</code></step>
-			<step>All your files will be compiled on Ubuntu 20.04 LTS using
-				<code-block lang="shell" src="gcc"/>
-			</step>
-			<step>All your files should end with a new line</step>
-			<step>A <code>README.md</code> file at the root of the folder of the project is mandatory</step>
-			<step>Your code should use the <code>Betty</code> style. It will be checked using
-				<a href="https://github.com/alx-tools/Betty/blob/master/betty-style.pl">
-					<format color="BurlyWood">betty-style.pl</format>
-				</a> and
-				<a href="https://github.com/alx-tools/Betty/blob/master/betty-doc.pl">
-					<format color="BurlyWood">betty-doc.pl</format>
-				</a>
-			</step>
-			<step>You are not allowed to use global variables</step>
-			<step>No more than 5 functions per file</step>
-			<step>You are not allowed to use the standard library. Any use of functions like <code>printf,
-				puts, etc…</code> is forbidden
-			</step>
-			<step>You are allowed to use
-				<a anchor="_putchar.c" summary="Code Below">
-					<format color="BurlyWood">_putchar</format>
-				</a>
-				<code-block collapsed-title="_putchar.c" collapsible="true" id="_putchar.c" lang="c"
-				            src="alx-low_level_programming/0x02-functions_nested_loops/_putchar.c"/>
-			</step>
-			<step>In the following examples, the
-				<format color="BurlyWood">main.c</format>
-				files are shown as examples. You can use them to test your functions.
-			</step>
-			<step>
-				The prototypes of all your functions and the prototype of the function
-				<code>_putchar</code> should be included in your header file called <code>main.h</code>
-			</step>
-			<step>You do not have to understand the <code>call by reference (address), stack, static variables,
-				recursions or arrays, yet.</code>
-			</step>
-		</procedure>
-	</chapter>
+        <procedure id="requirements" title="Requirements" type="choices">
+            <b>General</b>
+            <step>Allowed editors: <code>vi, vim, emacs</code></step>
+            <step>All your files will be compiled on Ubuntu 20.04 LTS using
+                <code-block lang="shell" src="gcc"/>
+            </step>
+            <step>All your files should end with a new line</step>
+            <step>A <code>README.md</code> file at the root of the folder of the project is mandatory</step>
+            <step>Your code should use the <code>Betty</code> style. It will be checked using
+                <a href="https://github.com/alx-tools/Betty/blob/master/betty-style.pl">
+                    <format color="BurlyWood">betty-style.pl</format>
+                </a> and
+                <a href="https://github.com/alx-tools/Betty/blob/master/betty-doc.pl">
+                    <format color="BurlyWood">betty-doc.pl</format>
+                </a>
+            </step>
+            <step>You are not allowed to use global variables</step>
+            <step>No more than 5 functions per file</step>
+            <step>You are not allowed to use the standard library. Any use of functions like <code>printf,
+                puts, etc…</code> is forbidden
+            </step>
+            <step>You are allowed to use
+                <a anchor="_putchar.c" summary="Code Below">
+                    <format color="BurlyWood">_putchar</format>
+                </a>
+                <code-block collapsed-title="_putchar.c" collapsible="true" id="_putchar.c" lang="c"
+                            src="alx-low_level_programming/0x02-functions_nested_loops/_putchar.c"/>
+            </step>
+            <step>In the following examples, the
+                <format color="BurlyWood">main.c</format>
+                files are shown as examples. You can use them to test your functions.
+            </step>
+            <step>
+                The prototypes of all your functions and the prototype of the function
+                <code>_putchar</code> should be included in your header file called <code>main.h</code>
+            </step>
+            <step>You do not have to understand the <code>call by reference (address), stack, static variables,
+                recursions or arrays, yet.</code>
+            </step>
+        </procedure>
+    </chapter>
 
-	<chapter id="tasks" title="Tasks">
-		<procedure id="0_putchar" title="0. _putchar" type="choices">
-			<format color="Brown">0-putchar.c</format>
-			<p>
-				Write a program that prints <code>_putchar</code>, followed by a new line
-			</p>
-			<step>The program should return <code>0</code></step>
-			<code-block collapsed-title="_putchar.c" collapsible="true" lang="c"
-			            src="alx-low_level_programming/0x02-functions_nested_loops/_putchar.c"/>
+    <chapter id="tasks1" title="Tasks">
+        <procedure id="0_putchar" title="0. _putchar" type="choices">
+            <format color="Brown">0-putchar.c</format>
+            <p>
+                Write a program that prints <code>_putchar</code>, followed by a new line
+            </p>
+            <step>The program should return <code>0</code></step>
+            <code-block collapsed-title="_putchar.c" collapsible="true" lang="c"
+                        src="alx-low_level_programming/0x02-functions_nested_loops/_putchar.c"/>
 
-			<code-block collapsed-title="Compilation" collapsible="true" lang="shell">
-				gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 0-putchar.c -o 0-putchar
-			</code-block>
-			<code-block collapsed-title="Running" collapsible="true" lang="shell">
-				./0-putchar
-			</code-block>
-			<code-block collapsed-title="Result" collapsible="true" lang="shell">
-				_putchar
-			</code-block>
-		</procedure>
+            <code-block collapsed-title="Compilation" collapsible="true" lang="shell">
+                gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 0-putchar.c -o 0-putchar
+            </code-block>
+            <code-block collapsed-title="Running" collapsible="true" lang="shell">
+                ./0-putchar
+            </code-block>
+            <code-block collapsed-title="Result" collapsible="true" lang="shell">
+                _putchar
+            </code-block>
+        </procedure>
 
-		<procedure
-				id="1_i_sometimes_suffer_from_insomnia_and_when_i_can_t_fall_asleep_i_play_what_i_call_the_alphabet_game"
-				title="1. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game
+        <procedure
+                id="1_i_sometimes_suffer_from_insomnia_and_when_i_can_t_fall_asleep_i_play_what_i_call_the_alphabet_game"
+                title="1. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game
 "
-				type="choices">
-			<format color="Brown">1-alphabet.c</format>
-			<p>Write a function that prints the alphabet, in lowercase, followed by a new line.</p>
-			<code-block collapsed-title="Prototype" collapsible="true" lang="c">
-				void print_alphabet(void);
-			</code-block>
-			<step>
-				You can only use
-				<format color="BurlyWood">_putchar</format>
-				twice in your code.
-			</step>
-			<code-block collapsed-title="_putchar.c" collapsible="true" lang="c"
-			            src="alx-low_level_programming/0x02-functions_nested_loops/_putchar.c"/>
-			<code-block collapsed-title="1-main.c" collapsible="true" lang="c"
-			            src="alx-low_level_programming/0x02-functions_nested_loops/1-main.c"/>
-			<code-block collapsed-title="compilation" collapsible="true" lang="shell">
-				gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 1-main.c 1-alphabet.c -o 1-alphabet
-			</code-block>
-			<code-block collapsed-title="Running" collapsible="true" lang="shell">
-				./1-alphabet
-			</code-block>
-			<code-block collapsed-title="Result" collapsible="true" lang="shell">
-				abcdefghijklmnopqrstuvwxyz
-			</code-block>
-		</procedure>
+                type="choices">
+            <format color="Brown">1-alphabet.c</format>
+            <p>Write a function that prints the alphabet, in lowercase, followed by a new line.</p>
+            <code-block collapsed-title="Prototype" collapsible="true" lang="c">
+                void print_alphabet(void);
+            </code-block>
+            <step>
+                You can only use
+                <format color="BurlyWood">_putchar</format>
+                twice in your code.
+            </step>
+            <code-block collapsed-title="_putchar.c" collapsible="true" lang="c"
+                        src="alx-low_level_programming/0x02-functions_nested_loops/_putchar.c"/>
+            <code-block collapsed-title="1-main.c" collapsible="true" lang="c"
+                        src="alx-low_level_programming/0x02-functions_nested_loops/1-main.c"/>
+            <code-block collapsed-title="compilation" collapsible="true" lang="shell">
+                gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 1-main.c 1-alphabet.c -o 1-alphabet
+            </code-block>
+            <code-block collapsed-title="Running" collapsible="true" lang="shell">
+                ./1-alphabet
+            </code-block>
+            <code-block collapsed-title="Result" collapsible="true" lang="shell">
+                abcdefghijklmnopqrstuvwxyz
+            </code-block>
+        </procedure>
 
-		<procedure id="2_10_x_alphabet" title="2. 10 x alphabet" type="choices">
-			<format color="Brown">2-print_alphabet_x10.c</format>
-			<p>
-				Write a function that prints 10 times the alphabet, in lowercase, followed by a new line
-			</p>
-			<code-block collapsed-title="Prototype" collapsible="true" lang="c">
-				void print_alphabet_x10(void);
-			</code-block>
-			<step>
-				You can only use
-				<format color="BurlyWood">_putchar</format>
-				twice in your code.
-			</step>
-			<code-block collapsed-title="_putchar.c" collapsible="true" lang="c"
-			            src="alx-low_level_programming/0x02-functions_nested_loops/_putchar.c"/>
-			<code-block collapsed-title="2-main.c" collapsible="true" lang="c"
-			            src="alx-low_level_programming/0x02-functions_nested_loops/2-main.c"/>
-			<code-block collapsed-title="Compilation" collapsible="true" lang="shell">
-				gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 2-main.c 2-print_alphabet_x10.c -o
-				2-alphabet_x10
-			</code-block>
-			<code-block collapsed-title="Running" collapsible="true" lang="shell">
-				./2-alphabet_x10
-			</code-block>
-			<code-block collapsed-title="Result" collapsible="true" lang="shell">
-				abcdefghijklmnopqrstuvwxyz
-				abcdefghijklmnopqrstuvwxyz
-				abcdefghijklmnopqrstuvwxyz
-				abcdefghijklmnopqrstuvwxyz
-				abcdefghijklmnopqrstuvwxyz
-				abcdefghijklmnopqrstuvwxyz
-				abcdefghijklmnopqrstuvwxyz
-				abcdefghijklmnopqrstuvwxyz
-				abcdefghijklmnopqrstuvwxyz
-				abcdefghijklmnopqrstuvwxyz
-			</code-block>
-		</procedure>
+        <procedure id="2_10_x_alphabet" title="2. 10 x alphabet" type="choices">
+            <format color="Brown">2-print_alphabet_x10.c</format>
+            <p>
+                Write a function that prints 10 times the alphabet, in lowercase, followed by a new line
+            </p>
+            <code-block collapsed-title="Prototype" collapsible="true" lang="c">
+                void print_alphabet_x10(void);
+            </code-block>
+            <step>
+                You can only use
+                <format color="BurlyWood">_putchar</format>
+                twice in your code.
+            </step>
+            <code-block collapsed-title="_putchar.c" collapsible="true" lang="c"
+                        src="alx-low_level_programming/0x02-functions_nested_loops/_putchar.c"/>
+            <code-block collapsed-title="2-main.c" collapsible="true" lang="c"
+                        src="alx-low_level_programming/0x02-functions_nested_loops/2-main.c"/>
+            <code-block collapsed-title="Compilation" collapsible="true" lang="shell">
+                gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 2-main.c 2-print_alphabet_x10.c -o
+                2-alphabet_x10
+            </code-block>
+            <code-block collapsed-title="Running" collapsible="true" lang="shell">
+                ./2-alphabet_x10
+            </code-block>
+            <code-block collapsed-title="Result" collapsible="true" lang="shell">
+                abcdefghijklmnopqrstuvwxyz
+                abcdefghijklmnopqrstuvwxyz
+                abcdefghijklmnopqrstuvwxyz
+                abcdefghijklmnopqrstuvwxyz
+                abcdefghijklmnopqrstuvwxyz
+                abcdefghijklmnopqrstuvwxyz
+                abcdefghijklmnopqrstuvwxyz
+                abcdefghijklmnopqrstuvwxyz
+                abcdefghijklmnopqrstuvwxyz
+                abcdefghijklmnopqrstuvwxyz
+            </code-block>
+        </procedure>
 
-		<procedure id="3_islower" title="3. islower" type="choices">
-			<format color="Brown">3-islower.c</format>
-			<p>Write a function that checks for lowercase character.</p>
-			<code-block collapsed-title="Prototype" collapsible="true" lang="c">
-				int _islower(int c);
-			</code-block>
-			<step>
-				It should:
-				<list>
-					<li>Return <code>1</code> if <code>arg c</code> is lowercase</li>
-					<li>Return <code>0</code> otherwise</li>
-				</list>
-			</step>
-			<code-block collapsed-title="_putchar.c" collapsible="true" lang="c"
-			            src="alx-low_level_programming/0x02-functions_nested_loops/_putchar.c"/>
-			<code-block collapsed-title="3-main.c" collapsible="true" lang="c"
-			            src="alx-low_level_programming/0x02-functions_nested_loops/3-main.c"/>
-			<code-block collapsed-title="Compilation" collapsible="true" lang="shell">
-				gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 3-main.c 3-islower.c -o 3-islower
-			</code-block>
-			<code-block collapsed-title="Running" collapsible="true" lang="shell">
-				./3-islower
-			</code-block>
-			<code-block collapsed-title="Result" collapsible="true" lang="shell">
-				011
-			</code-block>
-		</procedure>
+        <procedure id="3_islower" title="3. islower" type="choices">
+            <format color="Brown">3-islower.c</format>
+            <p>Write a function that checks for lowercase character.</p>
+            <code-block collapsed-title="Prototype" collapsible="true" lang="c">
+                int _islower(int c);
+            </code-block>
+            <step>
+                It should:
+                <list>
+                    <li>Return <code>1</code> if <code>arg c</code> is lowercase</li>
+                    <li>Return <code>0</code> otherwise</li>
+                </list>
+            </step>
+            <code-block collapsed-title="_putchar.c" collapsible="true" lang="c"
+                        src="alx-low_level_programming/0x02-functions_nested_loops/_putchar.c"/>
+            <code-block collapsed-title="3-main.c" collapsible="true" lang="c"
+                        src="alx-low_level_programming/0x02-functions_nested_loops/3-main.c"/>
+            <code-block collapsed-title="Compilation" collapsible="true" lang="shell">
+                gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 3-main.c 3-islower.c -o 3-islower
+            </code-block>
+            <code-block collapsed-title="Running" collapsible="true" lang="shell">
+                ./3-islower
+            </code-block>
+            <code-block collapsed-title="Result" collapsible="true" lang="shell">
+                011
+            </code-block>
+        </procedure>
 
-		<procedure id="4_isalpha" title="4. isalpha" type="choices">
-			<format color="Brown">4-isalpha.c</format>
-			<p>Write a function that checks for alphabetic character.</p>
-			<code-block collapsed-title="Prototype" collapsible="true" lang="c">
-				int _isalpha(int c);
-			</code-block>
-			<step>
-				It should:
-				<list>
-					<li>Return <code>1</code> if <code>arg c</code> is a letter, lowercase or uppercase</li>
-					<li>Return <code>0</code> otherwise</li>
-				</list>
-			</step>
-			<step>
-				FYI: The standard library provides a similar function: <code>isalpha</code>. To learn more Run
-				<code-block lang="shell">man isalpha</code-block>
-			</step>
-			<code-block collapsed-title="_putchar.c" collapsible="true" lang="c"
-			            src="alx-low_level_programming/0x02-functions_nested_loops/_putchar.c"/>
-			<code-block collapsed-title="4-main.c" collapsible="true" lang="c"
-			            src="alx-low_level_programming/0x02-functions_nested_loops/4-main.c"/>
-			<code-block collapsed-title="Compilation" collapsible="true" lang="shell">
-				gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 4-main.c 4-isalpha.c -o 4-isalpha
-			</code-block>
-			<code-block collapsed-title="Running" collapsible="true" lang="shell">
-				./4-isalpha
-			</code-block>
-			<code-block collapsed-title="Result" collapsible="true" lang="shell">
-				1110
-			</code-block>
-		</procedure>
+        <procedure id="4_isalpha" title="4. isalpha" type="choices">
+            <format color="Brown">4-isalpha.c</format>
+            <p>Write a function that checks for alphabetic character.</p>
+            <code-block collapsed-title="Prototype" collapsible="true" lang="c">
+                int _isalpha(int c);
+            </code-block>
+            <step>
+                It should:
+                <list>
+                    <li>Return <code>1</code> if <code>arg c</code> is a letter, lowercase or uppercase</li>
+                    <li>Return <code>0</code> otherwise</li>
+                </list>
+            </step>
+            <step>
+                FYI: The standard library provides a similar function: <code>isalpha</code>. To learn more Run
+                <code-block lang="shell">man isalpha</code-block>
+            </step>
+            <code-block collapsed-title="_putchar.c" collapsible="true" lang="c"
+                        src="alx-low_level_programming/0x02-functions_nested_loops/_putchar.c"/>
+            <code-block collapsed-title="4-main.c" collapsible="true" lang="c"
+                        src="alx-low_level_programming/0x02-functions_nested_loops/4-main.c"/>
+            <code-block collapsed-title="Compilation" collapsible="true" lang="shell">
+                gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 4-main.c 4-isalpha.c -o 4-isalpha
+            </code-block>
+            <code-block collapsed-title="Running" collapsible="true" lang="shell">
+                ./4-isalpha
+            </code-block>
+            <code-block collapsed-title="Result" collapsible="true" lang="shell">
+                1110
+            </code-block>
+        </procedure>
 
-		<procedure id="5_sign" title="5. Sign">
-			<format color="Brown">5-sign.c</format>
-			<p>Write a function that prints the sign of a number.</p>
-			<code-block collapsed-title="Prototype" collapsible="true" lang="c">
-				int print_sign(int n);
-			</code-block>
-			<step>
-				It should:
-				<list>
-					<li>
-						Returns <code>1</code> and prints <code>+</code> if <code>n</code> is greater than zero
-					</li>
-					<li>
-						Returns <code>0</code> and prints <code>0</code> if <code>n</code> is zero
-					</li>
-					<li>
-						Returns <code>-1</code> and prints <code>-</code> if <code>n</code> is less than zero
-					</li>
-				</list>
-			</step>
-			<code-block collapsed-title="_putchar.c" collapsible="true" lang="c"
-			            src="alx-low_level_programming/0x02-functions_nested_loops/_putchar.c"/>
-			<code-block collapsed-title="5-main.c" collapsible="true" lang="c"
-			            src="alx-low_level_programming/0x02-functions_nested_loops/5-main.c"/>
-			<code-block collapsed-title="Compilation" collapsible="true" lang="shell">
-				gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 5-main.c 5-sign.c -o 5-sign
-			</code-block>
-			<code-block collapsed-title="Running" collapsible="true" lang="shell">
-				./5-sign
-			</code-block>
-			<code-block collapsed-title="Result" collapsible="true" lang="shell">
-				+, 1
-				0, 0
-				+, 1
-				-, /
-			</code-block>
-		</procedure>
+        <procedure id="5_sign" title="5. Sign">
+            <format color="Brown">5-sign.c</format>
+            <p>Write a function that prints the sign of a number.</p>
+            <code-block collapsed-title="Prototype" collapsible="true" lang="c">
+                int print_sign(int n);
+            </code-block>
+            <step>
+                It should:
+                <list>
+                    <li>
+                        Returns <code>1</code> and prints <code>+</code> if <code>n</code> is greater than zero
+                    </li>
+                    <li>
+                        Returns <code>0</code> and prints <code>0</code> if <code>n</code> is zero
+                    </li>
+                    <li>
+                        Returns <code>-1</code> and prints <code>-</code> if <code>n</code> is less than zero
+                    </li>
+                </list>
+            </step>
+            <code-block collapsed-title="_putchar.c" collapsible="true" lang="c"
+                        src="alx-low_level_programming/0x02-functions_nested_loops/_putchar.c"/>
+            <code-block collapsed-title="5-main.c" collapsible="true" lang="c"
+                        src="alx-low_level_programming/0x02-functions_nested_loops/5-main.c"/>
+            <code-block collapsed-title="Compilation" collapsible="true" lang="shell">
+                gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 5-main.c 5-sign.c -o 5-sign
+            </code-block>
+            <code-block collapsed-title="Running" collapsible="true" lang="shell">
+                ./5-sign
+            </code-block>
+            <code-block collapsed-title="Result" collapsible="true" lang="shell">
+                +, 1
+                0, 0
+                +, 1
+                -, /
+            </code-block>
+        </procedure>
 
-		<procedure
-				id="6_there_is_no_such_thing_as_absolute_value_in_this_world_you_can_only_estimate_what_a_thing_is_worth_to_you"
-				title="6. There is no such thing as absolute value in this world. You can only estimate what a thing is worth to you">
-			<format color="Brown">6-abs.c</format>
-			<p>
-				Write a function that computes the absolute value of an integer.
-			</p>
-			<code-block collapsed-title="Prototype" collapsible="true" lang="c">
-				int _abs(int);
-			</code-block>
-			<step>
-				FYI: The standard library provides a similar function: <code>abs</code>. To learn more Run
-				<code-block lang="shell">man abs</code-block>
-			</step>
-			<code-block collapsed-title="_putchar.c" collapsible="true" lang="c"
-			            src="alx-low_level_programming/0x02-functions_nested_loops/_putchar.c"/>
-			<code-block collapsed-title="6-main.c" collapsible="true" lang="c"
-			            src="alx-low_level_programming/0x02-functions_nested_loops/6-main.c"/>
-			<code-block collapsed-title="Compilation" collapsible="true" lang="shell">
-				gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 6-main.c 6-abs.c -o 6-abs
-			</code-block>
-			<code-block collapsed-title="Running" collapsible="true" lang="shell">
-				./6-abs
-			</code-block>
-			<code-block collapsed-title="Result" collapsible="true" lang="shell">
-				1
-				0
-				1
-				98
-			</code-block>
-		</procedure>
-		<procedure id="repository" title="Repository">
-			<p><b>GitHub repository:</b> <code>alx-low_level_programming</code></p>
-			<p><b>Directory:</b> <code>0x02-functions_nested_loops</code></p>
-			<p><b>File:</b>
-				<code>0-putchar.c</code>
-				<code>1-alphabet.c</code>
-				<code>2-print_alphabet_x10.c</code>
-				<code>3-islower.c</code>
-				<code>4-isalpha.c</code>
-				<code>5-sign.c</code>
-				<code>6-.c</code>
-				<code>7-.c-</code>
-				<code>8-.c-</code>
-			</p>
-		</procedure>
-	</chapter>
+        <procedure
+                id="6_there_is_no_such_thing_as_absolute_value_in_this_world_you_can_only_estimate_what_a_thing_is_worth_to_you"
+                title="6. There is no such thing as absolute value in this world. You can only estimate what a thing is worth to you">
+            <format color="Brown">6-abs.c</format>
+            <p>
+                Write a function that computes the absolute value of an integer.
+            </p>
+            <code-block collapsed-title="Prototype" collapsible="true" lang="c">
+                int _abs(int);
+            </code-block>
+            <step>
+                FYI: The standard library provides a similar function: <code>abs</code>. To learn more Run
+                <code-block lang="shell">man abs</code-block>
+            </step>
+            <code-block collapsed-title="_putchar.c" collapsible="true" lang="c"
+                        src="alx-low_level_programming/0x02-functions_nested_loops/_putchar.c"/>
+            <code-block collapsed-title="6-main.c" collapsible="true" lang="c"
+                        src="alx-low_level_programming/0x02-functions_nested_loops/6-main.c"/>
+            <code-block collapsed-title="Compilation" collapsible="true" lang="shell">
+                gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 6-main.c 6-abs.c -o 6-abs
+            </code-block>
+            <code-block collapsed-title="Running" collapsible="true" lang="shell">
+                ./6-abs
+            </code-block>
+            <code-block collapsed-title="Result" collapsible="true" lang="shell">
+                1
+                0
+                1
+                98
+            </code-block>
+        </procedure>
+
+        <procedure
+                id="7_there_are_only_3_colors_10_digits_and_7_notes_it_s_what_we_do_with_them_that_s_important"
+                title="7. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important">
+            <p>Write a function that prints the last digit of a number.</p>
+            <list>
+                <li>
+                    <code-block collapsed-title="Prototype:" collapsible="true" lang="c">
+                        int print_last_digit(int);
+                    </code-block>
+                </li>
+                <li>Return the value of the last digit</li>
+            </list>
+            <code-block lang="c" src="alx-low_level_programming/0x02-functions_nested_loops/7-main.c"/>
+        </procedure>
+        <procedure id="repository" title="Repository">
+            <p><b>GitHub repository:</b> <code>alx-low_level_programming</code></p>
+            <p><b>Directory:</b> <code>0x02-functions_nested_loops</code></p>
+            <p><b>File:</b>
+                <code>0-putchar.c</code>
+                <code>1-alphabet.c</code>
+                <code>2-print_alphabet_x10.c</code>
+                <code>3-islower.c</code>
+                <code>4-isalpha.c</code>
+                <code>5-sign.c</code>
+                <code>6-abs.c</code>
+                <code>7-print_last_digit.c</code>
+            </p>
+        </procedure>
+    </chapter>
+
+    <procedure id="tasks" title="Tasks">
+        <deflist collapsible="true">
+            <def id="8_i_m_federal_agent_jack_bauer_and_today_is_the_longest_day_of_my_life"
+                 title="8. I'm federal agent Jack Bauer, and today is the longest day of my life">
+
+                <p>
+                    Write a function that prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59.
+                </p>
+                <code-block collapsed-title="Prototype:" collapsible="true" lang="c">
+                    void jack_bauer(void);
+                </code-block>
+                <p>
+                    You can listen to <a href="https://www.youtube.com/watch?v=btAfXqgMkPs">this soundtrack</a>
+                    while coding :)
+                </p>
+                <video preview-src="yt.png" src="https://www.youtube.com/watch?v=btAfXqgMkPs"/>
+                <code-block lang="c" src="alx-low_level_programming/0x02-functions_nested_loops/8-main.c"/>
+                <deflist collapsible="true">
+                    <def title="Repo:">
+                        <list>
+                            <li>
+                                <p><b>GitHub repository:</b> <code>alx-low_level_programming</code></p>
+                            </li>
+                            <li>
+                                <p><b>Directory:</b> <code>0x02-functions_nested_loops</code></p>
+                            </li>
+                            <li>
+                                <p><b>File:</b> <code>8-24_hours.c</code></p>
+                            </li>
+                        </list>
+                    </def>
+                </deflist>
+
+            </def>
+            <def title="9. Learn your times table">
+                <p>
+                    Write a function that prints the 9 times table, starting with 0.
+                </p>
+                <code-block collapsed-title="Prototype" collapsible="true" lang="c">
+                    void times_table(void);
+                </code-block>
+                <list>
+                    <li>Format: see example</li>
+                </list>
+                <code-block lang="c" src="alx-low_level_programming/0x02-functions_nested_loops/9-main.c"/>
+                <deflist collapsible="true">
+                    <def title="Repo:">
+                        <list>
+                            <li>
+                                <p><b>GitHub repository:</b> <code>alx-low_level_programming</code></p>
+                            </li>
+                            <li>
+                                <p><b>Directory:</b> <code>0x02-functions_nested_loops</code></p>
+                            </li>
+                            <li>
+                                <p><b>File:</b> <code>9-times_table.c</code></p>
+                            </li>
+                        </list>
+                    </def>
+                </deflist>
+            </def>
+            <def title="10. a + b">
+                <p>
+                    Write a function that adds two integers and returns the result.
+                </p>
+                <code-block collapsed-title="Prototype:" collapsible="true" lang="c">
+                    int add(int, int);
+                </code-block>
+                <code-block lang="c" src="alx-low_level_programming/0x02-functions_nested_loops/10-main.c"/>
+                <deflist collapsible="true">
+                    <def title="Repo:">
+                        <list>
+                            <li>
+                                <p><b>GitHub repository:</b> <code>alx-low_level_programming</code></p>
+                            </li>
+                            <li>
+                                <p><b>Directory:</b> <code>0x02-functions_nested_loops</code></p>
+                            </li>
+                            <li>
+                                <p><b>File:</b> <code>10-add.c</code></p>
+                            </li>
+                        </list>
+                    </def>
+                </deflist>
+            </def>
+            <def title="11. 98 Battery Street, the OG">
+                <p>
+                    Write a function that prints all natural numbers from <code>n</code> to <code>98</code>, followed by
+                    a new line.
+                </p>
+                <code-block collapsed-title="Prototype:" collapsible="true" lang="c">
+                    void print_to_98(int n);
+                </code-block>
+                <list>
+                    <li>Numbers must be separated by a comma, followed by a space</li>
+                    <li>Numbers should be printed in order</li>
+                    <li>The first printed number should be the number passed to your function</li>
+                    <li>The last printed number should be 98</li>
+                    <li>You are allowed to use the standard library</li>
+                </list>
+                <code-block lang="c" src="alx-low_level_programming/0x02-functions_nested_loops/11-main.c"/>
+                <deflist collapsible="true">
+                    <def title="Repo:">
+                        <list>
+                            <li>
+                                <p><b>GitHub repository:</b> <code>alx-low_level_programming</code></p>
+                            </li>
+                            <li>
+                                <p><b>Directory:</b> <code>0x02-functions_nested_loops</code></p>
+                            </li>
+                            <li>
+                                <p><b>File:</b> <code>11-print_to_98.c</code></p>
+                            </li>
+                        </list>
+                    </def>
+                </deflist>
+            </def>
+            <def title="12. The World looks like a multiplication-table, or a mathematical equation, which, turn it how you will, balances itself">
+                <p>Write a function that prints the <code>n</code> times table, starting with 0.</p>
+                <code-block collapsed-title="Prototype:" collapsible="true" lang="c">
+                    void print_times_table(int n);
+                </code-block>
+                <list>
+                    <li>
+                        If <code>n</code> is greater than 15 or less than <code>0</code> the function should not print
+                        anything
+                    </li>
+                    <li>Format: see example</li>
+                </list>
+                <code-block lang="c" src="alx-low_level_programming/0x02-functions_nested_loops/100-main.c"/>
+                <deflist collapsible="true">
+                    <def title="Repo:">
+                        <list>
+                            <li>
+                                <p><b>GitHub repository:</b> <code>alx-low_level_programming</code></p>
+                            </li>
+                            <li>
+                                <p><b>Directory:</b> <code>0x02-functions_nested_loops</code></p>
+                            </li>
+                            <li>
+                                <p><b>File:</b> <code>100-times_table.c</code></p>
+                            </li>
+                        </list>
+                    </def>
+                </deflist>
+            </def>
+            <def title="13. Nature made the natural numbers; All else is the work of women">
+                <p>
+                    If we list all the natural numbers below 10 that are multiples of <code>3</code> or <code>5</code>,
+                    we get <code>3, 5, 6 and 9.</code> The sum of these multiples is 23. Write a program that computes
+                    and prints the sum of all the multiples of <code>3</code> or <code>5</code> below <code>1024</code>
+                    (excluded), followed by a new line.
+                </p>
+                <list>
+                    <li>
+                        You are not allowed to use the standard library
+                    </li>
+                </list>
+                <deflist collapsible="true">
+                    <def title="Repo:">
+                        <list>
+                            <li>
+                                <p><b>GitHub repository:</b> <code>alx-low_level_programming</code></p>
+                            </li>
+                            <li>
+                                <p><b>Directory:</b> <code>0x02-functions_nested_loops</code></p>
+                            </li>
+                            <li>
+                                <p><b>File:</b> <code>101-natural.c</code></p>
+                            </li>
+                        </list>
+                    </def>
+                </deflist>
+            </def>
+            <def title="14. In computer class, the first assignment was to write a program to print the first 100 Fibonacci numbers. Instead, I wrote a program that would steal passwords of students. My teacher gave me an A">
+                <p>
+                    Write a program that prints the first 50 Fibonacci numbers, starting with <code>1 and 2</code>,
+                    followed by a new line.
+                </p>
+                <list>
+                    <li>The numbers must be separated by comma, followed by a space ,</li>
+                    <li>You are allowed to use the standard library</li>
+                </list>
+                <deflist collapsible="true">
+                    <def title="Repo:">
+                        <list>
+                            <li>
+                                <p><b>GitHub repository:</b> <code>alx-low_level_programming</code></p>
+                            </li>
+                            <li>
+                                <p><b>Directory:</b> <code>0x02-functions_nested_loops</code></p>
+                            </li>
+                            <li>
+                                <p><b>File:</b> <code>102-fibonacci.c</code></p>
+                            </li>
+                        </list>
+                    </def>
+                </deflist>
+            </def>
+            <def title="15. Even Liber Abbaci">
+                <p>
+                    Each new term in the Fibonacci sequence is generated by adding the previous two terms. By starting
+                    with 1 and 2, the first 10 terms will be: 1, 2, 3, 5, 8, 13, 21, 34, 55, 89. By considering the
+                    terms in the Fibonacci sequence whose values do not exceed 4,000,000, write a program that finds and
+                    prints the sum of the even-valued terms, followed by a new line.
+                </p>
+
+                <list>
+                    <li>You are allowed to use the standard library</li>
+                </list>
+                <deflist collapsible="true">
+                    <def title="Repo:">
+                        <list>
+                            <li>
+                                <p><b>GitHub repository:</b> <code>alx-low_level_programming</code></p>
+                            </li>
+                            <li>
+                                <p><b>Directory:</b> <code>0x02-functions_nested_loops</code></p>
+                            </li>
+                            <li>
+                                <p><b>File:</b> <code>103-fibonacci.c</code></p>
+                            </li>
+                        </list>
+                    </def>
+                </deflist>
+            </def>
+            <def title="16. In computer class, the first assignment was to write a program to print the first 100 Fibonacci numbers. Instead, I wrote a program that would steal passwords of students. My teacher gave me an A+">
+                <p>
+                    Write a program that finds and prints the first 98 Fibonacci numbers, starting with
+                    <code>1 and 2</code>, followed by a new line.
+                </p>
+                <list>
+                    <li>The numbers should be separated by comma, followed by a space ,</li>
+                    <li>You are allowed to use the standard library</li>
+                    <li>
+                        You are not allowed to use any other library (You can’t use <code>GMP</code> etc…)
+                    </li>
+                    <li>
+                        You are not allowed to use <code>long long, malloc, pointers, arrays/tables, or
+                        structures</code>
+                    </li>
+                    <li>
+                        You are not allowed to hard code any Fibonacci number (except for 1 and 2)
+                    </li>
+                </list>
+                <deflist collapsible="true">
+                    <def title="Repo:">
+                        <list>
+                            <li>
+                                <p><b>GitHub repository:</b> <code>alx-low_level_programming</code></p>
+                            </li>
+                            <li>
+                                <p><b>Directory:</b> <code>0x02-functions_nested_loops</code></p>
+                            </li>
+                            <li>
+                                <p><b>File:</b> <code>104-fibonacci.c</code></p>
+                            </li>
+                        </list>
+                    </def>
+                </deflist>
+            </def>
+        </deflist>
+    </procedure>
+
 </topic>

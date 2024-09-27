@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="Cleanup-your-Portfolio-Project"
+       title="Cleanup your Portfolio Project"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <deflist>
+        <def title="Concepts">
+            <i>For this project, we expect you to look at this concept:</i>
+            <list>
+                <li><a href="Job-Search-Resources.topic"/></li>
+            </list>
+        </def>
+        <def title="Let's Clean Up">
+            <img alt="cleanup" border-effect="rounded" src="cleanup.gif"/>
+            <p>
+                Of all the things that a potential employer looks at, code is the most important. It is after all, what
+                they are hiring you to do. Also remember, Recruiters and Hiring Managers are busy people. Here is a
+                real-world scenario that may help you understand how important your GitHub is to eventual job placement.
+            </p>
+        </def>
+        <def title="Top of the Resumé Pile at DreamCo">
+            <p>
+                Imagine this… You’re at a meetup and a friendly recruiter from DreamCo strikes up a conversation with
+                you. He says there’s a software engineering position opening up in a few weeks and it would be great to
+                keep in touch. You let him know you’ll follow up and send him a resume. That night you do a ton of
+                research about DreamCo and tailor your resumé and email followup for the position. You get your resumé
+                reviewed, iterate, and by the end of next day you confidently send him your latest draft. The Recruiter
+                replies immediately – you’re a strong fit for the role.
+            </p>
+
+            <p>
+                Your resume is going to the top of the pile he will pass to the Hiring Manager. The Hiring Manager (your
+                potential manager) receives a stack of 20 resumes (filtered down from the 2000 received), and she thinks
+                you are a great candidate. She would love to speak with you. Right before she emails the recruiter to
+                reach out to you, she finds your GitHub profile.
+            </p>
+
+            <p>
+                She randomly selects some projects and pokes around. She sees a checkin comment, “one more fix before
+                bed” and thinks it’s not particularly professional, but at least it demonstrates diligence. She opens a
+                random file and there are hardcoded strings being passed between functions to manage state. “That’s
+                pretty poor coding hygiene, but style and standards can be taught. Maybe this is a one-off, ” the
+                Manager thinks. Finally she finds a file where there is some more complex logic. Variables are poorly
+                named, some functionality could have clearly been refactored, and one function named “addThemAllUp”
+                spans 2 screens with 5 while loops and no comments to explain! She then flips to the next resumé on the
+                stack.
+            </p>
+        </def>
+    </deflist>
+
+    <procedure id="tasks" title="Tasks">
+        <deflist>
+            <def title="0. Comment all your code">
+                <p>
+                    Go through and add comments to your code. The more, the better. If you’ve already done this, great!
+                    You have nothing more to do.
+                </p>
+                <p>
+                    If you’re unclear about the standards for comments, look up what is expected. Here’s an
+                    <a href="https://www.digitalocean.com/community/tutorials/how-to-write-comments-in-python-3">
+                        example from Digital Ocean
+                    </a>
+                    detailing the standard commenting practices for Python 3.
+                </p>
+                <p>Provide a link to your Portfolio Project’s github URL</p>
+            </def>
+            <def title="1. Clean up those commit messages">
+                <p>
+                    Look through the history of your commits and view them from the perspective of a potential employer.
+                    Would you hire yourself? Are your commit messages clear and informative? Is there a way to edit a
+                    commit message on GitHub?
+                </p>
+            </def>
+            <def title="2. (Re)Organize your files">
+                <p>
+                    Clean up and remove any files that serve no purpose. This includes temp files, unused libraries,
+                    pycache, etc.
+                </p>
+            </def>
+            <def title="3. Refactor and Simplify">
+                <p>
+                    Are your functions/classes too big? Do they have too many responsibilities? Take time to refactor
+                    anything that may be unmanageable.
+                </p>
+            </def>
+            <def title="4. Spruce up variable names">
+                <p>
+                    One letter variables for anything besides temporary counters are unhelpful. Take the time to go
+                    through and update variable names to conform to convention and be descriptive.
+                </p>
+            </def>
+            <def title="5. Complete your README.md">
+                <p>
+                    The required task here is to improve your README.md to be complete. It should contain all standard
+                    aspects of a traditional README.md including:
+                </p>
+                <list>
+                    <li> Project name</li>
+                    <li> Introduction
+                        <list>
+                            <li>
+                                Must include link to your deployed site, final project blog article, author(s) LinkedIn
+                            </li>
+                        </list>
+                    </li>
+                    <li> Installation</li>
+                    <li> Usage</li>
+                    <li>Contributing</li>
+                    <li>Related projects</li>
+                    <li>Licensing</li>
+                </list>
+                <p>
+                    A couple resources:
+                    <a href="https://opensource.com/open-organization/17/1/repo-tells-a-story">
+                        * What your code repository says about you *
+                    </a>
+                    Here’s an
+                    <a href="https://github.com/matiassingers/awesome-readme">
+                        awesome list of READMEs.
+                    </a>
+                </p>
+                <p>At least one screenshot of your app must be included.</p>
+            </def>
+            <def title="6. Optional: Include much more technical detail and incorporate your story into your `README.md`">
+                <p>
+                    Your portfolio project will not be the most technically impressive application that a recruiter or
+                    hiring manager sees. Bring context to the application by sharing your inspiration for creating this,
+                    or express the technical challenge you set out to solve. Be honest where you struggled and what you
+                    envision for a next-iteration. Add the emotion, the timeline, and a reminder of the human behind the
+                    keyboard so that your project is seen through the lens of “Wow, I’d like to work with a human who
+                    thinks like this!”
+                </p>
+                <p>
+                    Pull from all your planning materials, your blog post, and project screenshots to create a README.md
+                    that stands out and tells the story of this project. This is a wonderful place to go into more
+                    technical depth than you did in your blog post. Really explain the details of the algorithm you
+                    chose, or the details of why you chose a specific solution. Add visuals (gifs, screenshots, emoji!)
+                    to bring the file to life!
+                </p>
+                <p>Here are some examples of README.md‘s that tell a great story:</p>
+                <list>
+                    <li>
+                        <a href="https://github.com/deepfakes/faceswap">
+                            DeepFakes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/erabug/wikigraph">
+                            WikiGraph
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/christopherchoe/jobodyssey_hbtn">
+                            Job Odyssey
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/bdbaraban/ideadog">
+                            ideadog
+                        </a>
+                    </li>
+                </list>
+            </def>
+        </deflist>
+    </procedure>
+
+</topic>

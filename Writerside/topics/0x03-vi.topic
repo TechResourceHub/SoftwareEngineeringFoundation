@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="0x03-vi"
+       title="0x03. vi"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <procedure id="another_text_editor" title="Another text editor">
+        <p>After <b>Emacs</b> its time to play with <b>vi</b></p>
+        <deflist>
+            <def title="Resources">
+                <tabs>
+                    <tab title="Read">
+                        <a href="https://www.cs.colostate.edu/helpdocs/vi.html">
+                            Basic vi commands
+                        </a>
+                    </tab>
+                </tabs>
+            </def>
+            <def title="Learning Objectives">
+                <p id="learning-objective-p">
+                    At the end of this project, you are expected to be able to
+                    <a href="https://fs.blog/feynman-learning-technique/">explain to anyone</a>, <b>without the help of
+                    Google</b>
+                </p>
+            </def>
+            <def title="General">
+                <list>
+                    <li>What is vi</li>
+                    <li>Who is Bill Joy</li>
+                    <li>How to start and exit vi</li>
+                    <li>What are the command and insert modes, and how to switch from one to the other</li>
+                    <li>How to edit text</li>
+                    <li>How to cut and paste lines</li>
+                    <li>How to search forward and backward</li>
+                    <li>How to undo</li>
+                    <li>How to quit vi</li>
+                </list>
+            </def>
+            <def title="Copyright - Plagiarism">
+                <list>
+                    <li>
+                        You are tasked to come up with solutions for the tasks below yourself to meet with the above
+                        learning objectives.
+                    </li>
+                    <li>
+                        You will not be able to meet the objectives of this or any following project by copying and
+                        pasting someone else’s work.
+                    </li>
+                    <li>You are not allowed to publish any content of this project.</li>
+                    <li>Any form of plagiarism is strictly forbidden and will result in removal from the program.</li>
+                </list>
+            </def>
+            <def title="Requirements">
+                <list>
+                    <li>All tasks must be done inside the sandbox <code>Ubuntu 20.04</code></li>
+                    <li>The answer of a task must be in a specific file</li>
+                    <li>
+                        Each answer file must contain only the command to execute in Emacs for solving the task.
+                        Example: <b>“What is the command to quit without saving changes?”</b> -&gt; the file should
+                        contain only
+                        <shortcut>:q!</shortcut>
+                    </li>
+                </list>
+            </def>
+        </deflist>
+    </procedure>
+
+    <procedure id="tasks" title="Tasks">
+        <deflist>
+            <def title="0. Create your answer directory">
+                <p>
+                    Navigate to <code>/root</code> and create a directory named <code>0x03_vi</code>
+                </p>
+            </def>
+            <def title="1. Inserting">
+                <p>
+                    What is the command to insert text before the cursor?
+                </p>
+                <p>
+                    Write the answer into the file <code>/root/0x03_vi/inserting</code>
+                </p>
+                <p>
+                    You can validate if the format of your answer is correct by displaying the file information
+                </p>
+                <code-block lang="shell">
+                    root@hex:~# ls -l /root/0x03_vi/inserting
+                    -rw-r--r-- 1 root root 2 Nov 11 04:34 /root/0x03_vi/inserting
+                    root@hex:~#
+                </code-block>
+            </def>
+            <def title="2. Cutting">
+                <p>
+                    What is the command to delete and cut the current line?
+                </p>
+                <p>
+                    Write the answer into the file <code>/root/0x03_vi/cutting</code>
+                </p>
+                <b>Tip:</b>
+                <p><a href="https://linuxize.com/post/how-to-copy-cut-paste-in-vim/">How to Copy, Cut and Paste</a></p>
+            </def>
+            <def title="3. Pasting">
+                <p>
+                    What is the command to paste the lines in the buffer into the text after the current line?
+                </p>
+                <p>
+                    Write the answer into the file <code>/root/0x03_vi/pasting</code>
+                </p>
+            </def>
+            <def title="4. Undoing">
+                <p>
+                    What is the command to undo what you just did?
+                </p>
+                <p>
+                    Write the answer into the file <code>/root/0x03_vi/undoing</code>
+                </p>
+            </def>
+            <def title="5. Exiting">
+                <p>
+                    What is the command to quit vi even though latest changes have not been saved for this vi call?
+                </p>
+                <p>
+                    Write the answer into th file <code>/root/0x03_vi/exiting</code>
+                </p>
+            </def>
+            <def title="6. Beginning of the line">
+                <p>
+                    What is the command to move the cursor to the start of the current line?
+                </p>
+                <p>
+                    Write the answer into the file <code>/root/0x03_vi/beginning_of_the_line</code>
+                </p>
+            </def>
+            <def title="7. End of line">
+                <p>
+                    What is the command to move the cursor to the end of the current line?
+                </p>
+                <p>
+                    Write the answer into the file <code>/root/0x03_vi/end_of_line</code>
+                </p>
+            </def>
+        </deflist>
+    </procedure>
+
+</topic>

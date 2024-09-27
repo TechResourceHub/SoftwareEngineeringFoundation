@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic id="0x00-Shell-navigation"
+       title="0x00. Shell, navigation"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd">
+
+    <procedure id="welcome_to_the_matrix_" title="Welcome to the Matrix!">
+        <img alt="matrix" border-effect="rounded" src="matrix.gif"/>
+        <p>This project will (probably) be your first experience with an Unix terminal!</p>
+        <p>For this project, please start and connect to your Sandbox <code>Ubuntu 20.04.</code></p>
+
+        <deflist>
+            <def title="Resources">
+                <tabs>
+                    <tab title="Read">
+                        <list>
+                            <li>
+                                <a href="https://linuxcommand.org/lc3_lts0020.php">
+                                    Linux navigation
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://linuxcommand.org/lc3_lts0030.php">
+                                    Linux - looking around
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://linuxcommand.org/lc3_lts0050.php">
+                                    Linux - manipulating files
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/tmp.html">
+                                    Linux - /tmp
+                                </a>
+                            </li>
+                        </list>
+                    </tab>
+                    <tab title="Or in your terminal:">
+                        <code-block lang="shell">
+                            man pwd
+                            man ls
+                            man cd
+                            man less
+                            man touch
+                            man cp
+                            man mv
+                            man rm
+                            man mkdir
+                            man rmdir
+                        </code-block>
+                    </tab>
+                </tabs>
+            </def>
+            <def title="Learning Objectives">
+                <p id="learning-objective-p">
+                    At the end of this project, you are expected to be able to
+                    <a href="https://fs.blog/feynman-learning-technique/">explain to anyone</a>, <b>without the help of
+                    Google</b>
+                </p>
+            </def>
+            <def title="General">
+                <list>
+                    <li>How to navigate in an Unix system</li>
+                    <li>How to list files and directories</li>
+                    <li>How to display the content of a file</li>
+                    <li>How to create a file or directory</li>
+                    <li>How to remove a file or directory</li>
+                    <li>How to move or copy a file or directory</li>
+                </list>
+            </def>
+            <def title="Copyright - Plagiarism">
+                <list>
+                    <li>
+                        You are tasked to come up with solutions for the tasks below yourself to meet with the above
+                        learning objectives.
+                    </li>
+                    <li>
+                        You will not be able to meet the objectives of this or any following project by copying and
+                        pasting someone else’s work.
+                    </li>
+                    <li>
+                        You are not allowed to publish any content of this project.
+                    </li>
+                    <li>
+                        Any form of plagiarism is strictly forbidden and will result in removal from the program.
+                    </li>
+                </list>
+            </def>
+        </deflist>
+    </procedure>
+
+    <procedure id="tasks" title="Tasks">
+        <deflist>
+            <def title="0. Create me">
+                <p>Access your sandbox and:</p>
+                <list>
+                    <li>
+                        Change your working directory to <code>/root</code>
+                    </li>
+                    <li>
+                        Then, create an empty file <code>so_cool</code>
+                    </li>
+                </list>
+                <b>Advice</b>
+                <list>
+                    <li>Don’t forget to validate your current working directory</li>
+                    <li>
+                        Don’t forget to display the list of files of your current directory to validate the creation of
+                        the new file
+                    </li>
+                </list>
+            </def>
+            <def title="2. To old">
+                <p>Access your sandbox and:</p>
+                <list>
+                    <li>
+                        Change your working directory to <code>/root</code>
+                    </li>
+                    <li>Create a file <code>old_school</code></li>
+                    <li>
+                        Then, rename the file <code>old_school</code> to <code>new_school</code> (in the same directory)
+                    </li>
+                </list>
+                <b>Advice</b>
+                <list>
+                    <li>Don’t forget to validate your current working directory</li>
+                    <li>
+                        Don’t forget to display the list of files of your current directory to validate the renaming of
+                        the file
+                    </li>
+                </list>
+            </def>
+            <def title="3. Not here">
+                <p>Access your sandbox and:</p>
+                <list>
+                    <li>
+                        Change the working directory to <code>/root</code>
+                    </li>
+                    <li>
+                        Create a file <code>not_here</code>
+                    </li>
+                    <li>
+                        Then, move the file <code>not_here</code> to <code>/tmp/right_school</code>
+                    </li>
+                </list>
+                <b>Advices:</b>
+                <list>
+                    <li>
+                        Don’t forget to validate your current working directory
+                    </li>
+                    <li>
+                        Don’t forget to display the list of files of your current directory to validate the move of the
+                        file
+                    </li>
+                </list>
+            </def>
+            <def title="4. Not anymore">
+                <p>Access your sandbox</p>
+                <list>
+                    <li>
+                        change your working directory to <code>/root</code>
+                    </li>
+                    <li>
+                        Create a file <code>ready_to_be_removed</code>
+                    </li>
+                    <li>
+                        Then, delete the file <code>ready_to_be_removed</code>
+                    </li>
+                </list>
+                <b>Advices:</b>
+                <list>
+                    <li>Don’t forget to validate your current working directory</li>
+                    <li>
+                        Don’t forget to display the list of files of your current directory to validate the removal of
+                        the file
+                    </li>
+                </list>
+            </def>
+            <def title="5. Organization is key!">
+                <p>Access your sandbox and:</p>
+                <list>
+                    <li>Change your working directory to <code>/root</code></li>
+                    <li>
+                        Then, create a directory <code>school_is_amazing</code>
+                    </li>
+                </list>
+                <b>Advices:</b>
+                <list>
+                    <li>Don’t forget to validate your current working directory</li>
+                    <li>
+                        Don’t forget to display the list of directories of your current directory to validate the
+                        creation of the directory
+                    </li>
+                </list>
+            </def>
+            <def title="6. No need">
+                <p>Access your sandbox and:</p>
+                <list>
+                    <li>
+                        Change your working directory to <code>/root</code>
+                    </li>
+                    <li>
+                        Create a directory <code>empty_directory</code>
+                    </li>
+                    <li>
+                        Then, remove the directory <code>empty_directory</code>
+                    </li>
+                </list>
+                <b>Advices:</b>
+                <list>
+                    <li>Don’t forget to validate your current working directory</li>
+                    <li>
+                        Don’t forget to display the list of directories of your current directory to validate the
+                        removal of the directory
+                    </li>
+                </list>
+            </def>
+        </deflist>
+    </procedure>
+
+</topic>
